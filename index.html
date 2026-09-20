@@ -72,14 +72,31 @@ ul,ol{padding:0;list-style:none;margin:0}
 .nav-cta a{color:var(--ink);border:1px solid var(--line-strong);border-radius:var(--radius);padding:8px 16px;font-size:.84rem}
 .nav-cta a:hover{background:var(--ink);color:var(--white)}
 
-/* header: 狭い画面ではナビを横スクロール1行にして、縦に間延びしないようにする */
+.nav-toggle-input{display:none}
+.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:34px;height:34px;cursor:pointer;flex:none}
+.nav-toggle span{display:block;width:100%;height:2px;background:var(--ink);border-radius:1px;transition:transform .2s ease,opacity .2s ease}
+
+/* header: 狭い画面ではハンバーガーメニューに切り替える */
 @media (max-width:760px){
-  .header-inner{flex-wrap:wrap;row-gap:8px;padding-block:10px}
-  .brand{order:1}
-  .nav-cta{order:2}
-  .nav-list{order:3;width:100%;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;gap:18px;padding-bottom:4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-  .nav-list::-webkit-scrollbar{display:none}
-  .nav-list a{white-space:nowrap}
+  .header-inner{position:relative;flex-wrap:nowrap;justify-content:flex-start;padding-block:10px}
+  .nav-toggle{display:flex;margin-left:auto}
+  .nav-list{
+    display:none;
+    position:absolute;
+    top:100%;left:0;right:0;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    padding:4px var(--gutter) 12px;
+  }
+  .nav-list a{padding:13px 0;border-bottom:1px solid var(--line)}
+  .nav-toggle-input:checked ~ .nav-list{display:flex}
+  .nav-toggle-input:checked ~ .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-toggle-input:checked ~ .nav-toggle span:nth-child(2){opacity:0}
+  .nav-toggle-input:checked ~ .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 }
 
 /* hero */
@@ -108,6 +125,8 @@ ul,ol{padding:0;list-style:none;margin:0}
 .section-head{max-width:40rem;margin-bottom:clamp(32px,6vw,56px)}
 .grid-2{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:clamp(28px,6vw,80px);align-items:start}
 @media (max-width:760px){.grid-2{grid-template-columns:1fr}}
+.flow-grid{grid-template-columns:minmax(0,.5fr) minmax(0,1fr);gap:clamp(20px,4vw,48px)}
+@media (max-width:760px){.flow-grid{grid-template-columns:1fr}}
 
 /* hairline rows (used everywhere) */
 .rows{display:grid;gap:2px}
@@ -208,13 +227,15 @@ footer.site-footer p{font-size:.82rem;color:var(--ink-soft);margin:4px 0}
     <a class="brand" href="#top">
       <img src="images/logo.png" alt="ヨコグミ">
     </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+    <label for="nav-toggle" class="nav-toggle" aria-label="メニューを開く"><span></span><span></span><span></span></label>
     <nav class="nav-list">
-      <a href="#s3">大切にしていること</a>
-      <a href="#s4">サービス内容</a>
-      <a href="#s4-price">料金</a>
-      <a href="#s6">プロフィール</a>
-      <a href="#s7">実績</a>
-      <a href="#s8">FAQ</a>
+      <a href="#s3" onclick="document.getElementById('nav-toggle').checked=false">大切にしていること</a>
+      <a href="#s4" onclick="document.getElementById('nav-toggle').checked=false">サービス内容</a>
+      <a href="#s4-price" onclick="document.getElementById('nav-toggle').checked=false">料金</a>
+      <a href="#s6" onclick="document.getElementById('nav-toggle').checked=false">プロフィール</a>
+      <a href="#s7" onclick="document.getElementById('nav-toggle').checked=false">実績</a>
+      <a href="#s8" onclick="document.getElementById('nav-toggle').checked=false">FAQ</a>
     </nav>
     <span class="nav-cta"><a href="#s9">無料相談</a></span>
   </div>
@@ -421,7 +442,7 @@ footer.site-footer p{font-size:.82rem;color:var(--ink-soft);margin:4px 0}
 
 <!-- S5 進め方 -->
 <section class="section" id="s5">
-  <div class="wrap grid-2" style="grid-template-columns:minmax(0,.5fr) minmax(0,1fr);gap:clamp(20px,4vw,48px);">
+  <div class="wrap grid-2 flow-grid">
     <div class="section-head">
       <p class="kicker"><span class="rule"></span>Flow</p>
       <h2 class="h2">進め方</h2>
