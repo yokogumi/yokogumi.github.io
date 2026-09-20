@@ -1,9 +1,18 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>ヨコグミ HPドラフト</title>
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ヨコグミ｜現場目線で、店づくりを一緒に。</title>
+<meta name="description" content="金沢で弁当店を4年黒字経営し、第三者承継まで経験した代表が、飲食店の開業準備から開業後の運営までを現場目線で伴走支援します。無料相談受付中。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
 <style>
+:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+[hidden]:not([hidden=until-found i]){display:none!important}
+
 :root{
   --paper:#f6f3ee; --paper-2:#efeae1; --paper-3:#e7e1d5;
   --ink:#1c1b19; --ink-soft:#55524c;
@@ -33,7 +42,7 @@
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-jp);font-weight:400;line-height:1.85;letter-spacing:.02em;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-jp);font-weight:400;line-height:1.85;letter-spacing:.02em;-webkit-font-smoothing:antialiased;font-size:14px}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
 ul,ol{padding:0;list-style:none;margin:0}
@@ -62,6 +71,16 @@ ul,ol{padding:0;list-style:none;margin:0}
 .nav-list a:hover{color:var(--ink)}
 .nav-cta a{color:var(--ink);border:1px solid var(--line-strong);border-radius:var(--radius);padding:8px 16px;font-size:.84rem}
 .nav-cta a:hover{background:var(--ink);color:var(--white)}
+
+/* header: 狭い画面ではナビを横スクロール1行にして、縦に間延びしないようにする */
+@media (max-width:760px){
+  .header-inner{flex-wrap:wrap;row-gap:8px;padding-block:10px}
+  .brand{order:1}
+  .nav-cta{order:2}
+  .nav-list{order:3;width:100%;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;gap:18px;padding-bottom:4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .nav-list::-webkit-scrollbar{display:none}
+  .nav-list a{white-space:nowrap}
+}
 
 /* hero */
 .hero{position:relative;min-height:min(86vh,720px);display:flex;align-items:flex-end;padding-block:clamp(70px,16vh,150px) clamp(40px,8vh,72px);overflow:hidden;color:#fff}
@@ -179,9 +198,10 @@ ul,ol{padding:0;list-style:none;margin:0}
 footer.site-footer{padding-block:36px;border-top:1px solid var(--line);background:var(--paper)}
 footer.site-footer .brand-name{font-family:var(--font-en);font-weight:600;letter-spacing:.1em;font-size:1rem}
 footer.site-footer p{font-size:.82rem;color:var(--ink-soft);margin:4px 0}
-.draftbar{background:var(--ink);color:var(--white);font-family:var(--font-en);font-size:.68rem;letter-spacing:.04em;padding:9px var(--gutter);text-align:center}
 :where(a,button,summary,input):focus-visible{outline:2px solid var(--sage-deep);outline-offset:3px}
 </style>
+</head>
+<body>
 
 <header class="site-header">
   <div class="wrap header-inner">
@@ -258,7 +278,7 @@ footer.site-footer p{font-size:.82rem;color:var(--ink-soft);margin:4px 0}
       <div class="value-cell">
         <span class="num">01</span>
         <h3>話を、じっくり聴く</h3>
-        <p style="white-space:nowrap;">急かさず、最後まで耳を傾けます。</p>
+        <p>急かさず、最後まで耳を傾けます。</p>
       </div>
       <div class="value-cell">
         <span class="num">02</span>
@@ -273,7 +293,7 @@ footer.site-footer p{font-size:.82rem;color:var(--ink-soft);margin:4px 0}
       <div class="value-cell">
         <span class="num">04</span>
         <h3>一緒に悩む</h3>
-        <p style="white-space:nowrap;">自分の店のことのように考えます。</p>
+        <p>自分の店のことのように考えます。</p>
       </div>
     </div>
   </div>
@@ -409,7 +429,7 @@ footer.site-footer p{font-size:.82rem;color:var(--ink-soft);margin:4px 0}
     </div>
     <ul class="steps">
       <li><h3><span class="step-no">1</span>無料相談</h3><p>対面（オンライン可）。1事業者1回・無料。開業までのロードマップをプレゼントします。</p></li>
-      <li><h3><span class="step-no">2</span>プラン選択</h3><p style="white-space:nowrap;">お手軽・標準・まるごとから、一緒に決めます。ここまで無料です。</p></li>
+      <li><h3><span class="step-no">2</span>プラン選択</h3><p>お手軽・標準・まるごとから、一緒に決めます。ここまで無料です。</p></li>
       <li><h3><span class="step-no">3</span>契約</h3><p>内容にご納得いただいたら、正式にご契約します。</p></li>
       <li><h3><span class="step-no">4</span>伴走しながら制作</h3><p>HP・チラシ・名刺などを、一つずつ一緒に形にします。</p></li>
       <li><h3><span class="step-no">5</span>開業・その後</h3><p>まるごとプランは開業後3ヶ月も継続。開業後も一人にしません。</p></li>
@@ -494,7 +514,7 @@ footer.site-footer p{font-size:.82rem;color:var(--ink-soft);margin:4px 0}
       <div class="field"><label for="f-status">状況</label><select id="f-status"><option>開業前</option><option>既存店</option></select></div>
       <div class="field"><label for="f-msg">相談内容</label><textarea id="f-msg" rows="3" placeholder="自由記述"></textarea></div>
       <button type="button" class="btn btn-primary">送信する</button>
-      <p style="font-size:.76rem;color:var(--ink-soft);margin-top:10px;">※ドラフトのため送信は未実装です</p>
+      <p style="font-size:.76rem;color:var(--ink-soft);margin-top:10px;">※現在フォーム送信の準備中です。恐れ入りますが、今しばらくお待ちください。</p>
     </form>
   </div>
 </section>
@@ -505,8 +525,9 @@ footer.site-footer p{font-size:.82rem;color:var(--ink-soft);margin:4px 0}
       <div class="brand-name">YOKOGUMI</div>
       <p>ヨコグミ｜現場目線で、店づくりを一緒に。／ 金沢市</p>
     </div>
-    <p>[メールアドレス仮] ／ [クラウドワークス プロフィールへのリンク仮]</p>
+    <p>[メールアドレス仮]</p>
   </div>
 </footer>
 
-</body></html>
+</body>
+</html>
