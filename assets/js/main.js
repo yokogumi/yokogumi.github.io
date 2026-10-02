@@ -45,12 +45,19 @@
   if (calc) {
     var yen = function (n) { return '¥' + n.toLocaleString('ja-JP'); };
     var update = function () {
-      var min = 0, max = 0, month = 0;
+      var min = 0, max = 0, month = 0, quote = [];
       calc.querySelectorAll('input:checked').forEach(function (c) {
-        if (c.dataset.month) month += +c.dataset.month;
+        if (c.dataset.quote) quote.push(c.closest('label').querySelector('.n').firstChild.nodeValue);
+        else if (c.dataset.month) month += +c.dataset.month;
         else { min += +c.dataset.min; max += +c.dataset.max; }
       });
       document.getElementById('total').textContent = min === max ? yen(min) : yen(min) + ' 〜 ' + yen(max);
+      var th = document.getElementById('totalH');
+      if (th) {
+        var on = function (k) { var e = calc.querySelector('[data-key="' + k + '"]'); return e && e.checked; };
+        th.textContent = (!on('hp') && (on('gbp') || on('line') || on('yoyaku') || on('card'))) ? '行き先のホームページは、お持ちですか？' : '';
+      }
+      var tq = document.getElementById('totalQ'); if (tq) tq.textContent = quote.length ? '＋ ' + quote.join('、') + '：別途お見積り' : '';
       document.getElementById('totalM').textContent = month ? '＋ 月額 ' + yen(month) : '';
     };
     calc.addEventListener('change', update);
