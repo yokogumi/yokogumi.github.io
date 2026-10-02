@@ -1,596 +1,327 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>ヨコグミ｜飲食店開業サポート</title>
-<meta name="description" content="金沢で弁当店を4年黒字経営し、第三者承継まで経験した代表が、飲食店の開業準備から開業後の運営までを現場目線で伴走支援します。無料相談受付中。">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ヨコグミ｜元弁当屋の、リアル開業相談（石川・金沢の飲食店 開業支援）</title>
+<meta name="description" content="元弁当屋だから、開業のギモン、リアルにお答えできます。飲食店の開業・運営を、実際に経営した立場から一緒に考える無料相談（契約するまで何度でも無料）。石川・金沢中心、オンラインは全国対応。">
+<meta property="og:title" content="ヨコグミ｜元弁当屋の、リアル開業相談">
+<meta property="og:description" content="実際に飲食店を経営した人が、開業する人の横に並んで、数字で一緒に考えます。">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://yokogumi.github.io">
-<meta property="og:title" content="ヨコグミ｜飲食店開業サポート">
-<meta property="og:description" content="金沢で弁当店を4年黒字経営し、第三者承継まで経験した代表が、飲食店の開業準備から開業後の運営までを現場目線で伴走支援します。無料相談受付中。">
-<meta property="og:image" content="https://yokogumi.github.io/images/hero.png">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FBF3E7">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"ヨコグミ","description":"元弁当屋の、リアル開業相談。飲食店の開業・運営支援。","areaServed":["石川県","金沢市"],"email":"yokogumi.info@gmail.com"}
+</script>
 <style>
-:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-[hidden]:not([hidden=until-found i]){display:none!important}
-
-:root{
-  --paper:#f6f3ee; --paper-2:#efeae1; --paper-3:#e7e1d5;
-  --ink:#1c1b19; --ink-soft:#55524c;
-  --sage:#7c8a7a; --sage-deep:#4f5d4d;
-  --line:rgba(28,27,25,.16); --line-strong:rgba(28,27,25,.32);
-  --white:#fbfaf7;
-  --font-jp:"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
-  --font-en:"Inter",var(--font-jp);
-  --wrap:1120px; --gutter:clamp(20px,5vw,64px); --sp-section:clamp(56px,9vw,104px);
-  --radius:2px;
+/* 全面背景パターン */
+.hero--bg{position:relative;padding:0;min-height:min(88vh,820px);display:flex;align-items:center;overflow:hidden}
+.hero__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:72% 50%;z-index:0}
+@media (min-width:901px){
+  /* 人物が見出しに重ならないよう、画像を右へ寄せ、左端をクリームに溶かす */
+  .hero__bg{left:9%;width:91%;object-position:62% 50%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16%);mask-image:linear-gradient(90deg,transparent 0,#000 16%)}
 }
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --paper:#17160f; --paper-2:#1e1c15; --paper-3:#26231a;
-    --ink:#ece7db; --ink-soft:#b3ac9a;
-    --sage:#8fa08c; --sage-deep:#a9bfa5;
-    --line:rgba(236,231,219,.16); --line-strong:rgba(236,231,219,.32);
-    --white:#232019;
-  }
+.hero__veil{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(251,243,231,.94) 0%,rgba(251,243,231,.82) 34%,rgba(251,243,231,.3) 56%,rgba(251,243,231,0) 78%)}
+.hero__body{position:relative;z-index:2;padding-block:clamp(56px,9vw,120px);width:100%}
+.hero--bg .hero__body>*{max-width:640px}
+.hero--bg .strip{border-top:1px solid var(--ink);margin-top:32px;max-width:420px}
+.hero__cap{position:absolute;z-index:3;right:var(--gut);bottom:20px;margin:0;max-width:none!important;background:rgba(251,243,231,.92);padding:6px 12px;font-size:12px;line-height:1.5;color:var(--ink2)}
+.hero__cap span{font-family:var(--mono);color:var(--green);letter-spacing:.08em;margin-right:.8em}
+.hero--bg .hero__body{max-width:1200px;margin-inline:auto}
+/* 画面の高さに収める（ノート・弁当箱がファーストビューに入るように） */
+@media (min-width:901px){
+  .hero--bg{min-height:calc(100svh - 64px)}
+  .hero__bg{object-position:62% 100%}
+  .hero__body{padding-block:clamp(24px,5vh,84px)}
+  .hero--bg .h1{font-size:clamp(34px,min(5.8vw,8.4vh),78px);margin-bottom:clamp(16px,3.2vh,36px)}
+  .hero--bg .cta-row{margin:clamp(18px,3.4vh,40px) 0 10px}
+  .hero--bg .strip{margin-top:clamp(14px,3vh,32px)}
 }
-:root[data-theme="dark"]{
-  --paper:#17160f; --paper-2:#1e1c15; --paper-3:#26231a;
-  --ink:#ece7db; --ink-soft:#b3ac9a;
-  --sage:#8fa08c; --sage-deep:#a9bfa5;
-  --line:rgba(236,231,219,.16); --line-strong:rgba(236,231,219,.32);
-  --white:#232019;
+/* スマホ・タブレット：画像を主役の帯にして、文字は下に置く */
+@media (max-width:900px){
+  .hero--bg{display:block;min-height:0}
+  .hero__bg{position:relative;inset:auto;display:block;width:100%;height:auto;aspect-ratio:4/3;object-position:78% 50%}
+  .hero__veil{display:none}
+  .hero__cap{position:static;display:block;background:none;padding:10px var(--gut) 0;font-size:12px}
+  .hero__body{padding-block:36px 56px}
+  .hero--bg .hero__body>*{max-width:none}
 }
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-jp);font-weight:400;line-height:1.85;letter-spacing:.02em;-webkit-font-smoothing:antialiased}
-img{max-width:100%;height:auto;display:block}
-a{color:inherit;text-decoration:none}
-ul,ol{padding:0;list-style:none;margin:0}
-
-.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
-.kicker{font-family:var(--font-en);font-size:.72rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--sage-deep);margin-bottom:1.2em;display:flex;align-items:center;gap:12px}
-.kicker .rule{width:28px;height:1.5px;background:currentColor;flex:none}
-.h2{font-size:clamp(1.5rem,1rem + 2.2vw,2.2rem);font-weight:700;line-height:1.55;letter-spacing:.03em;text-wrap:balance;margin:0}
-.lead{margin-top:1.2em;font-size:clamp(.94rem,.9rem + .2vw,1.02rem);color:var(--ink-soft);max-width:46em;text-wrap:pretty}
-
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:50px;padding:0 26px;font-family:var(--font-jp);font-size:.9rem;font-weight:500;letter-spacing:.06em;border-radius:var(--radius);border:1px solid var(--ink);transition:transform .2s ease}
-.btn:hover{transform:translateY(-2px)}
-.btn-primary{background:var(--ink);color:var(--white)}
-.btn-primary:hover{background:var(--sage-deep);border-color:var(--sage-deep)}
-.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-strong)}
-.btn-ghost.on-photo{color:#fff;border-color:rgba(255,255,255,.6)}
-
-/* header */
-.site-header{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--paper) 90%, transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;min-height:68px;gap:16px;flex-wrap:wrap}
-.brand{display:inline-flex;align-items:center;gap:10px}
-.brand img{height:54px}
-.brand-sub{font-family:var(--font-en);font-size:.68rem;letter-spacing:.2em;color:var(--sage-deep)}
-.nav-list{display:flex;align-items:center;gap:22px;font-size:.86rem;flex-wrap:wrap}
-.nav-list a{color:var(--ink-soft)}
-.nav-list a:hover{color:var(--ink)}
-.nav-cta a{color:var(--ink);border:1px solid var(--line-strong);border-radius:var(--radius);padding:8px 16px;font-size:.84rem}
-.nav-cta a:hover{background:var(--ink);color:var(--white)}
-
-.nav-toggle-input{display:none}
-.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:34px;height:34px;cursor:pointer;flex:none}
-.nav-toggle span{display:block;width:100%;height:2px;background:var(--ink);border-radius:1px;transition:transform .2s ease,opacity .2s ease}
-
-/* header: 狭い画面ではハンバーガーメニューに切り替える */
-@media (max-width:760px){
-  .header-inner{position:relative;flex-wrap:nowrap;justify-content:flex-start;padding-block:10px}
-  .nav-toggle{display:flex;margin-left:auto}
-  .nav-list{
-    display:none;
-    position:absolute;
-    top:100%;left:0;right:0;
-    flex-direction:column;
-    align-items:stretch;
-    gap:0;
-    background:var(--paper);
-    border-bottom:1px solid var(--line);
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-    padding:4px var(--gutter) 12px;
-  }
-  .nav-list a{padding:13px 0;border-bottom:1px solid var(--line)}
-  .nav-toggle-input:checked ~ .nav-list{display:flex}
-  .nav-toggle-input:checked ~ .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-  .nav-toggle-input:checked ~ .nav-toggle span:nth-child(2){opacity:0}
-  .nav-toggle-input:checked ~ .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-}
-
-/* hero */
-.hero{position:relative;min-height:min(86vh,720px);display:flex;align-items:flex-end;padding-block:clamp(70px,16vh,150px) clamp(40px,8vh,72px);overflow:hidden;color:#fff}
-.hero-media{position:absolute;inset:0;z-index:-1}
-.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 55%}
-.hero-scrim{position:absolute;inset:0;background:linear-gradient(to top, rgba(20,19,17,.68) 0%, rgba(20,19,17,.3) 40%, rgba(20,19,17,.12) 70%, rgba(20,19,17,.32) 100%)}
-.hero-body{position:relative}
-.hero-kicker{font-family:var(--font-en);font-size:.92rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;margin-bottom:22px;display:flex;align-items:center;gap:12px;text-shadow:0 1px 10px rgba(0,0,0,.4)}
-.hero-kicker .rule{width:28px;height:1.5px;background:currentColor}
-.hero-title{font-size:clamp(2rem,1.2rem + 4.6vw,3.6rem);font-weight:700;line-height:1.4;letter-spacing:.03em;text-shadow:0 4px 30px rgba(0,0,0,.32);text-wrap:balance}
-.hero-lead{max-width:32em;margin-top:22px;font-size:clamp(.94rem,.88rem + .3vw,1.05rem);line-height:1.95;text-shadow:0 1px 14px rgba(0,0,0,.45)}
-.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
-.hero-perk{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-size:.82rem;letter-spacing:.02em;color:rgba(255,255,255,.82)}
-.hero-perk svg{flex:none;opacity:.85}
-.hero-badge{position:absolute;top:clamp(40px,7vh,80px);right:var(--gutter);width:132px;height:132px;display:grid;place-content:center;gap:3px;text-align:center;border:1px solid rgba(198,214,193,.9);border-radius:50%;background:radial-gradient(circle, rgba(124,138,122,.42) 0%, rgba(124,138,122,.2) 100%);backdrop-filter:blur(3px);padding:10px;font-family:var(--font-jp);font-size:.68rem;letter-spacing:.04em;text-shadow:0 1px 8px rgba(0,0,0,.5)}
-.hero-badge b{font-size:.92rem;font-weight:700;letter-spacing:.02em;line-height:1.3}
-@media (max-width:720px){.hero-badge{display:none}}
-.hero-perk-mobile{display:none;margin-top:14px;font-size:.82rem;color:rgba(255,255,255,.82)}
-@media (max-width:720px){.hero-perk-mobile{display:block}}
-.br-mobile{display:none}
-@media (max-width:720px){.br-mobile{display:inline}}
-
-/* section */
-.section{padding-block:var(--sp-section)}
-.section:nth-of-type(odd){background:var(--paper)}
-.section:nth-of-type(even){background:var(--paper-2)}
-.section-head{max-width:40rem;margin-bottom:clamp(32px,6vw,56px)}
-.grid-2{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:clamp(28px,6vw,80px);align-items:start}
-@media (max-width:760px){.grid-2{grid-template-columns:1fr}}
-.flow-grid{grid-template-columns:minmax(0,.5fr) minmax(0,1fr);gap:clamp(20px,4vw,48px)}
-@media (max-width:760px){.flow-grid{grid-template-columns:1fr}}
-
-/* hairline rows (used everywhere) */
-.rows{display:grid;gap:2px}
-.rows.top{border-top:1px solid var(--line-strong)}
-.checklist-groups{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,40px)}
-.group-label{font-size:.86rem;font-weight:700;color:var(--sage-deep);letter-spacing:.02em;margin:0 0 10px}
-.checklist{border-top:1px solid var(--line-strong)}
-.checklist li{position:relative;padding:16px 0 16px 30px;border-bottom:1px solid var(--line);font-size:clamp(.9rem,.88rem + .2vw,.98rem);line-height:1.6}
-.checklist li::before{content:"";position:absolute;left:2px;top:23px;width:13px;height:7px;border-left:1.5px solid var(--sage-deep);border-bottom:1.5px solid var(--sage-deep);transform:rotate(-45deg)}
-@media (max-width:560px){.checklist-groups{grid-template-columns:1fr}}
-
-.concept-list li{padding:26px 0;border-top:1px solid var(--line)}
-.concept-list li:last-child{border-bottom:1px solid var(--line)}
-.concept-list .num{font-family:var(--font-en);font-size:.76rem;font-weight:600;letter-spacing:.16em;color:var(--sage-deep)}
-.concept-list h3{margin:.5em 0 .35em;font-size:1.1rem;font-weight:700;letter-spacing:.03em}
-.concept-list p{color:var(--ink-soft);font-size:.94rem}
-
-.value-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-strong);border-left:1px solid var(--line-strong)}
-.value-cell{padding:24px 20px;border-right:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
-.value-cell svg{display:block}
-.value-cell .num{font-family:var(--font-en);font-size:2.1rem;font-weight:700;letter-spacing:.02em;color:var(--sage-deep);display:block;line-height:1}
-.value-cell h3{font-size:1rem;font-weight:700;margin:.4em 0 .3em}
-.value-cell p{color:var(--ink-soft);font-size:.86rem}
-@media (max-width:760px){.value-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:420px){.value-grid{grid-template-columns:1fr}}
-
-.menu-item{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 28px;padding:26px 0;border-bottom:1px solid var(--line)}
-.menu-list{border-top:1px solid var(--line-strong)}
-.menu-item-main{flex:1 1 300px}
-.menu-item-main h3{font-size:1.14rem;font-weight:700;letter-spacing:.03em;margin:0 0 .3em;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.menu-item-main p{color:var(--ink-soft);font-size:.9rem;line-height:1.75;max-width:44ch;margin:0 0 8px}
-.menu-item-main ul{display:flex;flex-direction:column;gap:4px;font-size:.86rem;color:var(--ink-soft)}
-.menu-item-meta{display:flex;flex-direction:column;align-items:flex-end;gap:6px;white-space:nowrap}
-.menu-item-meta .price{font-family:var(--font-en);font-size:1.5rem;font-weight:500}
-.menu-item-meta .price span{font-size:.7rem;color:var(--ink-soft);font-family:var(--font-jp)}
-.tag{font-family:var(--font-en);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage-deep);border:1px solid var(--line-strong);border-radius:20px;padding:2px 10px}
-
-.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;align-items:stretch}
-.plan{border:1px solid var(--line-strong);border-radius:var(--radius);background:var(--paper);padding:24px 22px;display:flex;flex-direction:column;gap:8px;position:relative}
-.plan.rec{border:1.5px solid var(--ink)}
-.plan .rec-tag{position:absolute;top:-11px;left:20px;background:#b3372c;color:#fbfaf7;font-family:var(--font-en);font-size:.64rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:20px}
-.plan h3{font-size:1.1rem;font-weight:700;letter-spacing:.03em;margin:4px 0 0}
-.plan .sub{font-size:.82rem;color:var(--ink-soft)}
-.plan .price{font-family:var(--font-en);font-size:1.9rem;font-weight:500;margin:4px 0}
-.plan .price span{font-size:.68rem;color:var(--ink-soft);font-family:var(--font-jp)}
-.plan ul{display:flex;flex-direction:column;gap:6px;font-size:.86rem;color:var(--ink-soft)}
-.plan ul li.base{font-weight:700;color:var(--ink)}
-.plan ul li.plus::before{content:"＋ ";color:var(--sage-deep);font-weight:700}
-.plan .note{font-size:.72rem;color:var(--ink-soft);margin:-2px 0 0}
-.plan .for{margin-top:auto;padding-top:12px;border-top:1px dashed var(--line-strong);font-size:.8rem;color:var(--ink-soft)}
-
-.steps li{padding:24px 0;border-top:1px solid var(--line)}
-.steps li:last-child{border-bottom:1px solid var(--line)}
-.steps h3{display:flex;align-items:center;gap:16px;font-size:1.06rem;font-weight:700;letter-spacing:.03em;margin:0 0 .5em}
-.step-no{display:inline-grid;place-items:center;width:30px;height:30px;flex:none;border:1px solid var(--line-strong);border-radius:50%;font-family:var(--font-en);font-size:.78rem;font-weight:600}
-.steps p{color:var(--ink-soft);font-size:.94rem;padding-left:46px;margin:0}
-
-.salon-grid{align-items:start}
-@media (min-width:761px){.salon-grid{grid-template-columns:minmax(0,220px) minmax(0,1fr)}}
-.salon-figure{overflow:hidden;border-radius:var(--radius);background:var(--paper-3)}
-.salon-figure img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 28%}
-.ph{display:flex;align-items:center;justify-content:center;text-align:center;color:var(--ink-soft);font-size:.8rem;padding:16px;background:repeating-linear-gradient(135deg,var(--paper-3),var(--paper-3) 10px,var(--paper-2) 10px,var(--paper-2) 20px)}
-.salon-profile{margin-top:28px;display:grid;gap:2px}
-.salon-profile div{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--line);font-size:.9rem}
-.salon-profile div:last-child{border-bottom:1px solid var(--line)}
-.salon-profile dt{color:var(--sage-deep);letter-spacing:.06em;font-size:.82rem;padding-top:.1em}
-.salon-profile dd{margin:0;color:var(--ink-soft)}
-@media (max-width:500px){.salon-profile div{grid-template-columns:1fr}}
-
-.faq-list{border-top:1px solid var(--line-strong)}
-.faq-list details{border-bottom:1px solid var(--line)}
-.faq-list summary{display:flex;align-items:flex-start;gap:16px;padding:22px 0;font-size:.98rem;font-weight:500;letter-spacing:.02em;cursor:pointer;list-style:none}
-.faq-list summary::-webkit-details-marker{display:none}
-.faq-list summary::before{content:"Q";flex:none;font-family:var(--font-en);font-weight:700;color:var(--sage-deep)}
-.faq-list p{color:var(--ink-soft);font-size:.92rem;padding:0 0 22px 30px;margin:0}
-
-.opt-list{margin-top:32px}
-.opt-list h4{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sage-deep);margin:0 0 12px}
-.opt-list ul{display:grid;gap:2px;max-width:480px}
-.opt-list li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.88rem}
-.opt-list li span:last-child{color:var(--ink-soft);font-family:var(--font-en)}
-
-.field{margin-bottom:18px}
-.field label{display:block;font-size:.78rem;letter-spacing:.08em;color:var(--sage-deep);margin-bottom:6px}
-.field input,.field select,.field textarea{width:100%;border:none;border-bottom:1px solid var(--line-strong);background:transparent;padding:10px 2px;font-size:.95rem;font-family:var(--font-jp);color:var(--ink)}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--ink)}
-
-footer.site-footer{padding-block:36px;border-top:1px solid var(--line);background:var(--paper)}
-footer.site-footer .brand-name{font-family:var(--font-en);font-weight:600;letter-spacing:.1em;font-size:1rem}
-footer.site-footer p{font-size:.82rem;color:var(--ink-soft);margin:4px 0}
-:where(a,button,summary,input):focus-visible{outline:2px solid var(--sage-deep);outline-offset:3px}
 </style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand" href="#top">
-      <img src="images/logo.png" alt="ヨコグミ">
-    </a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
-    <label for="nav-toggle" class="nav-toggle" aria-label="メニューを開く"><span></span><span></span><span></span></label>
-    <nav class="nav-list">
-      <a href="#s3" onclick="document.getElementById('nav-toggle').checked=false">大切にしていること</a>
-      <a href="#s4" onclick="document.getElementById('nav-toggle').checked=false">サービス内容</a>
-      <a href="#s4-price" onclick="document.getElementById('nav-toggle').checked=false">料金</a>
-      <a href="#s6" onclick="document.getElementById('nav-toggle').checked=false">プロフィール</a>
-      <a href="#s7" onclick="document.getElementById('nav-toggle').checked=false">実績</a>
-      <a href="#s8" onclick="document.getElementById('nav-toggle').checked=false">FAQ</a>
+<header class="hd">
+  <div class="wrap hd__in">
+    <a class="hd__logo" href="#top" aria-label="ヨコグミ トップへ"><img src="assets/img/logo-horizontal.png" width="110" height="40" alt="ヨコグミ YOKOGUMI STARTUP SUPPORT"></a>
+    <nav class="hd__nav" aria-label="ページ内メニュー">
+      <a href="#price">料金</a><a href="#flow">進め方</a><a href="#faq">FAQ</a>
+      <a class="btn-line" href="#contact">無料相談</a>
     </nav>
-    <span class="nav-cta"><a href="#s9">無料相談</a></span>
+    <button class="hd__btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="メニューを開く"><span></span><span></span><span></span></button>
   </div>
+  <nav class="mnav" id="mnav" aria-label="メニュー" hidden>
+    <div class="wrap">
+      <a href="#story"><span class="num">01</span>ヨコグミについて</a>
+      <a href="#numbers"><span class="num">02</span>実績</a>
+      <a href="#neutral"><span class="num">03</span>他との違い</a>
+      <a href="#price"><span class="num">04</span>料金</a>
+      <a href="#flow"><span class="num">05</span>進め方</a>
+      <a href="#faq"><span class="num">06</span>よくある質問</a>
+      <a class="mnav__cta" href="#contact">まずは無料相談してみる <span aria-hidden="true">→</span></a>
+    </div>
+  </nav>
 </header>
 
-<section class="hero" id="top">
-  <div class="hero-media"><img src="images/hero.png" alt="温かみのある店内の様子"></div>
-  <div class="hero-scrim"></div>
-  <div class="wrap hero-body">
-    <p class="hero-kicker"><span class="rule"></span>弁当店「べんとも」元オーナー直伝</p>
-    <h1 class="hero-title">お店づくりを<br>開業から支える。</h1>
-    <p class="hero-lead">何から始めればいいか分からなくて当然です。<br class="br-mobile">私も同じでした。<br>まずは気軽にご相談ください。</p>
-    <div class="hero-actions">
-      <a href="#s9" class="btn btn-primary">まずは無料相談する</a>
-      <a href="#s4-price" class="btn btn-ghost on-photo">料金を見る</a>
-    </div>
-    <p class="hero-perk-mobile">相談いただいた方には「開業までのロードマップ」を<br>お渡ししています</p>
-  </div>
-  <div class="hero-badge"><span>無料相談で</span><b>開業までの<br>ロードマップ</b><span>プレゼント</span></div>
-</section>
+<main id="top">
 
-<!-- S2 共感 -->
-<section class="section" id="s2">
-  <div class="wrap grid-2">
-    <div class="section-head">
-      <p class="kicker"><span class="rule"></span>こんな方へ</p>
-      <h2 class="h2" style="font-size:clamp(1.25rem,.9rem + 1.7vw,1.8rem);white-space:normal;">開業の準備をしていると、<br>こんなところで<br>手が止まりがちです。</h2>
-      <p class="lead">私も弁当店で、同じところで手が止まりました。</p>
-    </div>
-    <div class="checklist-groups">
-      <div>
-        <p class="group-label">開業準備でつまずきがちなこと</p>
-        <ul class="checklist">
-          <li>何から、どう進めるか分からない</li>
-          <li>準備で手一杯で、販促まで手が回らない</li>
-          <li>販促物を別々に頼むと、高い・遅い・バラバラ</li>
-        </ul>
-      </div>
-      <div>
-        <p class="group-label">開業後の運営でつまずきがちなこと</p>
-        <ul class="checklist">
-          <li>HP・LINE・マップのことが分からない</li>
-          <li>SNS更新をする時間がない。続かない</li>
-          <li>仕込み・発注・会計の見直しに時間が取れない</li>
-          <li>AIツールも気になるけれど、何から使えばいいか分からない</li>
-        </ul>
-      </div>
-    </div>
+<!-- 01 共感：ファーストビュー -->
+<section class="hero hero--bg">
+  <img class="hero__bg" src="assets/img/hero.jpg" width="1376" height="768" alt="開店準備中の店のカウンターで、キャップとデニムのエプロンの男性と、ベージュのシャツの女性が横に並び、間取り図をのぞき込んで相談している" fetchpriority="high">
+  <div class="hero__veil" aria-hidden="true"></div>
+  <div class="wrap hero__body">
+    <p class="label">YOKOGUMI — 元弁当屋の、リアル開業相談。</p>
+    <h1 class="h1"><span class="nb">元弁当屋だから、</span><br><span class="nb">開業のギモン／</span><br><span class="nb"><span class="g">リアル</span>に</span><br><span class="nb">お答えできます。</span></h1>
+    <p class="lead">金沢・石川で、飲食店の開業・運営を、実際に経営した立場から横で一緒に考えます。オンラインなら全国から。</p>
+    <p class="cta-row">
+      <a class="btn" href="#contact">まずは無料相談してみる <span aria-hidden="true">→</span></a>
+      <a class="ulink" href="#price">料金を見る</a>
+    </p>
+    <p class="note">契約するまで、何度でも無料です。</p>
+    <dl class="strip strip--bg">
+      <dt>2023 → 2025　年間売上</dt>
+      <dd class="num">約1.5<small>倍</small></dd>
+    </dl>
   </div>
 </section>
 
-<!-- S3 大事にしていること -->
-<section class="section" id="s3">
+<!-- 02 共感：悩み -->
+<section class="sec" id="worry">
   <div class="wrap">
-    <div class="section-head">
-      <p class="kicker"><span class="rule"></span>Our value</p>
-      <h2 class="h2">ヨコグミが大切にしていること</h2>
-      <p class="lead">「現場目線で、店づくりを一緒に。」を、次の4つで実践します。</p>
-      <p class="lead" style="margin-top:10px;color:var(--ink);font-weight:600;">きれいごとでなく、立ち上げ・経営・バイアウトを経験した当事者として。</p>
-    </div>
-    <div class="value-grid">
-      <div class="value-cell">
-        <span class="num">01</span>
-        <h3>話をじっくり聴きます</h3>
-        <p>どんな小さなことも、最後までお話を伺います。</p>
-      </div>
-      <div class="value-cell">
-        <span class="num">02</span>
-        <h3>正直に言います</h3>
-        <p>売れないものは、売れないとお伝えします。</p>
-      </div>
-      <div class="value-cell">
-        <span class="num">03</span>
-        <h3>早く動きます</h3>
-        <p>相談から見積りまで、スピーディーに対応します。</p>
-      </div>
-      <div class="value-cell">
-        <span class="num">04</span>
-        <h3>一緒に悩みます</h3>
-        <p>自分の店のことのように考え、一緒に答えを探します。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- S4 サービス内容 -->
-<section class="section" id="s4" style="padding-bottom:clamp(20px,3vw,32px);">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="kicker"><span class="rule"></span>Service</p>
-      <h2 class="h2">サービス内容</h2>
-      <p class="lead">大きく分けると、2つの支援をしています。<br>どちらも、無料相談で状況を伺ってからご案内します。</p>
-    </div>
-
-    <div class="grid-2">
-      <div>
-        <h3 style="font-size:1.06rem;font-weight:700;letter-spacing:.03em;margin:0 0 .4em;">開業準備</h3>
-        <p style="color:var(--ink-soft);font-size:.92rem;margin:0 0 14px;">コンセプトやメニュー・原価の相談から、集客の準備まで。<br>最終的に決めるのはご本人ですが、一緒に整理して形にするのをお手伝いさせていただきます。</p>
-        <ul class="checklist" style="font-size:.9rem;">
-          <li>コンセプトの相談（想いを言葉にする）</li>
-          <li>メニュー・原価の相談</li>
-          <li>集客の準備（HP・SNS・チラシなど）</li>
-          <li>「何から始める？」の整理</li>
-        </ul>
-      </div>
-      <div>
-        <h3 style="font-size:1.06rem;font-weight:700;letter-spacing:.03em;margin:0 0 .4em;">業務改善</h3>
-        <p style="color:var(--ink-soft);font-size:.92rem;margin:0 0 14px;">仕込み、発注、回転率、SNS運用など、日々の「困った」を一緒に見直します。<br>決めるのはご本人。ヨコグミは、現場目線で相談に乗る役目です。</p>
-        <ul class="checklist" style="font-size:.9rem;">
-          <li>仕込み・発注・回転率の相談</li>
-          <li>SNS運用の見直し</li>
-          <li>日々の「困った」の相談</li>
-          <li>AIを使用したツール提案</li>
-        </ul>
-      </div>
-    </div>
-    <p class="lead" style="margin-top:clamp(28px,5vw,44px);">ここまで、どのくらい深く扱えるかはプランによって変わります。<br><a href="#s4-price" style="color:var(--sage-deep);border-bottom:1px solid var(--sage-deep);">料金プランを見る →</a></p>
-  </div>
-</section>
-
-<!-- S4b 料金プラン -->
-<section class="section" id="s4-price" style="padding-top:clamp(20px,3vw,32px);background:var(--paper);">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="kicker"><span class="rule"></span>Price</p>
-      <h2 class="h2">料金プラン</h2>
-      <p class="lead">3つのプランから選べます。<br>どれが合うかは無料相談（契約前）で一緒に決めます。<br>各プランに含まれる相談は、契約後の制作期間中のものです。</p>
-    </div>
-
-    <div class="plans">
-      <div class="plan">
-        <h3>お手軽プラン</h3>
-        <div class="sub">まず、ネットで見つかる状態に。相談はスポットで</div>
-        <div class="price">9.8<span>万円</span></div>
-        <ul>
-          <li>スポット相談（合計1回・対面）</li>
-          <li>ホームページ（1ページ）</li>
-          <li>Googleビジネスプロフィール開設</li>
-          <li>Instagram開設・初期整備</li>
-        </ul>
-        <div class="for">まず最低限、ネットで見つかる状態にしたい人に</div>
-      </div>
-      <div class="plan rec">
-        <span class="rec-tag">おすすめ</span>
-        <h3>標準プラン</h3>
-        <div class="sub">分からないことを、ちゃんと相談しながら進められる</div>
-        <div class="price">21.8<span>万円</span></div>
-        <ul>
-          <li class="base">お手軽プランの全部</li>
-          <li class="plus">たくさん相談できる伴走（合計12回・6ヶ月以内・対面）</li>
-          <li class="plus">A4チラシデザイン（印刷用データまで）</li>
-          <li class="plus">名刺デザイン（印刷用データまで）</li>
-          <li class="plus">LINE公式アカウント開設</li>
-        </ul>
-        <p class="note">※ペースは自由（1ヶ月の上限4回、ご相談しながら調整）。超過分はスポット相談扱い</p>
-        <div class="for">開業までに必要なものを一通りそろえたい人に</div>
-      </div>
-      <div class="plan">
-        <h3>まるごとプラン</h3>
-        <div class="sub">最大12回の伴走に加え、開店後3ヶ月まで、とことん</div>
-        <div class="price">43<span>万円</span></div>
-        <ul>
-          <li class="base">標準プランの全部</li>
-          <li class="plus">開業後3ヶ月の継続相談（月1回）</li>
-          <li class="plus">LINE予約(LIFF)・ネット予約フォーム</li>
-          <li class="plus">レジ・決済導入支援</li>
-        </ul>
-        <p class="note">※開業までの伴走はペースは自由（1ヶ月の上限4回、ご相談しながら調整）。超過分はスポット相談扱い</p>
-        <div class="for">準備から開業後も、丸ごと任せたい人に</div>
-      </div>
-    </div>
-    <p class="lead" style="margin-top:10px;font-size:.84rem;">※表示価格はすべて税別です。</p>
-
-    <div class="grid-2" style="margin-top:32px;align-items:start;">
-      <div>
-        <h4 style="font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sage-deep);margin:0 0 12px;">継続してご案内できる月額プラン</h4>
-        <div class="plan" style="max-width:360px;">
-          <h3>業務改善伴走プラン</h3>
-          <div class="sub">開業後の経営相談を、しっかり月単位で</div>
-          <div class="price">3<span>万円〜／月・税別</span></div>
-          <ul>
-            <li>月2回の相談（LINE相談はいつでも◎）</li>
-            <li>売上・SNS運用のチェックとアドバイス</li>
-            <li>業務改善のご提案（※ツール開発は別料金）</li>
-            <li>ホームページの更新</li>
-          </ul>
-          <p class="note">契約期間は1ヶ月単位（自動更新・最低契約期間なし）です。</p>
-          <p class="note">※現在は先着数件限定のご案内価格です。実績が増え次第、見直す場合があります。前月末までにご連絡がなければ翌月も自動更新、解約のご連絡があれば翌月から停止します。ご案内できる枠には限りがあります（同時に対応できるのは数件まで）。</p>
-          <div class="for">ヨコグミ卒業後の方はもちろん、既存店で継続的な相談相手が欲しい方に</div>
-        </div>
-      </div>
-      <div class="opt-list" style="margin-top:0;">
-        <h4>追加できるオプション（単品でも可・税別）</h4>
-        <ul>
-          <li><span>ショップカード（名刺サイズ・両面）</span><span>1.5〜2万円</span></li>
-          <li><span>のぼり・店頭A型看板データ</span><span>2〜3万円</span></li>
-          <li><span>屋号ネーミング</span><span>2〜4万円</span></li>
-          <li><span>ロゴ作成（ロゴタイプ／シンボル付き）</span><span>4〜8万円／8〜14万円</span></li>
-          <li><span>相談（プラン内の回数を超えた分・1時間）</span><span>1万円</span></li>
-        </ul>
-        <p style="font-size:.82rem;color:var(--ink-soft);margin-top:14px;">※内容により、詳細は個別にお見積もりさせていただきます。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- S5 進め方 -->
-<section class="section" id="s5">
-  <div class="wrap grid-2 flow-grid">
-    <div class="section-head">
-      <p class="kicker"><span class="rule"></span>Flow</p>
-      <h2 class="h2">進め方</h2>
-      <p class="lead">指示や提案書だけで終わらず、<br>同じ目線で一緒に動きます。</p>
-    </div>
-    <ul class="steps">
-      <li><h3><span class="step-no">1</span>無料相談</h3><p>対面（オンライン可）。1事業者1回・無料。開業までのロードマップをプレゼントします。</p></li>
-      <li><h3><span class="step-no">2</span>プラン選択</h3><p>お手軽・標準・まるごとから、一緒に決めます。ここまで無料です。</p></li>
-      <li><h3><span class="step-no">3</span>契約</h3><p>内容にご納得いただいたら、正式にご契約します。</p></li>
-      <li><h3><span class="step-no">4</span>伴走しながら制作</h3><p>HP・チラシ・名刺などを、一つずつ一緒に形にします。</p></li>
-      <li><h3><span class="step-no">5</span>開業・その後</h3><p>まるごとプランは開業後3ヶ月も継続。開業後も一人にしません。</p></li>
+    <p class="sec__no" aria-hidden="true">01</p>
+    <p class="label"><b>01</b> / 共感</p>
+    <h2 class="h2">こんなところで、<br>止まっていませんか。</h2>
+    <ul class="worry">
+      <li>何から手をつければいいのか、分からない。</li>
+      <li>開業したのに、何を直せば売上が伸びるのか分からない。</li>
+      <li>誰に相談すればいいのか分からず、一人で抱えている。</li>
     </ul>
+    <p class="bridge">その悩み、実際に弁当屋を経営していた私だから、<br class="pc">一緒に考えられます。</p>
+    <p class="note">対象：物件探し・資金調達・事業計画など、具体的に動き出している方。開業後1年くらいまでの方も。</p>
   </div>
 </section>
 
-<!-- S6 プロフィール -->
-<section class="section" id="s6">
-  <div class="wrap grid-2 salon-grid">
-    <div class="salon-figure">
-      <img src="images/profile.jpg" alt="村田一訓">
-    </div>
-    <div>
-      <p class="kicker"><span class="rule"></span>About</p>
-      <h2 class="h2">お店を実際にやってみたから、わかる。<br>原価も、コンセプトも、SNSの反応も、<br>知っていることは全部お話します。</h2>
-      <p class="lead">経営の大変さは、実際にやってみて初めて分かりました。<br>印刷会社で約20年デザイン業務に携わったのち、一念発起して金沢で弁当店「べんとも」を始めたのがきっかけです。<br>原価もコンセプトも客単価もSNSの反応も、他人事ではなく自分のこととして分かります。<br>この経験を、これから始める方のお店づくりに活かしたいと思っています。</p>
-      <div class="salon-profile">
-        <div><dt>肩書き</dt><dd>金沢市の弁当店「べんとも」元オーナー／飲食店開業サポート</dd></div>
-        <div><dt>代表</dt><dd>村田　一訓（むらた　かずのり）</dd></div>
-        <div><dt>実績</dt><dd>約4年間の経営で、2025年度実績 年商1,850万円。開業から一貫して黒字経営。2026年8月に第三者へ事業承継</dd></div>
-        <div><dt>SNS運用</dt><dd>Instagramは約4,000フォロワー。LINE公式アカウント・予約フォームも自身で開発</dd></div>
+<!-- 03 当事者 -->
+<section class="sec sec--tint" id="story">
+  <div class="wrap">
+    <p class="sec__no" aria-hidden="true">02</p>
+    <p class="label"><b>02</b> / 当事者</p>
+    <div class="two">
+      <div>
+        <h2 class="h2 h2--m">「本気でやる」と、<br><span class="nb">「正しいやり方でやる」は、</span><br>違いました。</h2>
+        <p><span class="s">印刷業界で約20年勤めたのち、</span><span class="s">コロナ禍をきっかけに、</span><span class="s">妻と温めていた夢に踏み出しました。</span><span class="s">飲食未経験のまま始めた弁当店「べんとも」です。</span></p>
+        <p>最初は、知らないことだらけでした。</p>
+        <ul class="ledger ledger--plain">
+          <li><span class="num">01</span>仕入れの買い出しを、全部自分でやっていた</li>
+          <li><span class="num">02</span>勤怠管理を、手作業で済ませていた</li>
+          <li><span class="num">03</span>店頭で待つだけの、「待ち」の商売だった</li>
+          <li><span class="num">04</span>法人の弁当需要に、あとから気づいた</li>
+          <li><span class="num">05</span>仕込みにかかる時間を、見誤った</li>
+        </ul>
+        <p><span class="s">どれも、知らなかっただけでした。</span><span class="s">知らなかったことを、先にお伝えします。</span></p>
       </div>
+      <figure class="prof">
+        <img src="assets/img/profile.jpg" width="420" height="640" loading="lazy" alt="村田一訓：エプロン姿で穏やかに笑う">
+        <figcaption class="cap"><span>村田一訓</span> 立ち上げ・経営・事業譲渡の当事者</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- S7 実績 -->
-<section class="section" id="s7">
+<!-- 04 数字 -->
+<section class="sec sec--green" id="numbers">
   <div class="wrap">
-    <div class="section-head">
-      <p class="kicker"><span class="rule"></span>Works</p>
-      <h2 class="h2">実績</h2>
+    <p class="sec__no" aria-hidden="true">03</p>
+    <p class="label"><b>03</b> / 数字</p>
+    <p class="years num">2023 <span aria-hidden="true">→</span> 2025</p>
+    <p class="years__l">年間売上</p>
+    <p class="big num" id="bigNum" data-to="1.5">約1.5<small>倍</small></p>
+    
+    <div class="trend" aria-label="年間売上の推移（2023年度を100とした指数）">
+      <p class="label">売上の推移　2023年度を「100」として</p>
+      <div class="trend__row"><span class="y num">2023年度</span><span class="bar" style="--w:62.5%"></span><span class="v num">100</span></div>
+      <div class="trend__row"><span class="y num">2025年度</span><span class="bar" style="--w:96.9%"></span><span class="v num">約155</span></div>
     </div>
-    <p class="group-label">HP・LP</p>
-    <ul class="menu-list">
-      <li class="menu-item">
-        <div class="menu-item-main">
-          <h3>凪 -nagi- フェイシャルサロン<span class="tag">美容サロン</span></h3>
-          <p>1ページHPの新規制作。予約導線・世界観の統一まで対応。</p>
-        </div>
-        <div class="menu-item-meta"><a href="https://santaworks-jp.github.io/nagi/" target="_blank" rel="noopener" class="btn btn-ghost" style="min-height:auto;padding:8px 16px;font-size:.82rem;">見る →</a></div>
-      </li>
-      <li class="menu-item">
-        <div class="menu-item-main">
-          <h3>白木 -shiraki- 日本料理店<span class="tag">日本料理店</span></h3>
-          <p>金沢・片町の夜のみ完全予約制を想定した1ページLP。暗い和の誌面調、縦組み見出しでまとめた1本。</p>
-        </div>
-        <div class="menu-item-meta"><a href="https://santaworks-jp.github.io/shiraki/" target="_blank" rel="noopener" class="btn btn-ghost" style="min-height:auto;padding:8px 16px;font-size:.82rem;">見る →</a></div>
-      </li>
-    </ul>
 
-    <p class="group-label" style="margin-top:32px;">印刷物</p>
-    <ul class="menu-list">
-      <li class="menu-item" style="align-items:flex-start;">
-        <div class="menu-item-main">
-          <h3>パン屋 新規開店チラシ<span class="tag">ベーカリー</span></h3>
-          <p>A4オープン告知チラシ。コンセプト・商品写真を活かしたデザインから印刷データまで。</p>
-        </div>
-        <div class="menu-item-meta"><img src="images/bakery-flyer.png" alt="パン屋 新規開店チラシ" style="width:150px;border-radius:4px;display:block;box-shadow:0 3px 14px rgba(0,0,0,.16);"></div>
-      </li>
+    <ul class="ledger ledger--inv">
+      <li><span class="num k">27.4%</span><span class="v">利益率（2025年度）</span></li>
+      <li><span class="num k">3ヶ月</span><span class="v">開業から、単月黒字化</span></li>
+      <li><span class="num k">3年8ヶ月</span><span class="v">経営し、黒字のまま事業譲渡</span></li>
     </ul>
-
-    <p class="group-label" style="margin-top:32px;">業務ツール</p>
-    <ul class="menu-list">
-      <li class="menu-item">
-        <div class="menu-item-main">
-          <h3>げんばTODO<span class="tag">タスク管理ツール</span></h3>
-          <p>今日・今週・いつかでタスクを整理。カテゴリ分けとチェック操作を、その場でお試しいただけます。</p>
-        </div>
-        <div class="menu-item-meta"><a href="https://claude.ai/code/artifact/41b7bd8a-98b0-4cc0-8584-d51c06531484" target="_blank" rel="noopener" class="btn btn-ghost" style="min-height:auto;padding:8px 16px;font-size:.82rem;">見る →</a></div>
-      </li>
-      <li class="menu-item">
-        <div class="menu-item-main">
-          <h3>げんば帳簿<span class="tag">家計簿・お小遣い帳ツール</span></h3>
-          <p>入出金を記帳すると残高を自動計算。日々のお金の記録をシンプルに続けるためのツールです。</p>
-        </div>
-        <div class="menu-item-meta"><a href="https://claude.ai/code/artifact/e36c73b5-1856-431e-ac0d-817f15b323b5" target="_blank" rel="noopener" class="btn btn-ghost" style="min-height:auto;padding:8px 16px;font-size:.82rem;">見る →</a></div>
-      </li>
-    </ul>
-    <p class="lead" style="margin-top:10px;font-size:.84rem;">※げんばTODO・げんば帳簿は紹介用のサンプル（ダミーデータ）です。</p>
+    <p class="inv-p"><span class="s">損益分岐点、FL比率、客単価。</span><span class="s">感覚ではなく、数字を見て判断してきました。</span></p>
   </div>
 </section>
 
-<!-- S8 FAQ -->
-<section class="section" id="s8">
+<!-- 05 立ち位置 -->
+<section class="sec" id="neutral">
   <div class="wrap">
-    <div class="section-head">
-      <p class="kicker"><span class="rule"></span>FAQ</p>
-      <h2 class="h2">よくある質問</h2>
+    <p class="sec__no" aria-hidden="true">04</p>
+    <p class="label"><b>04</b> / 立ち位置</p>
+    <h2 class="h2">特定の業者とは、<br>組んでいません。</h2>
+    <p class="mw">どこかの商品を売るための相談ではありません。開業に必要なものを、一緒に考える側です。何でも相談できます。できないことは、できないと言います。</p>
+
+    <div class="tbl-wrap">
+      <h3 class="h3">開業の相談先は、実はバラバラ</h3>
+      <table class="tbl">
+        <tbody>
+          <tr><th>銀行・信用金庫</th><td>資金調達のことだけ</td></tr>
+          <tr><th>不動産屋</th><td>物件のことだけ</td></tr>
+          <tr><th>税理士</th><td>税金・数字のことだけ</td></tr>
+          <tr><th>広告・制作会社</th><td>広告・HPのことだけ</td></tr>
+          <tr class="me"><th>ヨコグミ</th><td>開業に関わることを、横断して相談できる</td></tr>
+        </tbody>
+      </table>
     </div>
-    <div class="faq-list">
-      <details open><summary>対応エリアはどこですか？</summary><p>金沢市と近県が中心です。オンラインで全国も対応します。</p></details>
-      <details><summary>開業前で、何から始めたらいいか分かりません。相談してよいですか？</summary><p>大丈夫です。むしろそういう方のための相談です。<br>開業までのロードマップをお渡ししながら、何を用意すべきかの整理からお手伝いします。</p></details>
-      <details><summary>既存店のリニューアルだけでも頼めますか？</summary><p>頼めます。HPだけ、名刺だけ、でも構いません。</p></details>
-      <details><summary>飲食店以外でも頼めますか？</summary><p>現在は飲食店の開業・運営支援に絞って対応しています。<br>飲食店の立ち上げから、黒字での引き継ぎまでの経験を活かせる範囲で、お力になりたいためです。</p></details>
-      <details><summary>メニューやコンセプトを、代わりに決めてもらえますか？</summary><p>最終的に決めるのはご本人です。ヨコグミが代わりに決めることはしません。<br>ただ、話を伺いながら一緒に絞り込んだり、経営目線で判断材料をお伝えすることはできます。</p></details>
+
+    <div class="tbl-wrap">
+      <h3 class="h3">ほかの開業コンサルとの違い</h3>
+      <table class="tbl tbl--cmp">
+        <thead><tr><th></th><th>一般的な開業コンサル</th><th>ヨコグミ</th></tr></thead>
+        <tbody>
+          <tr><th>経営した経験は</th><td>ない人が多い</td><td>実際に経営し、黒字のまま譲渡した</td></tr>
+          <tr><th>いつまで見てくれる</th><td>開業前まで</td><td>開業後も、相談できる</td></tr>
+          <tr><th>業者との関係は</th><td>提携していることも</td><td>どことも提携していない</td></tr>
+          <tr><th>勧めるものは</th><td>理論・一般論になりがち</td><td><span class="s">経営した経験から、</span><span class="s">本当に必要なもの</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="name">
+      <img src="assets/img/logo-character.png" width="120" height="140" loading="lazy" alt="ヨコグミのラッコ">
+      <p><span class="s"><b>ヨコグミ</b>は、「横」に並んで、「組む」という意味です。</span><span class="s">ラッコが仲間と手をつないで並んで浮く姿に、その考え方を重ねました。</span><span class="s">上から教えるのではなく、横に並んで、一緒に考えます。</span></p>
     </div>
   </div>
 </section>
 
-<!-- S9 問い合わせ -->
-<section class="section" id="s9">
-  <div class="wrap grid-2">
-    <div class="section-head">
-      <p class="kicker"><span class="rule"></span>Contact</p>
-      <h2 class="h2">まず無料相談で、<br>お話を聞かせてください。</h2>
-      <p class="lead">まだ何も決まっていなくて大丈夫です。いただいた内容には2営業日以内に返信します。</p>
-      <p class="lead" style="margin-top:10px;font-size:.84rem;">相談いただいた方には「開業までのロードマップ」をお渡ししています。</p>
+<!-- 06 できること -->
+<section class="sec sec--tint" id="price">
+  <div class="wrap">
+    <p class="sec__no" aria-hidden="true">05</p>
+    <p class="label"><b>05</b> / できること</p>
+    <h2 class="h2">必要なものだけ、<br>選んでください。</h2>
+    <p class="mw">メインは、無料相談です。実務に入るときだけ、必要な分を単品で選べます。パッケージはありません。</p>
+
+    <form class="calc" id="calc" aria-label="お見積りの目安">
+      <ul class="ledger ledger--sel">
+        <li><label><input type="checkbox" data-min="60000" data-max="60000"><span class="n">ホームページ制作<small>1ページ。元弁当屋が、集客導線まで考えて作ります。</small></span><span class="p num">¥60,000</span></label></li>
+        <li><label><input type="checkbox" data-min="30000" data-max="30000"><span class="n">A4チラシデザイン<small>実際に配って反応があった構成をベースに。</small></span><span class="p num">¥30,000</span></label></li>
+        <li><label><input type="checkbox" data-min="15000" data-max="30000"><span class="n">名刺デザイン</span><span class="p num">¥15,000〜30,000</span></label></li>
+        <li><label><input type="checkbox" data-min="20000" data-max="20000"><span class="n">ショップカード<small>名刺サイズ・両面。</small></span><span class="p num">¥20,000</span></label></li>
+        <li><label><input type="checkbox" data-min="30000" data-max="30000"><span class="n">のぼり・店頭A型看板（データ）</span><span class="p num">¥30,000</span></label></li>
+        <li><label><input type="checkbox" data-min="20000" data-max="40000"><span class="n">ロゴ作成<small>シンボルなし／あり。</small></span><span class="p num">¥20,000〜40,000</span></label></li>
+        <li><label><input type="checkbox" data-min="50000" data-max="50000"><span class="n">事業計画書・融資書類の作成サポート<small>自己資金と公庫融資で開業した経験から、伴走します。</small></span><span class="p num">¥50,000</span></label></li>
+        <li><label><input type="checkbox" data-min="50000" data-max="50000"><span class="n">オープン直前の1日集中サポート<small>8時間・対面。</small></span><span class="p num">¥50,000</span></label></li>
+        <li><label><input type="checkbox" data-month="30000"><span class="n">SNS運用代行・分析<small>Instagramを約4,000人まで伸ばした実践知で。投稿月4本＋簡易分析。</small></span><span class="p num">¥30,000<i>／月</i></span></label></li>
+        <li><label><input type="checkbox" data-min="10000" data-max="10000"><span class="n">実務相談<small>単品を注文したあと、打ち合わせが必要なとき。1時間。</small></span><span class="p num">¥10,000</span></label></li>
+      </ul>
+      <div class="total">
+        <span class="label">合計（税別・目安）</span>
+        <output class="num" id="total">¥0</output>
+        <output class="num total__m" id="totalM"></output>
+      </div>
+      <p class="note">金額は税別・目安です。幅のある項目は、内容によって変わります。詳しくは相談のうえ、お見積りします。</p>
+    </form>
+
+    <p class="cta-row"><a class="btn" href="#contact">まずは無料相談してみる <span aria-hidden="true">→</span></a></p>
+  </div>
+</section>
+
+<!-- 07 進め方・FAQ -->
+<section class="sec" id="flow">
+  <div class="wrap">
+    <p class="sec__no" aria-hidden="true">06</p>
+    <p class="label"><b>06</b> / 進め方</p>
+    <h2 class="h2">相談してから、<br>決めて大丈夫です。</h2>
+    <ol class="steps">
+      <li><span class="num">01</span><div><h3>無料相談</h3><p>対面（オンラインも可）。契約するまで何度でも無料です。今の状況を伺います。</p></div></li>
+      <li><span class="num">02</span><div><h3>単品を選ぶ</h3><p>必要なものだけを、一緒に決めます。ここまで無料です。</p></div></li>
+      <li><span class="num">03</span><div><h3>お見積り・ご契約</h3><p><span class="s">内容とお見積りを確認して、納得できたらご契約です。</span><span class="s">ご契約までは、費用はかかりません。</span><span class="s">納得できなければ、お断りいただいて構いません。</span></p></div></li>
+      <li><span class="num">04</span><div><h3>制作・実務相談</h3><p><span class="s">HP・チラシ・名刺などを、一つずつ形にします。</span><span class="s">打ち合わせが必要なときは、1時間1万円の実務相談です。</span></p></div></li>
+      <li><span class="num">05</span><div><h3>開業、そのあと</h3><p>開業後も、無料相談は続けられます。一人にしません。</p></div></li>
+    </ol>
+
+    <div class="gift">
+      <p class="label">GIFT</p>
+      <h3 class="gift__h">ご相談の方へ、3つのプレゼント。</h3>
+      <ul class="gift__list">
+        <li><span class="num">GIFT 01</span><b>開業までに、やることリスト</b><span>何から手をつけるかの道しるべ。</span></li>
+        <li><span class="num">GIFT 02</span><b>弁当屋1年目の、実際の収支データ</b><span>個別の取引先は伏せた、サマリー版。</span></li>
+        <li><span class="num">GIFT 03</span><b>開業前に知っておきたかった、失敗談リスト</b><span>先に知っておけば避けられたこと。</span></li>
+      </ul>
     </div>
-    <form onsubmit="return false;">
-      <div class="field"><label for="f-name">お名前</label><input id="f-name" type="text" placeholder="例）金沢 花子"></div>
-      <div class="field"><label for="f-mail">連絡先（メール）</label><input id="f-mail" type="email" placeholder="例）example@mail.com"></div>
-      <div class="field"><label for="f-status">状況</label><select id="f-status"><option>開業前</option><option>既存店</option></select></div>
-      <div class="field"><label for="f-msg">相談内容</label><textarea id="f-msg" rows="3" placeholder="自由記述"></textarea></div>
-      <button type="button" class="btn btn-primary">送信する</button>
-      <p style="font-size:.76rem;color:var(--ink-soft);margin-top:10px;">※現在フォーム送信の準備中です。お急ぎの場合は <a href="mailto:yokogumi.info@gmail.com">yokogumi.info@gmail.com</a> まで直接ご連絡ください。</p>
+
+    <div class="faq" id="faq">
+      <p class="label"><b>07</b> / 質問</p>
+      <h2 class="h2 h2--s">よくある質問</h2>
+      <details><summary>対応エリアはどこですか？</summary><p>金沢市と近県が中心です。オンラインなら全国から対応します。</p></details>
+      <details><summary>開業前で、何から始めたらいいか分かりません。相談してよいですか？</summary><p>大丈夫です。むしろ、そういう方のための相談です。今の状況を伺い、何を用意すべきかの整理から一緒にやります。</p></details>
+      <details><summary>無料相談と、単品を注文したあとの相談は何が違いますか？</summary><p>無料相談は、方向性や疑問への回答が中心で、契約するまで何度でも無料です。実務の代行や制作は含みません。単品を注文したあとに打ち合わせが必要な場合は、1時間1万円の実務相談になります。</p></details>
+      <details><summary>ほかの開業コンサルと何が違いますか？</summary><p>実際に飲食店を経営し、黒字のまま事業譲渡までやった当事者であること。特定の業者と提携せず、忖度なくお話しできることです。</p></details>
+      <details><summary>既存のお店のリニューアルだけでも頼めますか？</summary><p>頼めます。HPだけ、名刺だけでも構いません。単品で選べます。</p></details>
+      <details><summary>屋号やロゴがまだ決まっていませんが、相談できますか？</summary><p>できます。屋号づくり・ロゴ作成もご用意しています。</p></details>
+      <details><summary>飲食店以外でも頼めますか？</summary><p>いまは、飲食店の開業・運営支援に絞っています。飲食店の立ち上げから事業譲渡までの経験を、いちばん活かせるためです。</p></details>
+      <details><summary>ドメイン・サーバーの契約はどうなりますか？</summary><p>基本はお客さまのご契約です（取得・設定はこちらで行います）。管理の代行も承ります。</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 08 相談 -->
+<section class="sec sec--tint" id="contact">
+  <div class="wrap">
+    <p class="sec__no" aria-hidden="true">08</p>
+    <p class="label"><b>08</b> / 相談</p>
+    <h2 class="h2">まず、話を<br>聞かせてください。</h2>
+    <p class="mw"><span class="s">まだ具体化していなくて大丈夫です。</span><span class="s">2営業日以内に返信します。</span><span class="s">しつこい営業はしません。</span></p>
+
+    <form class="form" id="form" novalidate>
+      <label>お名前<input name="name" required autocomplete="name"></label>
+      <label>ご連絡先（メールアドレス）<input name="email" type="email" required autocomplete="email"></label>
+      <label>業種・ジャンル<span class="hint">例：弁当店、カフェ、居酒屋</span><input name="genre"></label>
+      <label>開業予定時期、または開業日<input name="when"></label>
+      <label>現在の状況
+        <select name="status">
+          <option value="">選んでください</option>
+          <option>まだ構想段階</option><option>物件を探している</option><option>資金調達を進めている</option><option>すでに開業していて、運営の相談をしたい</option><option>その他</option>
+        </select>
+      </label>
+      <label>今、一番相談したいこと・困っていること<textarea name="body" rows="5"></textarea></label>
+      <label>相談の形式
+        <select name="style"><option>どちらでも可</option><option>対面</option><option>オンライン</option></select>
+      </label>
+      <label>（対面の場合）希望エリア<input name="area"></label>
+      <label>現在のお仕事（差し支えなければ）<input name="job"></label>
+      <label>ヨコグミを知ったきっかけ<input name="how"></label>
+      <p class="cta-row"><button class="btn" type="submit">この内容で相談する <span aria-hidden="true">→</span></button></p>
+      <p class="note">送信ボタンを押すと、メールアプリが開きます（<span class="num">yokogumi.info@gmail.com</span> 宛）。</p>
     </form>
   </div>
 </section>
 
-<footer class="site-footer">
-  <div class="wrap" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;">
-    <div>
-      <div class="brand-name">YOKOGUMI</div>
-      <p>ヨコグミ｜飲食店開業サポート／ 金沢市</p>
+</main>
+
+<footer class="ft">
+  <div class="wrap ft__in">
+    <img src="assets/img/logo-vertical.png" width="200" height="180" loading="lazy" alt="ヨコグミ YOKOGUMI STARTUP SUPPORT">
+    <div class="ft__t">
+      <p class="label">ヨコグミ｜元弁当屋の、リアル開業相談。</p>
+      <p>村田一訓 ／ 金沢市<br><span class="num">yokogumi.info@gmail.com</span></p>
+      <p class="note">話を最後まで聴く ・ 正直に言う ・ 早く動く ・ 一緒に悩む</p>
     </div>
-    <p><a href="mailto:yokogumi.info@gmail.com" style="color:inherit;">yokogumi.info@gmail.com</a></p>
   </div>
 </footer>
 
+<script src="assets/js/main.js"></script>
 </body>
 </html>
