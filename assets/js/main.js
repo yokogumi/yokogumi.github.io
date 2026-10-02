@@ -79,6 +79,29 @@
     syncFormLinks();
   }
 
+  // アクセス解析：無料相談ボタンのクリックと、価格表の選択を記録（Googleアナリティクス）
+  var track = function (name, params) { if (typeof gtag === 'function') gtag('event', name, params || {}); };
+  var placeOf = function (a) {
+    if (a.closest('.hd__nav')) return 'header';
+    if (a.closest('.mnav')) return 'mobile_menu';
+    if (a.closest('.hero')) return 'hero';
+    if (a.closest('#price')) return 'price';
+    if (a.closest('#contact')) return 'contact';
+    return 'other';
+  };
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="docs.google.com/forms"]');
+    if (a) track('consult_click', { button_place: placeOf(a), has_selection: /entry\./.test(a.href) ? 'yes' : 'no' });
+  });
+  if (calc) {
+    calc.addEventListener('change', function (e) {
+      var c = e.target; if (!c || !c.matches('input[type=checkbox]')) return;
+      var n = c.closest('label').querySelector('.n').firstChild.nodeValue.trim();
+      track(c.checked ? 'service_select' : 'service_unselect', { service_name: n });
+    });
+  }
+
+
   // 08 フォーム（暫定：メールアプリを開く）
   var form = document.getElementById('form');
   if (form) {
