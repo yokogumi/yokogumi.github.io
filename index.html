@@ -50,6 +50,17 @@
   .hero--bg .hero__body>*{max-width:none}
 }
 </style>
+<style>
+/* 価格表：グループ見出しと「要見積り」 */
+.ledger--sel .grp{display:flex;gap:14px;align-items:baseline;padding:34px 0 10px;font-weight:900;font-size:15px;letter-spacing:.04em;border-top:1px solid var(--ink)}
+.ledger--sel .grp:first-child{padding-top:6px;border-top:0}
+.ledger--sel .grp .num{font-size:12px;color:var(--green);font-weight:400;letter-spacing:.1em}
+.ledger--sel .p .q{font-style:normal;font-size:12px;letter-spacing:.08em;border:1px solid var(--green);color:var(--green);padding:2px 8px;border-radius:2px}
+.total__q{flex-basis:100%;font-size:13px;color:var(--ink2);min-height:0}
+.total__q:empty{display:none}
+.ledger--sel .grp-note{padding:2px 0 12px 28px;font-size:13px;color:var(--ink2);line-height:1.7}
+.total__h{color:var(--green)}
+</style>
 </head>
 <body>
 
@@ -58,7 +69,7 @@
     <a class="hd__logo" href="#top" aria-label="ヨコグミ トップへ"><img src="assets/img/logo-horizontal.png" width="110" height="40" alt="ヨコグミ YOKOGUMI STARTUP SUPPORT"></a>
     <nav class="hd__nav" aria-label="ページ内メニュー">
       <a href="#price">料金</a><a href="#flow">進め方</a><a href="#faq">FAQ</a>
-      <a class="btn-line" href="#contact">無料相談</a>
+      <a class="btn-line" href="https://docs.google.com/forms/d/e/1FAIpQLSfCmlGO5wQaKVgEN18aG3xpJQOTL0yU8fTLBmSKBReAAPDPqA/viewform" target="_blank" rel="noopener">無料相談</a>
     </nav>
     <button class="hd__btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="メニューを開く"><span></span><span></span><span></span></button>
   </div>
@@ -70,7 +81,7 @@
       <a href="#price"><span class="num">04</span>料金</a>
       <a href="#flow"><span class="num">05</span>進め方</a>
       <a href="#faq"><span class="num">06</span>よくある質問</a>
-      <a class="mnav__cta" href="#contact">まずは無料相談してみる <span aria-hidden="true">→</span></a>
+      <a class="mnav__cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfCmlGO5wQaKVgEN18aG3xpJQOTL0yU8fTLBmSKBReAAPDPqA/viewform" target="_blank" rel="noopener">まずは無料相談してみる <span aria-hidden="true">→</span></a>
     </div>
   </nav>
 </header>
@@ -86,7 +97,7 @@
     <h1 class="h1"><span class="nb">元弁当屋だから、</span><br><span class="nb">開業のギモン／</span><br><span class="nb"><span class="g">リアル</span>に</span><br><span class="nb">お答えできます。</span></h1>
     <p class="lead">金沢・石川で、飲食店の開業・運営を、実際に経営した立場から横で一緒に考えます。オンラインなら全国から。</p>
     <p class="cta-row">
-      <a class="btn" href="#contact">まずは無料相談してみる <span aria-hidden="true">→</span></a>
+      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfCmlGO5wQaKVgEN18aG3xpJQOTL0yU8fTLBmSKBReAAPDPqA/viewform" target="_blank" rel="noopener">まずは無料相談してみる <span aria-hidden="true">→</span></a>
       <a class="ulink" href="#price">料金を見る</a>
     </p>
     <p class="note">契約するまで、何度でも無料です。</p>
@@ -215,26 +226,39 @@
 
     <form class="calc" id="calc" aria-label="お見積りの目安">
       <ul class="ledger ledger--sel">
-        <li><label><input type="checkbox" data-min="60000" data-max="60000"><span class="n">ホームページ制作<small>1ページ。元弁当屋が、集客導線まで考えて作ります。</small></span><span class="p num">¥60,000</span></label></li>
-        <li><label><input type="checkbox" data-min="30000" data-max="30000"><span class="n">A4チラシデザイン<small>実際に配って反応があった構成をベースに。</small></span><span class="p num">¥30,000</span></label></li>
-        <li><label><input type="checkbox" data-min="15000" data-max="30000"><span class="n">名刺デザイン</span><span class="p num">¥15,000〜30,000</span></label></li>
+        <li class="grp" aria-hidden="true"><span class="num">01</span>計画・お金</li>
+        <li><label><input type="checkbox" data-min="30000" data-max="30000"><span class="n">事業計画書・融資書類の整理<small>自己資金と公庫融資で開業した経験から、整理をお手伝いします。書類はご自身で書き、最後に確認します。</small></span><span class="p num">¥30,000</span></label></li>
+        <li class="grp" aria-hidden="true"><span class="num">02</span>名前・見た目</li>
+        <li><label><input type="checkbox" data-min="20000" data-max="40000"><span class="n">ロゴ作成<small>シンボルなし ¥20,000／あり ¥40,000。</small></span><span class="p num">¥20,000〜40,000</span></label></li>
+        <li><label><input type="checkbox" data-key="card" data-min="15000" data-max="15000"><span class="n">名刺デザイン<small>デザインから印刷データまで。</small></span><span class="p num">¥15,000</span></label></li>
         <li><label><input type="checkbox" data-min="20000" data-max="20000"><span class="n">ショップカード<small>名刺サイズ・両面。</small></span><span class="p num">¥20,000</span></label></li>
+        <li><label><input type="checkbox" data-min="30000" data-max="30000"><span class="n">A4チラシデザイン<small>実際に配って反応があった構成をベースに。</small></span><span class="p num">¥30,000</span></label></li>
         <li><label><input type="checkbox" data-min="30000" data-max="30000"><span class="n">のぼり・店頭A型看板（データ）</span><span class="p num">¥30,000</span></label></li>
-        <li><label><input type="checkbox" data-min="20000" data-max="40000"><span class="n">ロゴ作成<small>シンボルなし／あり。</small></span><span class="p num">¥20,000〜40,000</span></label></li>
-        <li><label><input type="checkbox" data-min="50000" data-max="50000"><span class="n">事業計画書・融資書類の作成サポート<small>自己資金と公庫融資で開業した経験から、伴走します。</small></span><span class="p num">¥50,000</span></label></li>
+        <li><label><input type="checkbox" data-min="8000" data-max="8000"><span class="n">印刷の手配<small>印刷会社への発注をお手伝いします（印刷費は別）。</small></span><span class="p num">¥8,000</span></label></li>
+        <li class="grp" aria-hidden="true"><span class="num">03</span>ネットの入口</li>
+        <li class="grp-note">LINE、Googleマップ、名刺のQRコードは、行き先のホームページがあると、そろいます。</li>
+        <li><label><input type="checkbox" data-key="hp" data-min="60000" data-max="60000"><span class="n">ホームページ制作<small>1ページ。元弁当屋が、集客導線まで考えて作ります。地図の埋め込み、スマホ対応、LINEと問い合わせへのリンクを含みます。</small></span><span class="p num">¥60,000</span></label></li>
+        <li><label><input type="checkbox" data-key="gbp" data-min="20000" data-max="20000"><span class="n">Googleビジネスプロフィール<small>Googleマップに、お店を載せるための開設と初期設定。</small></span><span class="p num">¥20,000</span></label></li>
+        <li><label><input type="checkbox" data-key="line" data-min="50000" data-max="50000"><span class="n">LINE公式アカウント構築<small>開設のサポート、プロフィール、あいさつ、リッチメニュー1枚、基本の自動応答まで。クーポン・配信・運用は含みません。</small></span><span class="p num">¥50,000</span></label></li>
+        <li><label><input type="checkbox" data-key="yoyaku" data-quote="1"><span class="n">予約システム（LINE連携）<small>LINEで予約が完結する仕組み。お店の形に合わせて作るため、内容を伺ってお見積りします。</small></span><span class="p"><em class="q">要見積り</em></span></label></li>
+        <li class="grp" aria-hidden="true"><span class="num">04</span>お店の仕組み</li>
+        <li><label><input type="checkbox" data-min="20000" data-max="40000"><span class="n">レジ・決済システムの導入支援<small>手数料などを比べて、申込と初期設定をお手伝いします。特定の業者は勧めません。</small></span><span class="p num">¥20,000〜40,000</span></label></li>
+        <li><label><input type="checkbox" data-min="10000" data-max="10000"><span class="n">電話回線の開通サポート<small>回線の種類を比べて、申込と開通後の確認をお手伝いします。</small></span><span class="p num">¥10,000</span></label></li>
+        <li class="grp" aria-hidden="true"><span class="num">05</span>オープン前</li>
         <li><label><input type="checkbox" data-min="50000" data-max="50000"><span class="n">オープン直前の1日集中サポート<small>8時間・対面。</small></span><span class="p num">¥50,000</span></label></li>
-        <li><label><input type="checkbox" data-month="30000"><span class="n">SNS運用代行・分析<small>Instagramを約4,000人まで伸ばした実践知で。投稿月4本＋簡易分析。</small></span><span class="p num">¥30,000<i>／月</i></span></label></li>
-        <li><label><input type="checkbox" data-min="10000" data-max="10000"><span class="n">実務相談<small>単品を注文したあと、打ち合わせが必要なとき。1時間。</small></span><span class="p num">¥10,000</span></label></li>
       </ul>
       <div class="total">
         <span class="label">合計（税別・目安）</span>
         <output class="num" id="total">¥0</output>
         <output class="num total__m" id="totalM"></output>
+        <output class="total__q" id="totalQ"></output>
+        <output class="total__q total__h" id="totalH"></output>
       </div>
-      <p class="note">金額は税別・目安です。幅のある項目は、内容によって変わります。詳しくは相談のうえ、お見積りします。</p>
+      <p class="note">金額は税別・目安です。幅のある項目は、内容によって変わります。「要見積り」の項目は、合計に入っていません。</p>
+      <p class="note">単品を注文したあと、打ち合わせが必要なときは、1時間1万円の実務相談です。SNS運用、業務ツール、開店後の運用など、ここにないものも、ご相談ください。</p>
     </form>
 
-    <p class="cta-row"><a class="btn" href="#contact">まずは無料相談してみる <span aria-hidden="true">→</span></a></p>
+    <p class="cta-row"><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfCmlGO5wQaKVgEN18aG3xpJQOTL0yU8fTLBmSKBReAAPDPqA/viewform" target="_blank" rel="noopener">まずは無料相談してみる <span aria-hidden="true">→</span></a></p>
   </div>
 </section>
 
@@ -283,29 +307,12 @@
     <p class="sec__no" aria-hidden="true">08</p>
     <p class="label"><b>08</b> / 相談</p>
     <h2 class="h2">まず、話を<br>聞かせてください。</h2>
-    <p class="mw"><span class="s">まだ具体化していなくて大丈夫です。</span><span class="s">2営業日以内に返信します。</span><span class="s">しつこい営業はしません。</span></p>
+    <p class="mw"><span class="s">まだ具体化していなくて大丈夫です。</span><span class="s">納得するまで、とことん何度でもお話ししましょう。</span><span class="s">しつこい営業はしません。</span><span class="s">お気軽にご相談ください。</span></p>
 
-    <form class="form" id="form" novalidate>
-      <label>お名前<input name="name" required autocomplete="name"></label>
-      <label>ご連絡先（メールアドレス）<input name="email" type="email" required autocomplete="email"></label>
-      <label>業種・ジャンル<span class="hint">例：弁当店、カフェ、居酒屋</span><input name="genre"></label>
-      <label>開業予定時期、または開業日<input name="when"></label>
-      <label>現在の状況
-        <select name="status">
-          <option value="">選んでください</option>
-          <option>まだ構想段階</option><option>物件を探している</option><option>資金調達を進めている</option><option>すでに開業していて、運営の相談をしたい</option><option>その他</option>
-        </select>
-      </label>
-      <label>今、一番相談したいこと・困っていること<textarea name="body" rows="5"></textarea></label>
-      <label>相談の形式
-        <select name="style"><option>どちらでも可</option><option>対面</option><option>オンライン</option></select>
-      </label>
-      <label>（対面の場合）希望エリア<input name="area"></label>
-      <label>現在のお仕事（差し支えなければ）<input name="job"></label>
-      <label>ヨコグミを知ったきっかけ<input name="how"></label>
-      <p class="cta-row"><button class="btn" type="submit">この内容で相談する <span aria-hidden="true">→</span></button></p>
-      <p class="note">送信ボタンを押すと、メールアプリが開きます（<span class="num">yokogumi.info@gmail.com</span> 宛）。</p>
-    </form>
+    <div class="contact-cta">
+      <p class="cta-row"><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfCmlGO5wQaKVgEN18aG3xpJQOTL0yU8fTLBmSKBReAAPDPqA/viewform" target="_blank" rel="noopener">まずは無料相談してみる <span aria-hidden="true">→</span></a></p>
+      <p class="note">フォームが開かない場合は、<span class="num">yokogumi.info@gmail.com</span> へ、お名前と、ご相談内容をお送りください。</p>
+    </div>
   </div>
 </section>
 
