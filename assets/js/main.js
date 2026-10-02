@@ -60,8 +60,23 @@
       var tq = document.getElementById('totalQ'); if (tq) tq.textContent = quote.length ? '＋ ' + quote.join('、') + '：別途お見積り' : '';
       document.getElementById('totalM').textContent = month ? '＋ 月額 ' + yen(month) : '';
     };
-    calc.addEventListener('change', update);
+    // 選んだ項目を、Googleフォームの「ご興味のあるサービス」に引き継ぐ
+    var FORM_ENTRY = 'entry.99179705';
+    var syncFormLinks = function () {
+      var names = [];
+      calc.querySelectorAll('input:checked').forEach(function (c) {
+        var n = c.closest('label').querySelector('.n').firstChild.nodeValue.trim();
+        if (c.dataset.quote) n += '（要見積り）';
+        names.push(n);
+      });
+      document.querySelectorAll('a[href*="docs.google.com/forms"]').forEach(function (a) {
+        var base = a.href.split('?')[0];
+        a.href = names.length ? base + '?usp=pp_url&' + FORM_ENTRY + '=' + encodeURIComponent(names.join('、')) : base;
+      });
+    };
+    calc.addEventListener('change', function () { update(); syncFormLinks(); });
     update();
+    syncFormLinks();
   }
 
   // 08 フォーム（暫定：メールアプリを開く）
