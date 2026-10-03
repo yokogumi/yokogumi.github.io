@@ -74,9 +74,15 @@ h1,h2,h3{margin:0;font-weight:900;line-height:1.3}
 .ph__s{font-size:13px;line-height:1.7}
 .cap{font-size:12px;color:var(--ink2);margin-top:12px;line-height:1.6}
 .cap span{font-family:var(--mono);color:var(--green);margin-right:.8em;letter-spacing:.08em}
-.strip{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-top:1px solid var(--ink);margin:28px 0 0;padding-top:12px}
-.strip dt{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--ink2)}
-.strip dd{margin:0;font-size:34px;font-weight:500;line-height:1}
+.strip{display:flex;flex-direction:column;align-items:flex-start;gap:8px;border-top:1px solid var(--ink);margin:28px 0 0;padding-top:12px}
+.strip dt{font-family:var(--mono);font-size:min(12px,3.2vw);letter-spacing:.02em;color:var(--ink2);white-space:nowrap}
+.strip dd{margin:0;font-size:34px;font-weight:500;line-height:1;white-space:nowrap}
+.catch{margin:0;line-height:1.5}
+.catch span{display:block}
+.catch__s{font-size:14px;color:var(--ink2);letter-spacing:.04em}
+.catch__b{white-space:nowrap;font-size:21px;font-weight:700;color:var(--green);line-height:1.35;margin:6px 0 4px;letter-spacing:.02em}
+.catch em{font-style:normal;font-weight:700;color:var(--ink)}
+@media (max-width:760px){.catch__b{font-size:min(21px,4.6vw)}.catch__s{font-size:min(13px,3.3vw)}}
 small{font-size:.45em;font-family:var(--sans);font-weight:700;margin-left:.15em}
 
 /* sections */
