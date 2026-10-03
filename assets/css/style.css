@@ -82,7 +82,7 @@ h1,h2,h3{margin:0;font-weight:900;line-height:1.3}
 .catch__s{font-size:14px;color:var(--ink2);letter-spacing:.04em}
 .catch__b{white-space:nowrap;font-size:21px;font-weight:700;color:var(--green);line-height:1.35;margin:6px 0 4px;letter-spacing:.02em}
 .catch em{font-style:normal;font-weight:700;color:var(--ink)}
-@media (max-width:760px){.catch__b{font-size:min(21px,4.6vw)}.catch__s{font-size:min(13px,3.3vw)}}
+@media (max-width:760px){.catch__b{font-size:min(21px,4.6vw)}.catch__s{font-size:min(13px,2.95vw);letter-spacing:.02em}}
 small{font-size:.45em;font-family:var(--sans);font-weight:700;margin-left:.15em}
 
 /* sections */
