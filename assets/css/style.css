@@ -254,6 +254,32 @@ details p{margin:0 0 22px;font-size:16px;color:var(--ink2)}
 .help__more{margin:20px 0 0}
 @media (max-width:760px){.help{margin-top:40px}.help__list li{padding-left:30px}}
 
+/* 当事者：写真を文章に合わせて追従（右側の空き対策） */
+@media (min-width:1000px){.two .prof{position:sticky;top:104px;align-self:start}}
+
+/* パッケージ（単品と分けて、セットだと分かるように） */
+.pack{max-width:900px;margin:0 0 56px}
+.pack .label{margin-bottom:14px}
+.pack__card{display:grid;grid-template-columns:34px 1fr auto;gap:18px;align-items:start;padding:28px 28px 26px;background:var(--paper);border:2px solid var(--green);cursor:pointer;position:relative}
+.pack__card:hover,.pack__card:has(input:checked){background:#fff}
+.pack__card input[type=checkbox]{width:26px;height:26px;margin:4px 0 0}
+.pack__card input[type=checkbox]:checked::after{left:8px;top:3px;width:6px;height:12px}
+.pack__body{display:block;min-width:0}
+.pack__tag{display:inline-block;background:var(--green);color:#fff;font-family:var(--mono);font-size:12px;letter-spacing:.14em;padding:3px 10px;margin-bottom:12px;line-height:1.6}
+.pack__name{display:block;font-size:clamp(22px,2.8vw,30px);font-weight:900;line-height:1.4;word-break:auto-phrase;text-wrap:balance}
+.pack__lead{display:block;margin:6px 0 16px;font-size:15px;color:var(--ink2)}
+.pack__items{display:block;border-top:1px solid var(--line)}
+.pack__items>span{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.pack__items i{font-style:normal}
+.pack__items b{font-weight:400;font-size:14px;color:var(--ink2);white-space:nowrap}
+.pack__note{display:block;margin-top:12px;font-size:13px;color:var(--ink2);line-height:1.7}
+.pack__price{display:flex;flex-direction:column;align-items:flex-end;gap:2px;text-align:right;white-space:nowrap}
+.pack__price s{font-size:13px;color:var(--ink2)}
+.pack__price b{font-size:clamp(28px,3.6vw,40px);font-weight:500;color:var(--green);line-height:1.2}
+.pack__price em{font-style:normal;font-size:12px;font-weight:700;color:var(--green);border:1px solid var(--green);padding:1px 8px;margin-top:6px}
+.label--single{max-width:900px;margin:0 0 14px}
+@media (max-width:760px){.pack{margin-bottom:40px}.pack__card{grid-template-columns:30px 1fr;gap:14px;padding:22px 16px}.pack__price{grid-column:2;align-items:flex-start;text-align:left}}
+
 /* reveal */
 .rv{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
