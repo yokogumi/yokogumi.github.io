@@ -3,392 +3,451 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GRR6W87QMH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-GRR6W87QMH');
-</script>
-<title>ヨコグミ｜元弁当屋の、リアル開業相談（石川・金沢の飲食店 開業支援）</title>
-<meta name="description" content="元弁当屋だから、開業のギモン、リアルにお答えできます。飲食店の開業・運営を、実際に経営した立場から一緒に考える無料相談（契約するまで何度でも無料）。石川・金沢中心、オンラインは全国対応。">
-<meta property="og:title" content="ヨコグミ｜元弁当屋の、リアル開業相談">
-<meta property="og:description" content="実際に飲食店を経営した人が、開業する人の横に並んで、数字で一緒に考えます。">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://yokogumi.github.io/">
-<meta property="og:site_name" content="ヨコグミ">
-<meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://yokogumi.github.io/assets/img/ogp.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="ヨコグミ｜元弁当屋の、リアル開業相談。カウンターで横に並んで相談する二人">
-<meta name="twitter:card" content="summary_large_image">
+<title>ヨコグミ｜店舗集客・業務サポート｜石川・金沢の飲食店・サロンの集客・事務・開業支援</title>
+<meta name="description" content="手が回らない作業を、まるごと引き受けます。石川・金沢の飲食店・サロンの集客・事務・開業支援に、元弁当屋のオーナーが伴走します。45分の無料相談から。最低契約期間なしの月契約。">
 <link rel="canonical" href="https://yokogumi.github.io/">
-<meta name="theme-color" content="#FBF3E7">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ヨコグミ｜店舗集客・業務サポート">
+<meta property="og:description" content="手が回らない作業を、まるごと引き受けます。石川・金沢の飲食店・サロン向け。45分の無料相談から。">
+<meta property="og:url" content="https://yokogumi.github.io/">
+<meta property="og:image" content="https://yokogumi.github.io/assets/img/ogp.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0F6F62">
+<!-- favicon：assets/img/favicon.png を配置してください（未配置でも表示には影響しません） -->
+<link rel="icon" href="assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"ヨコグミ","description":"元弁当屋の、リアル開業相談。飲食店の開業・運営支援。","areaServed":["石川県","金沢市"],"email":"yokogumi.info@gmail.com"}
-</script>
-<style>
-/* 全面背景パターン */
-.hero--bg{position:relative;padding:0;min-height:min(88vh,820px);display:flex;align-items:center;overflow:hidden}
-.hero__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:72% 50%;z-index:0}
-@media (min-width:901px){
-  /* 人物が見出しに重ならないよう、画像を右へ寄せ、左端をクリームに溶かす */
-  .hero__bg{left:9%;width:91%;object-position:62% 50%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16%);mask-image:linear-gradient(90deg,transparent 0,#000 16%)}
-}
-.hero__veil{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(251,243,231,.94) 0%,rgba(251,243,231,.82) 34%,rgba(251,243,231,.3) 56%,rgba(251,243,231,0) 78%)}
-.hero__body{position:relative;z-index:2;padding-block:clamp(56px,9vw,120px);width:100%}
-.hero--bg .hero__body>*{max-width:640px}
-.hero--bg .strip{border-top:1px solid var(--ink);margin-top:32px;max-width:420px}
-.hero__cap{position:absolute;z-index:3;right:var(--gut);bottom:20px;margin:0;max-width:none!important;background:rgba(251,243,231,.92);padding:6px 12px;font-size:12px;line-height:1.5;color:var(--ink2)}
-.hero__cap span{font-family:var(--mono);color:var(--green);letter-spacing:.08em;margin-right:.8em}
-.hero--bg .hero__body{max-width:1200px;margin-inline:auto}
-/* 画面の高さに収める（ノート・弁当箱がファーストビューに入るように） */
-@media (min-width:901px){
-  .hero--bg{min-height:calc(100svh - 76px)}
-  .hero__bg{object-position:62% 100%}
-  .hero__body{padding-block:clamp(24px,5vh,84px)}
-  .hero--bg .h1{font-size:clamp(34px,min(5.8vw,8.4vh),78px);margin-bottom:clamp(16px,3.2vh,36px)}
-  .hero--bg .cta-row{margin:clamp(18px,3.4vh,40px) 0 10px}
-  .hero--bg .strip{margin-top:clamp(14px,3vh,32px)}
-}
-/* スマホ・タブレット：画像を主役の帯にして、文字は下に置く */
-@media (max-width:900px){
-  .hero--bg{display:block;min-height:0}
-  .hero__bg{position:relative;inset:auto;display:block;width:100%;height:auto;aspect-ratio:4/3;object-position:78% 50%}
-  .hero__veil{display:none}
-  .hero__cap{position:static;display:block;background:none;padding:10px var(--gut) 0;font-size:12px}
-  .hero__body{padding-block:36px 56px}
-  .hero--bg .hero__body>*{max-width:none}
-}
-</style>
-<style>
-/* 価格表：グループ見出しと「要見積り」 */
-.ledger--sel .grp{display:flex;gap:14px;align-items:baseline;padding:34px 0 10px;font-weight:900;font-size:15px;letter-spacing:.04em;border-top:1px solid var(--ink)}
-.ledger--sel .grp:first-child{padding-top:6px;border-top:0}
-.ledger--sel .grp .num{font-size:12px;color:var(--green);font-weight:400;letter-spacing:.1em}
-.ledger--sel .p .q{font-style:normal;font-size:12px;letter-spacing:.08em;border:1px solid var(--green);color:var(--green);padding:2px 8px;border-radius:2px}
-.total__q{flex-basis:100%;font-size:13px;color:var(--ink2);min-height:0}
-.total__q:empty{display:none}
-.ledger--sel .grp-note{padding:2px 0 12px 28px;font-size:13px;color:var(--ink2);line-height:1.7}
-.total__h{color:var(--green)}
-</style>
-<style>
-@media (max-width:760px){.tags{display:grid!important;grid-template-columns:1fr 1fr;gap:8px;max-width:360px}.tags span{text-align:center;padding:6px 6px!important}}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/config.js"></script>
 </head>
 <body>
+<a class="skip" href="#main">本文へ移動</a>
 
-<header class="hd">
-  <div class="wrap hd__in">
-    <a class="hd__logo" href="#top" aria-label="ヨコグミ トップへ"><img src="assets/img/logo-horizontal.png" width="143" height="52" alt="ヨコグミ YOKOGUMI STARTUP SUPPORT"></a>
-    <nav class="hd__nav" aria-label="ページ内メニュー">
-      <a href="#price">料金</a><a href="#flow">進め方</a><a href="#faq">FAQ</a>
-      <a class="btn-line" href="https://docs.google.com/forms/d/e/1FAIpQLSfCmlGO5wQaKVgEN18aG3xpJQOTL0yU8fTLBmSKBReAAPDPqA/viewform" target="_blank" rel="noopener">無料相談</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="ヨコグミ 店舗集客・業務サポート トップへ">
+      <img class="brand-symbol" src="assets/img/symbol.png" alt="" width="146" height="176">
+      <span class="brand-text"><img class="brand-word" src="assets/img/wordmark.png" alt="ヨコグミ" width="403" height="112"><small>店舗集客・業務サポート</small></span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="メニューを開く"><span></span><span></span></button>
+    <nav id="nav" aria-label="メインメニュー">
+      <a class="nav-top" href="#top">トップ</a>
+      <a href="#plans">料金</a>
+      <a href="#why">なぜヨコグミ</a>
+      <a href="#about">ヨコグミとは</a>
+      <a href="#works">実績</a>
+      <a href="#flow">進め方</a>
+      <a href="#faq">よくある質問</a>
+      <a class="btn btn-sm js-form" href="#contact">無料相談を申し込む</a>
     </nav>
-    <button class="hd__btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="メニューを開く"><span></span><span></span><span></span></button>
   </div>
-  <nav class="mnav" id="mnav" aria-label="メニュー" hidden>
-    <div class="wrap">
-      <a href="#story"><span class="num">01</span>ヨコグミについて</a>
-      <a href="#numbers"><span class="num">02</span>実績</a>
-      <a href="#neutral"><span class="num">03</span>他との違い</a>
-      <a href="#price"><span class="num">04</span>料金</a>
-      <a href="#flow"><span class="num">05</span>進め方</a>
-      <a href="#faq"><span class="num">06</span>よくある質問</a>
-      <a class="mnav__cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfCmlGO5wQaKVgEN18aG3xpJQOTL0yU8fTLBmSKBReAAPDPqA/viewform" target="_blank" rel="noopener">まずは無料相談してみる <span aria-hidden="true">→</span></a>
-    </div>
-  </nav>
 </header>
 
-<main id="top">
-
-<!-- 01 共感：ファーストビュー -->
-<section class="hero hero--bg">
-  <img class="hero__bg" src="assets/img/hero.jpg" width="1672" height="940" alt="開店準備中の店のカウンターで、キャップとエプロンの男性と、短い髪の女性が横に並び、間取り図を見ながら相談している" fetchpriority="high">
-  <div class="hero__veil" aria-hidden="true"></div>
-  <div class="wrap hero__body">
-    <p class="label" style="margin-bottom:14px">YOKOGUMI — 元弁当屋の、飲食店開業サポート</p>
-    <p class="tags" style="display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px"><span style="border:1px solid var(--green);color:var(--green);background:rgba(251,243,231,.75);padding:3px 12px;border-radius:2px;font-size:13px;font-weight:700;line-height:1.6;letter-spacing:.04em">事業計画書</span><span style="border:1px solid var(--green);color:var(--green);background:rgba(251,243,231,.75);padding:3px 12px;border-radius:2px;font-size:13px;font-weight:700;line-height:1.6;letter-spacing:.04em">ホームページ作成</span><span style="border:1px solid var(--green);color:var(--green);background:rgba(251,243,231,.75);padding:3px 12px;border-radius:2px;font-size:13px;font-weight:700;line-height:1.6;letter-spacing:.04em">SNS運用</span><span style="border:1px solid var(--green);color:var(--green);background:rgba(251,243,231,.75);padding:3px 12px;border-radius:2px;font-size:13px;font-weight:700;line-height:1.6;letter-spacing:.04em">AIツール開発</span></p>
-    <h1 class="h1"><span class="nb">元弁当屋だから、</span><br><span class="nb">開業のギモン／</span><br><span class="nb"><span class="g">リアル</span>に</span><br><span class="nb">お答えできます。</span></h1>
-    <p class="lead">金沢・石川で、飲食店の開業・運営を、実際に経営した立場から横で一緒に考えます。オンラインなら全国から。</p>
-    <p class="cta-row">
-      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfCmlGO5wQaKVgEN18aG3xpJQOTL0yU8fTLBmSKBReAAPDPqA/viewform" target="_blank" rel="noopener">まずは無料相談してみる <span aria-hidden="true">→</span></a>
-      <a class="ulink" href="#price">料金を見る</a>
-    </p>
-    <p class="note">契約するまで、何度でも無料です。</p>
-    <div class="strip strip--bg">
-      <p class="catch"><span class="catch__s">飲食<em>経験ゼロ</em>から、立ち上げて、黒字のまま譲渡しました。</span><span class="catch__b">私だから、お伝えできることがあります。</span></p>
-    </div>
-  </div>
-</section>
-
-<!-- 02 共感：悩み -->
-<section class="sec" id="worry">
-  <div class="wrap">
-    <p class="sec__no" aria-hidden="true">01</p>
-    <p class="label"><b>01</b> / 共感</p>
-    <h2 class="h2">こんなところで、<br>止まっていませんか。</h2>
-    <ul class="worry">
-      <li>何から手をつければいいのか、分からない。</li>
-      <li>開業したのに、何を直せば売上が伸びるのか分からない。</li>
-      <li>誰に相談すればいいのか分からず、一人で抱えている。</li>
-    </ul>
-    <p class="bridge">その悩み、実際に弁当屋を経営していた私だから、<br class="pc">一緒に考えられます。</p>
-    <p style="font-weight:700;font-size:clamp(16px,1.8vw,20px);line-height:1.7;margin:0 0 28px;padding-left:.9em">開業までに必要なこと・不要なことを、ちゃんとお伝えします。</p>
-    <p class="note">対象：物件探し・資金調達・事業計画など、具体的に動き出している方。開業後1年くらいまでの方も。</p>
-    <div class="help">
-      <p class="label">たとえば、こんなことをお手伝いします</p>
-      <ul class="help__list">
-        <li>事業計画書・融資書類を、一緒に整理する</li>
-        <li>集客の流れまで考えて、ホームページを作る</li>
-        <li>戦略的なSNS運用で、集客につなげる</li>
-        <li>AI活用で、お店で使えるツールを、一緒に作る</li>
-      </ul>
-      <p class="help__more"><a class="ulink" href="#price">くわしくは、できること <span aria-hidden="true">→</span></a></p>
-    </div>
-  </div>
-</section>
-
-<!-- 03 当事者 -->
-<section class="sec sec--tint" id="story">
-  <div class="wrap">
-    <p class="sec__no" aria-hidden="true">02</p>
-    <p class="label"><b>02</b> / 当事者</p>
-    <div class="two">
-      <div>
-        <h2 class="h2 h2--m">何も知らずに損したこと、<br>たくさんあります。</h2>
-        <p><span class="s">印刷業界で約20年勤めたのち、</span><span class="s">コロナ禍をきっかけに、</span><span class="s">妻と温めていた夢に踏み出しました。</span><span class="s">飲食未経験のまま始めた弁当店「べんとも」です。</span></p>
-        <p>最初は、知らないことだらけでした。</p>
-        <ul class="ledger ledger--plain">
-          <li><span class="num">01</span>ひたすら店頭で待つだけの、「待ち」の商売だった</li>
-          <li><span class="num">02</span>誰も気づかないことにこだわりを持ちすぎて、無駄に材料コストをかけた</li>
-          <li><span class="num">03</span>少しでも安くとケチって、買い出しに多くの時間を費やした</li>
-          <li><span class="num">04</span>一般向けに始めたが、会議やセミナー用の法人需要に、あとで気づいた</li>
-          <li><span class="num">05</span>バックオフィス業務を全部自分で済ませていた</li>
-        </ul>
-        <p><span class="s">どれも、知らなかったことでした。</span><br><span class="s">すごい遠回りしました。</span><span class="s">無駄な時間も費やしました。</span></p>
-        <p><span class="s">これから開業する人には、</span><span class="s">そんな思いはしてほしくない。</span><span class="s">それがこの事業を始めたきっかけです。</span></p>
-        <p style="font-weight:700"><span class="s">だから知らなかったことを、</span><span class="s">先にお伝えします。</span></p>
+<main id="main">
+<!-- SECTION 01 ファーストビュー -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="kicker">ヨコグミ ／ 店舗集客・業務サポート</p>
+      <h1>手が回らない作業<br>まるごと<br>引き受けます<span class="dot">。</span></h1>
+      <ul class="scope" aria-label="対応する主な手段"><li><a href="#check" data-pain="p3">ホームページ制作</a></li><li><a href="#check" data-pain="p1">インスタ運用</a></li><li><a href="#check" data-pain="p5">LINE公式構築</a></li><li><a href="#check" data-pain="p4">開業支援</a></li></ul>
+      <p class="hero-lead"><span class="nb">弁当屋を3年8か月経営し、</span><span class="nb">黒字のまま事業を譲渡した元オーナーが、</span><br><b class="hero-em"><span class="em-sm">石川・金沢の</span>飲食店・サロンの<span class="nw">「集客・事務・開業支援」</span>に伴走します。</b><br><span class="nb">何をすべきかを一緒に決めて、</span><span class="nb">必要なら実作業まで。</span><span class="nb">月額でも、単品でも。</span></p>
+      <div class="hero-cta">
+        <a class="btn js-form" href="#contact">無料相談を申し込む</a>
+        <a class="link-arrow" href="#check">まずは無料診断の内容を見る</a>
       </div>
-      <figure class="prof">
-        <img src="assets/img/profile.jpg" width="420" height="640" loading="lazy" alt="村田一訓：エプロン姿で穏やかに笑う">
-        <figcaption class="cap"><span>村田一訓</span> 立ち上げ・経営・事業譲渡の当事者</figcaption>
-      </figure>
+      <p class="facts"><span class="nw">契約まで何度でも無料</span> ／ <span class="nw">1回45分</span> ／ <span class="nw">オンライン全国対応可</span></p>
     </div>
   </div>
+  <img class="hero-bg" src="assets/img/hero.jpg" alt="カウンターで図面を広げて相談している様子" width="1600" height="899" fetchpriority="high">
 </section>
 
-<!-- 04 数字 -->
-<section class="sec sec--green" id="numbers">
+<!-- SECTION 02 こんな状態ではありませんか？ -->
+<section class="sec" id="check">
   <div class="wrap">
-    <p class="sec__no" aria-hidden="true">03</p>
-    <p class="label"><b>03</b> / 数字</p>
-    <p class="years num">2023 <span aria-hidden="true">→</span> 2025</p>
-    <p class="years__l">年間売上</p>
-    <p class="big num" id="bigNum" data-to="1.5">約1.5<small>倍</small></p>
-    
-    <div class="trend" aria-label="年間売上の推移（2023年度を100とした指数）">
-      <p class="label">売上の推移　2023年度を「100」として</p>
-      <div class="trend__row"><span class="y num">2023年度</span><span class="bar" style="--w:62.5%"></span><span class="v num">100</span></div>
-      <div class="trend__row"><span class="y num">2025年度</span><span class="bar" style="--w:96.9%"></span><span class="v num">約155</span></div>
-    </div>
-
-    <ul class="ledger ledger--inv">
-      <li><span class="num k">27.4%</span><span class="v">利益率（2025年度）</span></li>
-      <li><span class="num k">3ヶ月で</span><span class="v">単月黒字化（開業から）</span></li>
-      <li><span class="num k">3年8ヶ月</span><span class="v">経営し、黒字のまま事業譲渡</span></li>
-    </ul>
-    <p class="inv-p"><span class="s">損益分岐点、FL比率、客単価。</span><span class="s">感覚ではなく、数字を見て判断してきました。</span></p>
-  </div>
-</section>
-
-<!-- 05 立ち位置 -->
-<section class="sec" id="neutral">
-  <div class="wrap">
-    <p class="sec__no" aria-hidden="true">04</p>
-    <p class="label"><b>04</b> / 立ち位置</p>
-    <h2 class="h2">特定の業者とは、<br>組んでいません。</h2>
-    <p class="mw">どこかの商品を売るための相談ではありません。開業に必要なものを、一緒に考える側です。何でも相談できます。できないことは、できないと言います。</p>
-
-    <div class="tbl-wrap">
-      <h3 class="h3">開業の相談先は、実はバラバラ</h3>
-      <table class="tbl">
-        <tbody>
-          <tr><th>銀行・信用金庫</th><td>資金調達のことだけ</td></tr>
-          <tr><th>不動産屋</th><td>物件のことだけ</td></tr>
-          <tr><th>税理士</th><td>税金・数字のことだけ</td></tr>
-          <tr><th>広告・制作会社</th><td>広告・HPのことだけ</td></tr>
-          <tr class="me"><th>ヨコグミ</th><td>開業に関わることを、横断して相談できる</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="tbl-wrap">
-      <h3 class="h3">ほかの開業コンサルとの違い</h3>
-      <table class="tbl tbl--cmp">
-        <thead><tr><th></th><th>一般的な開業コンサル</th><th>ヨコグミ</th></tr></thead>
-        <tbody>
-          <tr><th>経営した経験は</th><td>ない人が多い</td><td>実際に経営し、黒字のまま譲渡した</td></tr>
-          <tr><th>いつまで見てくれる</th><td>開業前まで</td><td>開業後も、相談できる</td></tr>
-          <tr><th>業者との関係は</th><td>提携していることも</td><td>どことも提携していない</td></tr>
-          <tr><th>勧めるものは</th><td>理論・一般論になりがち</td><td><span class="s">経営した経験から、</span><span class="s">本当に必要なもの</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="name">
-      <img src="assets/img/logo-character.png" width="120" height="140" loading="lazy" alt="ヨコグミのラッコ">
-      <p><span class="s"><b>ヨコグミ</b>は、「横」に並んで、「組む」という意味です。</span><span class="s">ラッコが仲間と手をつないで並んで浮く姿に、その考え方を重ねました。</span><span class="s">上から教えるのではなく、横に並んで、一緒に考えます。</span></p>
-    </div>
-  </div>
-</section>
-
-<!-- 06 できること -->
-<section class="sec sec--tint" id="price">
-  <div class="wrap">
-    <p class="sec__no" aria-hidden="true">05</p>
-    <p class="label"><b>05</b> / できること</p>
-    <h2 class="h2">必要なものだけ、<br>選んでください。</h2>
-    <p class="mw">契約するまで、相談は何回でも無料です。実務に入るときだけ、必要な分を単品で選べます。ネットの入口をまとめて整えたい方には、スタートパックもあります。</p>
-
-
-    <form class="calc" id="calc" aria-label="お見積りの目安">
-          <div class="pack">
-      <p class="label">パッケージ ／ 3つをまとめて</p>
-      <label class="pack__card">
-        <input type="checkbox" data-key="pack" data-min="85000" data-max="85000">
-        <span class="pack__body">
-          <span class="pack__tag">PACKAGE</span>
-          <span class="pack__name">「ネット集客」スタートパック</span>
-          <span class="pack__lead">ネットの入口を、3つまとめて整えます。</span>
-          <span class="pack__items">
-            <span><i>ホームページ制作</i><b class="num">¥60,000</b></span>
-            <span><i>Googleビジネスプロフィール</i><b class="num">¥20,000</b></span>
-            <span><i>Instagramの初期設計</i><b class="num">¥15,000</b></span>
-          </span>
-          <span class="pack__note">※ パックに含まれるものは、下の単品で重ねて選ばないでください。</span>
-        </span>
-        <span class="pack__price"><s class="num">単品の合計 ¥95,000</s><b class="num">¥85,000</b><em>1万円お得</em></span>
-      </label>
-    </div>
-    <p class="label label--single">単品で選ぶ</p>
-      <div class="pick">
-        <p class="label">まず、この4つから</p>
-        <ul class="pick__list">
-          <li><label><input type="checkbox" data-min="30000" data-max="30000"><span class="n">事業計画書・融資書類の整理<small><span class="s">私も日本政策金融公庫から融資をいただき、飲食未経験から開業しました。</span><span class="s">必要のない費用は削り、最低限の資金調達でなるべくリスクをおさえて進めましょう。</span></small></span><span class="p num">¥30,000</span></label></li>
-          <li><label><input type="checkbox" data-key="hp" data-min="60000" data-max="60000"><span class="n">ホームページ制作<small><span class="s">べんとも時代に、Instagramをゼロから約4,000人まで伸ばし、</span><span class="s">LINE公式と自作の予約システムで、注文までの流れを整えました。</span><span class="s">お店のホームページも、その視点で作ります。</span><span class="s">地図の埋め込み、スマホ対応、LINEと問い合わせへのリンクを含みます。</span></small></span><span class="p num">¥60,000</span></label></li>
-          <li><label><input type="checkbox" data-key="sns" data-month="30000"><span class="n">SNS運用代行（Instagram）<small><span class="pl pl--lead"><span class="s">写真の見せ方から、日々の投稿、月末の分析・改善まで、</span><span class="s">お店のSNSを代わりに運用します。</span></span><span class="pl"><span class="s">べんとも時代に、Instagramをゼロから約4,000人まで伸ばした経験をもとに、</span><span class="s">集客につながる投稿を考えます。</span></span><span class="pl pl--note"><span class="s">※ 週3回のプランや、訪問撮影つきのプランもあります。ご相談ください。リール・ストーリーズ・広告運用は含みません。</span></span></small></span><span class="p num">¥30,000<i>／月</i><span class="pn">ライト：週2回（月8投稿）</span></span></label></li>
-          <li><label><input type="checkbox" data-key="ai" data-month="12000"><span class="n">AI活用のオンラインレッスン（Claude）<small><span class="pl pl--lead"><span class="s">Claudeの登録から、お店で使えるツールが1つできるまで、一緒に進めます。</span><span class="s">（例：原価の計算表、シフト表、日報など）</span></span><span class="pl"><span class="s">開業前の方はもちろん、すでにお店をされている方にも、おすすめです。</span></span><span class="pl"><span class="s">AIを日常の仕事で使い、予約アプリなどを自分で作っている立場から、お伝えします。</span></span><span class="pl pl--note"><span class="s">※ Claudeの有料プランが必要になります（費用は別です）。</span></span></small></span><span class="p num">¥12,000<i>／月</i><span class="pn">月2回×60分、最初の3か月（全6回）<br>以降も月12,000円</span></span></label></li>
-        </ul>
-      </div>
-      <p class="label label--more">ほかにも、必要なものを選べます</p>
-      <ul class="ledger ledger--sel">
-        <li class="grp" aria-hidden="true"><span class="num">01</span>名前・見た目</li>
-        <li><label><input type="checkbox" data-min="20000" data-max="40000"><span class="n">ロゴ作成<small>シンボルなし ¥20,000／あり ¥40,000。</small></span><span class="p num">¥20,000〜40,000</span></label></li>
-        <li><label><input type="checkbox" data-key="flyer" data-min="30000" data-max="30000"><span class="n">A4チラシのデザイン<small>印刷会社で約20年、誌面のデザインを担当。デザインから印刷データまで。</small></span><span class="p num">¥30,000</span></label></li>
-        <li><label><input type="checkbox" data-key="card" data-min="15000" data-max="15000"><span class="n">名刺デザイン<small>デザインから印刷データまで。</small></span><span class="p num">¥15,000</span></label></li>
-        <li><label><input type="checkbox" data-min="20000" data-max="20000"><span class="n">ショップカード<small>名刺サイズ・両面。</small></span><span class="p num">¥20,000</span></label></li>
-        <li><label><input type="checkbox" data-min="30000" data-max="30000"><span class="n">のぼり・店頭A型看板（データ）</span><span class="p num">¥30,000</span></label></li>
-        <li><label><input type="checkbox" data-min="8000" data-max="8000"><span class="n">印刷の手配<small>印刷会社への発注をお手伝いします（印刷費は別）。</small></span><span class="p num">¥8,000</span></label></li>
-        <li class="grp" aria-hidden="true"><span class="num">02</span>ネットの入口</li>
-        <li class="grp-note">LINE、Googleマップ、名刺のQRコードは、行き先のホームページがあると、そろいます。</li>
-        <li><label><input type="checkbox" data-key="gbp" data-min="20000" data-max="20000"><span class="n">Googleビジネスプロフィール<small>Googleマップに、お店を載せるための開設と初期設定。</small></span><span class="p num">¥20,000</span></label></li>
-        <li><label><input type="checkbox" data-key="ig" data-min="15000" data-max="15000"><span class="n">Instagramの初期設計<small>アカウント作成のサポート、プロフィール文・名前・アイコンの設計、ホームページやGoogleマップへの導線、ハイライト枠の設計、最初の投稿の型3パターン。日々の投稿代行・撮影・リール・広告運用は含みません。</small></span><span class="p num">¥15,000</span></label></li>
-        <li><label><input type="checkbox" data-key="line" data-min="50000" data-max="50000"><span class="n">LINE公式アカウント構築<small>開設のサポート、プロフィール、あいさつ、リッチメニュー1枚、基本の自動応答まで。クーポン・配信・運用は含みません。</small></span><span class="p num">¥50,000</span></label></li>
-        <li><label><input type="checkbox" data-key="yoyaku" data-quote="1"><span class="n">予約システム（LINE連携）<small>LINEで予約が完結する仕組み。お店の形に合わせて作るため、内容を伺ってお見積りします。</small></span><span class="p"><em class="q">要見積り</em></span></label></li>
-        <li class="grp" aria-hidden="true"><span class="num">03</span>お店の仕組み</li>
-        <li><label><input type="checkbox" data-min="20000" data-max="40000"><span class="n">レジ・決済システムの導入支援<small>手数料などを比べて、申込と初期設定をお手伝いします。特定の業者は勧めません。</small></span><span class="p num">¥20,000〜40,000</span></label></li>
-        <li><label><input type="checkbox" data-min="10000" data-max="10000"><span class="n">電話回線の開通サポート<small>回線の種類を比べて、申込を一緒に進め、開通後の確認までお手伝いします。</small></span><span class="p num">¥10,000</span></label></li>
-        <li class="grp" aria-hidden="true"><span class="num">04</span>オープン前</li>
-        <li><label><input type="checkbox" data-min="50000" data-max="50000"><span class="n">オープン直前の1日集中サポート<small>8時間・対面。</small></span><span class="p num">¥50,000</span></label></li>
-      </ul>
-      <div class="total">
-        <span class="label">合計（税別・目安）</span>
-        <output class="num" id="total">¥0</output>
-        <output class="num total__m" id="totalM"></output>
-        <output class="total__q" id="totalQ"></output>
-        <output class="total__q total__h" id="totalH"></output>
-      </div>
-      <p class="note">金額は税別・目安です。幅のある項目は、内容によって変わります。「要見積り」の項目は、合計に入っていません。</p>
-      <p class="note">単品を注文したあと、打ち合わせが必要なときは、1時間1万円の実務相談です。SNS運用、業務ツール、開店後の運用など、ここにないものも、ご相談ください。</p>
-    </form>
-
-    <p class="cta-row"><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfCmlGO5wQaKVgEN18aG3xpJQOTL0yU8fTLBmSKBReAAPDPqA/viewform" target="_blank" rel="noopener">まずは無料相談してみる <span aria-hidden="true">→</span></a></p>
-  </div>
-</section>
-
-<!-- 07 進め方・FAQ -->
-<section class="sec" id="flow">
-  <div class="wrap">
-    <p class="sec__no" aria-hidden="true">06</p>
-    <p class="label"><b>06</b> / 進め方</p>
-    <h2 class="h2">相談してから、<br>決めて大丈夫です。</h2>
-    <ol class="steps">
-      <li><span class="num">01</span><div><h3>無料相談</h3><p>対面（オンラインも可）。契約するまで何度でも無料です。今の状況を伺います。</p></div></li>
-      <li><span class="num">02</span><div><h3>単品を選ぶ</h3><p>必要なものだけを、一緒に決めます。ここまで無料です。</p></div></li>
-      <li><span class="num">03</span><div><h3>お見積り・ご契約</h3><p><span class="s">内容とお見積りを確認して、納得できたらご契約です。</span><span class="s">ご契約までは、費用はかかりません。</span><span class="s">納得できなければ、お断りいただいて構いません。</span></p></div></li>
-      <li><span class="num">04</span><div><h3>制作・実務相談</h3><p><span class="s">HP・チラシ・名刺などを、一つずつ形にします。</span><span class="s">打ち合わせが必要なときは、1時間1万円の実務相談です。</span></p></div></li>
-      <li><span class="num">05</span><div><h3>開業、そのあと</h3><p>開業後も、無料相談は続けられます。一人にしません。</p></div></li>
+    <p class="sec-label"><span>02</span> CHECK</p>
+    <h2>手が回らない作業は、<br class="sp">どれですか？</h2>
+    <ol class="steps" aria-label="進み方">
+      <li><b>1</b>近いものを選ぶ（複数OK）</li><li><b>2</b>料金の目安を見る</li><li><b>3</b>相談・見積もり</li>
     </ol>
-
-    <div class="gift">
-      <p class="label">GIFT</p>
-      <h3 class="gift__h">ご相談の方へ、3つのプレゼント。</h3>
-      <ul class="gift__list">
-        <li><span class="num">GIFT 01</span><b>開業までに、やることリスト</b><span>何から手をつけるかの道しるべ。</span></li>
-        <li><span class="num">GIFT 02</span><b>弁当屋1年目の、実際の収支データ</b><span>個別の取引先は伏せた、サマリー版。</span></li>
-        <li><span class="num">GIFT 03</span><b>開業前に知っておきたかった、失敗談リスト</b><span>先に知っておけば避けられたこと。</span></li>
-      </ul>
-    </div>
-
-    <div class="faq" id="faq">
-      <p class="label"><b>07</b> / 質問</p>
-      <h2 class="h2 h2--s">よくある質問</h2>
-      <details><summary>対応エリアはどこですか？</summary><p>金沢市と近県が中心です。オンラインなら全国から対応します。</p></details>
-      <details><summary>開業前で、何から始めたらいいか分かりません。相談してよいですか？</summary><p>大丈夫です。むしろ、そういう方のための相談です。今の状況を伺い、何を用意すべきかの整理から一緒にやります。</p></details>
-      <details><summary>無料相談と、単品を注文したあとの相談は何が違いますか？</summary><p>無料相談は、方向性や疑問への回答が中心で、契約するまで何度でも無料です。実務の代行や制作は含みません。単品を注文したあとに打ち合わせが必要な場合は、1時間1万円の実務相談になります。</p></details>
-      <details><summary>ほかの開業コンサルと何が違いますか？</summary><p>実際に飲食店を経営し、黒字のまま事業譲渡までやった当事者であること。特定の業者と提携せず、忖度なくお話しできることです。</p></details>
-      <details><summary>既存のお店のリニューアルだけでも頼めますか？</summary><p>頼めます。HPだけ、名刺だけでも構いません。単品で選べます。</p></details>
-      <details><summary>屋号やロゴがまだ決まっていませんが、相談できますか？</summary><p>できます。屋号づくり・ロゴ作成もご用意しています。</p></details>
-      <details><summary>飲食店以外でも頼めますか？</summary><p>飲食店の開業・運営支援が中心ですが、内容によっては、お力になれる場合もあります。まずは、お気軽にご相談ください。</p></details>
-      <details><summary>ドメイン・サーバーの契約はどうなりますか？</summary><p>基本はお客さまのご契約です（取得・設定はこちらで行います）。管理の代行も承ります。</p></details>
+    <div class="pickwrap">
+      <fieldset class="picklist">
+        <legend class="sr">いま困っていることを、選んでください（複数選べます）</legend>
+        <label class="pickrow"><input type="checkbox" value="p1" data-kind="month" data-name="投稿代行プラン" data-amount="30000" data-plan="plan-2"><span class="pickrow-text">営業と仕込みで手一杯で、Instagramの更新が止まっている</span><span class="pickrow-offer"><em>月額</em>投稿代行プラン<b class="mono">月 30,000円</b></span></label>
+        <label class="pickrow"><input type="checkbox" value="p3" data-kind="tan" data-name="ホームページ制作" data-amount="60000" data-plan="sim-hp"><span class="pickrow-text">ホームページがない、もしくは古いまま。作る時間も余裕もない</span><span class="pickrow-offer"><em>単品</em>ホームページ制作<b class="mono">60,000円</b></span></label>
+        <label class="pickrow"><input type="checkbox" value="p4" data-kind="tan" data-name="事業計画書・融資書類の整理" data-amount="30000" data-plan="sim-biz"><span class="pickrow-text">お店を開業したいけれど、何から手をつければいいか分からない</span><span class="pickrow-offer"><em>単品</em>事業計画書・融資書類の整理<b class="mono">30,000円</b></span></label>
+        <label class="pickrow"><input type="checkbox" value="p5" data-kind="tan" data-name="LINE公式構築" data-amount="50000" data-plan="sim-line"><span class="pickrow-text">公式LINEで集客や予約を受けたいけど、何から始めるか分からない</span><span class="pickrow-offer"><em>単品</em>LINE公式構築<b class="mono">50,000円</b></span></label>
+        <label class="pickrow"><input type="checkbox" value="p8" data-kind="tan" data-name="AIレッスン（3か月・全6回）" data-amount="36000" data-plan="sim-ai"><span class="pickrow-text">AIを使ってみたいけれど、何から手をつければいいか分からない</span><span class="pickrow-offer"><em>単品</em>AIレッスン（3か月・全6回）<b class="mono">36,000円</b></span></label>
+        <label class="pickrow"><input type="checkbox" value="p2" data-kind="quote" data-name="アプリ・ツール開発" data-plan="sim-tool"><span class="pickrow-text">勤怠や納品書の事務まで手が回らない。市販のアプリも使いにくい</span><span class="pickrow-offer"><em>単品</em>アプリ・ツール開発<b class="mono">要見積もり</b></span></label>
+      </fieldset>
+      <aside class="pickpanel" id="pick-bar" aria-live="polite">
+        <p class="pickpanel-label">選んだ内容</p>
+        <div class="pickpanel-sum" id="pick-summary"></div>
+        <p class="pickpanel-btns">
+          <a class="btn js-form" href="#contact">この内容で無料相談する</a>
+          <a class="btn btn-ghost js-pick-price is-off" href="#plans" aria-disabled="true">料金の詳細を見る</a>
+        </p>
+        <button type="button" class="link-btn" id="pick-clear" hidden>選択をクリア</button>
+        <div class="pickpanel-free">
+          <p><b>どれか分からない方も、まず無料相談へ。</b></p>
+          <p>誰に聞けばいいか分からないことも、そのままお話しください。<br>1回45分・オンライン全国対応可・契約まで何度でも無料です。</p>
+        </div>
+      </aside>
     </div>
   </div>
 </section>
 
-<!-- 08 相談 -->
-<section class="sec sec--tint" id="contact">
+<!-- SECTION 03 料金プラン -->
+<section class="sec" id="plans-top">
   <div class="wrap">
-    <p class="sec__no" aria-hidden="true">08</p>
-    <p class="label"><b>08</b> / 相談</p>
-    <h2 class="h2">まず、話を<br>聞かせてください。</h2>
-    <p class="mw"><span class="s">まだ具体化していなくて大丈夫です。</span><span class="s">納得するまで、とことん何度でもお話ししましょう。</span><span class="s">しつこい営業はしません。</span><span class="s">お気軽にご相談ください。</span></p>
+    <p class="sec-label"><span>03</span> PRICING</p>
+    <h2>サービスと料金</h2>
+    <p class="lead">月額で続けて任せるか、単品で必要なものだけ頼むか。お客様の状態に合わせて選べます。</p>
 
-    <div class="contact-cta">
-      <p class="cta-row"><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfCmlGO5wQaKVgEN18aG3xpJQOTL0yU8fTLBmSKBReAAPDPqA/viewform" target="_blank" rel="noopener">まずは無料相談してみる <span aria-hidden="true">→</span></a></p>
-      <p class="note">フォームが開かない場合は、<span class="num">yokogumi.info@gmail.com</span> へ、お名前と、ご相談内容をお送りください。</p>
+    <div class="sub" id="plans">
+    <h3 class="sub-title">集客サポート 月額プラン</h3>
+    <p class="lead">Instagram・Googleマップ・LINEの相談から代行まで。手が回らない度合いに合わせて、3つから選べます。月契約で、最低契約期間はありません。</p>
+
+    <div class="plan-cards reveal" id="plans-cards">
+      <article class="pcard" id="plan-1">
+        <p class="pcard-no mono">01</p>
+        <h3>相談プラン</h3>
+        <p class="pcard-for">相談しながら、<br>自分で実行したい人向け</p>
+        <p class="pcard-price mono">月 10,000円</p>
+        <ul class="pcard-list">
+          <li>月1回45分の相談</li>
+          <li>今月やることを3つ提案</li>
+          <li>LINE相談・Googleマップのアドバイス</li>
+          <li>AI活用の相談（ツール開発は要見積もり）</li>
+        </ul>
+        <p class="pcard-go"><a class="link-arrow js-form" href="#contact">このプランを無料相談で聞く</a></p>
+      </article>
+      <article class="pcard" id="plan-2">
+        <p class="pcard-no mono">02</p>
+        <h3>投稿代行プラン</h3>
+        <p class="pcard-for">投稿作成まで<br>任せたい人向け</p>
+        <p class="pcard-price mono">月 30,000円</p>
+        <ul class="pcard-list">
+          <li class="base">相談プランの内容</li>
+          <li class="add">Instagram投稿 4本</li>
+        </ul>
+        <p class="pcard-go"><a class="link-arrow js-form" href="#contact">このプランを無料相談で聞く</a></p>
+      </article>
+      <article class="pcard pcard-hi" id="plan-3">
+        <p class="pcard-no mono">03</p>
+        <h3>まるごと代行プラン</h3>
+        <p class="pcard-for">Instagram・マップ・LINEまで<br>まとめて任せたい人向け</p>
+        <p class="pcard-price mono">月 50,000円</p>
+        <ul class="pcard-list">
+          <li class="base">相談プランの内容</li>
+          <li class="add">Instagram投稿 8本・ストーリーズ</li>
+          <li class="add">マップ・LINEの更新 合計5件</li>
+          <li class="add">月次レポート</li>
+        </ul>
+        <p class="pcard-go"><a class="link-arrow js-form" href="#contact">このプランを無料相談で聞く</a></p>
+      </article>
     </div>
+
+
+    <p class="plan-fee-note">いずれのプランも、はじめに初期設計費（1回のみ）15,000円がかかります。</p>
+
+    <details class="compare"><summary>内容を一覧で比べる</summary>
+    <div class="plan-table-wrap">
+      <table class="plan-table">
+        <caption class="sr">月額プランの比較表</caption>
+        <thead>
+          <tr><td></td><th scope="col">相談<br>のみ</th><th scope="col">投稿<br>代行</th><th scope="col" class="hi">まるごと<br>代行</th></tr>
+          <tr class="price-row"><th scope="row">月額</th><td class="mono">10,000円</td><td class="mono">30,000円</td><td class="mono hi">50,000円</td></tr>
+        </thead>
+        <tbody>
+        <tr><th scope="row">月1回45分の相談</th><td class="y" aria-label="含まれる">●</td><td class="y" aria-label="含まれる">●</td><td class="y" aria-label="含まれる">●</td></tr>
+        <tr><th scope="row">今月やることを3つ提案</th><td class="y" aria-label="含まれる">●</td><td class="y" aria-label="含まれる">●</td><td class="y" aria-label="含まれる">●</td></tr>
+        <tr><th scope="row">LINE相談<small>返信は2営業日以内・1回1テーマ</small></th><td class="y" aria-label="含まれる">●</td><td class="y" aria-label="含まれる">●</td><td class="y" aria-label="含まれる">●</td></tr>
+        <tr><th scope="row">Googleマップ運用のアドバイス</th><td class="y" aria-label="含まれる">●</td><td class="y" aria-label="含まれる">●</td><td class="y" aria-label="含まれる">●</td></tr>
+        <tr><th scope="row">AI活用の相談</th><td class="y" aria-label="含まれる">●</td><td class="y" aria-label="含まれる">●</td><td class="y" aria-label="含まれる">●</td></tr>
+        <tr><th scope="row">簡易レポート</th><td class="y" aria-label="含まれる">●</td><td class="y" aria-label="含まれる">●</td><td class="y" aria-label="含まれる">●</td></tr>
+        <tr><th scope="row">Instagram投稿</th><td class="n" aria-label="含まれない">―</td><td>4本</td><td>8本<small>＋ストーリーズ</small></td></tr>
+        <tr><th scope="row">Googleマップ・LINEの更新</th><td class="n" aria-label="含まれない">―</td><td class="n" aria-label="含まれない">―</td><td>合計5件</td></tr>
+        <tr><th scope="row">月次レポート</th><td class="n" aria-label="含まれない">―</td><td class="n" aria-label="含まれない">―</td><td class="y" aria-label="含まれる">●</td></tr>
+        <tr class="extra-head"><th scope="colgroup" colspan="4">月額のほかにかかる料金</th></tr>
+        <tr class="extra-tr"><th scope="row">初期設計<small>Instagramを始めるとき1回のみ</small></th><td colspan="3" class="mono">15,000円</td></tr>
+        <tr class="extra-tr"><th scope="row">投稿を追加<small>1本あたり</small></th><td colspan="3" class="mono">6,000円</td></tr>
+        <tr class="extra-tr"><th scope="row">更新を追加<small>1件あたり</small></th><td colspan="3" class="mono">3,000円</td></tr>
+        </tbody>
+      </table>
+    </div>
+    </details>
+    <p class="note">実際の作業は、相談プランでは店主ご自身で行います。表示価格はすべて税抜です。</p>
+
+
+    </div>
+
+    <div class="sub sub-menu" id="menu">
+    <h3 class="sub-title">単品サービス</h3>
+    <p class="lead">必要なものだけ、1つから。単品だけでも、月額プランにプラスしても、お選びいただけます。</p>
+
+    <div class="sim" id="sim">
+      <div class="sim-pick">
+        <fieldset>
+          <legend>制作・設計</legend>
+          <label><input id="sim-hp" type="checkbox" data-label="ホームページ制作" data-min="60000"><span>ホームページ制作<small>1ページ・テンプレート型（地図の埋め込み）</small></span><b class="mono">60,000円</b></label>
+          <label><input id="sim-line" type="checkbox" data-label="LINE公式構築" data-min="50000"><span>LINE公式構築<small>お店の情報・最初のメッセージ・メニュー画面・自動返信の設定</small></span><b class="mono">50,000円</b></label>
+          <label><input id="sim-gbp" type="checkbox" data-label="Googleビジネスプロフィール" data-min="20000"><span>Googleビジネスプロフィール<small>お店の情報ページの開設と登録</small></span><b class="mono">20,000円</b></label>
+          <label><input id="sim-ig" type="checkbox" data-label="Instagram初期設計" data-min="15000"><span>Instagram初期設計<small>プロフィール・導線・最初の投稿の型づくり</small></span><b class="mono">15,000円</b></label>
+          <label><input id="sim-tool" type="checkbox" data-label="アプリ・ツール開発" data-quote="1"><span>アプリ・ツール開発<small>勤怠管理・納品書整理など事務処理の困りごとをお聞きし、お店専用に作成します。</small></span><b class="mono">要見積もり</b></label>
+          <label><input type="checkbox" data-label="チラシ" data-min="30000"><span>チラシ<small>A4・カラー片面のデザイン（印刷データまで）</small></span><b class="mono">30,000円</b></label>
+          <label><input type="checkbox" data-label="名刺" data-min="15000"><span>名刺<small>デザイン制作（印刷データまで）</small></span><b class="mono">15,000円</b></label>
+          <label><input type="checkbox" data-label="ロゴ" data-min="20000" data-max="40000"><span>ロゴ<small>シンボルなし2万円／ありは4万円</small></span><b class="mono">20,000〜40,000円</b></label>
+          <label><input type="checkbox" data-label="印刷の手配" data-min="8000"><span>印刷の手配<small>印刷に適したデータを作成し、発注までサポート</small></span><b class="mono">8,000円</b></label>
+        </fieldset>
+        <fieldset>
+          <legend>開業準備・支援</legend>
+          <label><input type="checkbox" data-label="コンセプト設計・ブランディング" data-quote="1"><span>コンセプト設計・ブランディング<small>誰に・何を・どう見せるかを整理し、お店の軸を言葉にします</small></span><b class="mono">要見積もり</b></label>
+          <label><input id="sim-biz" type="checkbox" data-label="事業計画書・融資書類の整理" data-min="30000"><span>事業計画書・融資書類の整理<small>整理まで（書類は本人が作成）</small></span><b class="mono">30,000円</b></label>
+          <label><input type="checkbox" data-label="レジ・決済導入支援" data-min="20000" data-max="40000"><span>レジ・決済導入支援<small>クレカ・PayPayなどの導入</small></span><b class="mono">20,000〜40,000円</b></label>
+          <label><input type="checkbox" data-label="オープン直前の1日集中サポート" data-min="50000"><span>オープン直前の1日集中サポート<small>8時間・対面</small></span><b class="mono">50,000円</b></label>
+        </fieldset>
+        <fieldset>
+          <legend>実務相談</legend>
+          <label><input type="checkbox" data-label="実務相談（1時間）" data-min="10000"><span>実務相談（1時間）<small>注文後の打ち合わせ1時間</small></span><b class="mono">10,000円</b></label>
+          <label><input id="sim-ai" type="checkbox" data-label="AIレッスン（3か月・全6回）" data-min="36000"><span>AIレッスン（3か月・全6回）<small>Claudeの使い方を一緒に練習。月12,000円×3か月（月2回）</small></span><b class="mono">36,000円</b></label>
+        </fieldset>
+              <fieldset class="sim-plans">
+          <legend>月額プランも一緒に見積もる（任意・1つ選べます）</legend>
+          <label><input type="radio" name="simplan" data-plan="plan-1" data-label="相談プラン" data-month="10000"><span>相談プラン<small>月1回45分の相談・LINE相談 など</small></span><b class="mono">月 10,000円</b></label>
+          <label><input type="radio" name="simplan" data-plan="plan-2" data-label="投稿代行プラン" data-month="30000"><span>投稿代行プラン<small>相談プラン＋Instagram投稿4本</small></span><b class="mono">月 30,000円</b></label>
+          <label><input type="radio" name="simplan" data-plan="plan-3" data-label="まるごと代行プラン" data-month="50000"><span>まるごと代行プラン<small>Instagram投稿8本・マップ・LINEの更新・月次レポート</small></span><b class="mono">月 50,000円</b></label>
+        </fieldset>
+      </div>
+      <aside class="sim-out" aria-live="polite">
+        <h3>選んだ項目</h3>
+        <ul id="sim-list" class="sim-list"></ul>
+        <p class="sim-total"><span>単品の合計</span><b id="sim-total" class="mono">0円</b></p>
+        <p class="sim-total sim-month" id="sim-month-row" hidden><span>月額</span><b id="sim-month" class="mono"></b></p>
+        <p id="sim-bundle" class="sim-bundle" hidden>ホームページ・Googleビジネスプロフィール・Instagram初期設計を同時にご依頼の場合は、「ネット集客スタートパック」85,000円です。</p>
+        <p class="sim-go"><a class="btn btn-sm js-form" href="#contact">この内容で無料相談する</a></p>
+        <button type="button" id="sim-reset" class="link-btn">選択をクリア</button>
+        <p class="note">これは目安を確認するための簡易シミュレーターです。契約・お申込み・決済ではありません。内容によって金額が変わる場合があります。</p>
+      </aside>
+    </div>
+  </div>
+</section>
+<!-- SECTION 02b なぜヨコグミに任せられるのか -->
+<section class="sec" id="why">
+  <div class="wrap">
+    <p class="sec-label"><span>04</span> WHY YOKOGUMI</p>
+    <h2>手が回らない作業を、<br>ヨコグミに任せられる理由。</h2>
+    <p class="lead">お店のことで手一杯で、集客まで手が回らないこともあると思います。そんなときに、現場の事情が分かる人が、つくるところから任せられるようにしています。</p>
+    <div class="rs-x reveal">
+      <div class="rs-x-side">
+        <p class="rs-x-tag">店をやる側</p>
+        <p class="rs-num mono"><span data-count="3">3</span><em>年</em><span data-count="8">8</span><em>か月</em></p>
+        <p class="rs-cap">弁当店「べんとも」を経営</p>
+        <p class="rs-x-text">飲食未経験から弁当店を開業しました。仕込みや買い出し、バックオフィス業務まで、全部自分で抱えていました。<br>集客まで手が回らない状況は、他人事ではありません。だから、同じ立場で相談に乗れます。</p>
+      </div>
+      <p class="rs-x-mark mono" aria-hidden="true">×</p>
+      <div class="rs-x-side">
+        <p class="rs-x-tag">つくる側</p>
+        <p class="rs-num mono"><span data-count="20">20</span><em>年</em></p>
+        <p class="rs-cap">印刷会社で、デザインに携わってきた</p>
+        <p class="rs-x-text">ホームページ・チラシ・名刺・ロゴなど、お店の顔になるものを、仕事としてつくり続けてきました。<br>LINE公式・予約システムの構築や、Instagram（約4,000人まで運用）まで、集客の実績があります。</p>
+      </div>
+    </div>
+    <p class="rs-x-then reveal">お店のたいへんな実情を分かっている当事者で、集客ツールや販促物も、自分でつくれる。<br>さらに、経営して「知らなかったこと」を、これから店をやる人に先にお伝えできます。</p>
+    <div class="rs-num-row reveal">
+      <h3>数字を見て、必要なものだけ決めます。</h3>
+      <p>損益分岐点や原価率など、感覚ではなく数字で判断してきました。特定の業者と組まず、紹介料目的の提案もしないので、必要なものだけお伝えします。</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="sec sec-tint wsec" id="why-story">
+  <div class="wrap">
+    <div class="wstory reveal">
+      <div class="wstory-head">
+        <p class="wstory-label">どうしてヨコグミか</p>
+        <h3 class="wstory-title">私の苦い経験を、<br>生かせるからです。</h3>
+        <p class="wstory-intro">弁当店を経営して、知らないまま遠回りしたことが、たくさんあります。</p>
+      </div>
+      <ul class="wstory-list">
+        <li><p>ひたすら店頭で待つだけの、「待ち」の商売だった</p></li>
+        <li><p>誰も気づかないことにこだわりを持ちすぎて、無駄に材料コストをかけた</p></li>
+        <li><p>少しでも安くとケチって、買い出しに多くの時間を費やした</p></li>
+        <li><p>一般向けに始めたが、会議やセミナー用の法人需要に、あとで気づいた</p></li>
+        <li><p>バックオフィス業務を全部自分で済ませていた</p></li>
+        <li class="wstory-cap"><p>どれも、<b>先に知っていれば</b>防げたことです。</p></li>
+      </ul>
+      <div class="wstory-close">
+        <p class="wstory-big">最初から<br>知っていれば。</p>
+        <div>
+          <p>自分ひとりで抱え込まずに、外注も使いながら、時間の使い方を考えて店を回せたと思います。遠回りした分だけ、「先に知っておきたかったこと」はよく分かります。</p>
+          <p class="wstory-accent">同じ遠回りは、しなくて大丈夫です。先にお伝えします。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 03 ヨコグミとは -->
+<section class="sec sec-tint" id="about">
+  <div class="wrap">
+    <p class="sec-label"><span>05</span> ABOUT</p>
+    <h2>実際に店をやった人が、<br>横に並んで一緒に考えます。</h2>
+
+    <div class="about-top">
+      <figure class="portrait"><img src="assets/img/profile.jpg" alt="弁当店「べんとも」のキャップとデニムのエプロン姿の村田" width="640" height="800" loading="lazy"><figcaption class="portrait-cap"><span>代表</span>村田 一訓<small>立ち上げ・経営・事業譲渡の当事者</small></figcaption></figure>
+      <div class="about-body">
+        <p class="lead">印刷業界で約20年勤めたのち、コロナ禍をきっかけに、妻と温めていた夢に踏み出しました。飲食未経験のまま始めた弁当店「べんとも」です。</p>
+        <p class="own-words">実際に自分で店をやって、集客も数字も、ちゃんと見てきました。<br>
+        損益分岐点も原価率も、感覚ではなく数字で判断してきました。<br>
+        自分が知らずに損したことは、全部覚えています。同じ失敗をしてほしくないので、聞かれたことには、経験と数字をもとにお答えします。</p>
+        <p class="stats-title">弁当店「べんとも」の経営実績</p>
+        <div class="stats reveal">
+      <div class="stat"><p class="stat-num mono">約<span data-count="3">3</span><em>か月</em></p><p>開業から単月黒字化</p></div>
+      <div class="stat"><p class="stat-num mono"><span data-count="3">3</span><em>年</em><span data-count="8">8</span><em>か月</em></p><p>弁当屋を経営</p></div>
+      <div class="stat"><p class="stat-num mono">約<span data-count="1.5" data-dec="1">1.5</span><em>倍</em></p><p>年間売上の伸び<br><small>2023年度 → 2025年度</small></p></div>
+      <div class="stat"><p class="stat-num mono">約<span data-count="4000">4,000</span><em>人</em></p><p>Instagramを運用<br><small>フォロワー数</small></p></div>
+    </div>
+      </div>
+    </div>
+
+
+    <div class="origin reveal">
+      <div class="origin-logo" aria-hidden="true">
+        <img class="origin-symbol" src="assets/img/symbol.png" alt="" width="146" height="176" loading="lazy">
+        <img class="origin-word" src="assets/img/wordmark.png" alt="" width="403" height="112" loading="lazy">
+      </div>
+      <div class="origin-text">
+        <h3>「ヨコグミ」の名前の由来</h3>
+        <p>「横」に並んで、「組む」という意味です。ラッコが仲間と手をつないで並んで浮く姿に、その考え方を重ねました。上から教えるのではなく、横に並んで、一緒に考えます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 06 制作実績 -->
+<section class="sec" id="works">
+  <div class="wrap">
+    <p class="sec-label"><span>06</span> WORKS</p>
+    <h2>制作実績</h2>
+    <p class="lead">ヨコグミ名義の制作実績は、まだ多くありません。いまは、実在しない店を題材にした、自主制作のサンプルを載せています。お客様の作品ではありません。</p>
+    <ul class="works reveal">
+      <li class="work">
+        <a class="work-link" href="https://santaworks-jp.github.io/nagi/" target="_blank" rel="noopener">
+        <img src="assets/img/works/lp-salon.jpg" alt="フェイシャルサロンのランディングページの画面（自主制作サンプル）" width="1200" height="750" loading="lazy">
+          <div class="work-body">
+          <p class="work-tag">自主制作サンプル／架空の店舗</p>
+          <h3>フェイシャルサロンのLP</h3>
+          <p>石川・金沢の個室サロンを想定した、1ページのランディングページです。</p>
+        <span class="work-go">サンプルのページを見る →</span></div>
+        </a>
+      </li>
+      <li class="work">
+        <a class="work-link" href="https://santaworks-jp.github.io/shiraki/" target="_blank" rel="noopener">
+        <img src="assets/img/works/lp-washoku.jpg" alt="日本料理店のランディングページの画面（自主制作サンプル）" width="1200" height="750" loading="lazy">
+          <div class="work-body">
+          <p class="work-tag">自主制作サンプル／架空の店舗</p>
+          <h3>日本料理店のLP</h3>
+          <p>金沢のカウンター八席の日本料理店を想定した、1ページのランディングページです。写真はすべてイメージです。</p>
+        <span class="work-go">サンプルのページを見る →</span></div>
+        </a>
+      </li>
+      <li class="work work-flyer">
+        <a class="work-link" href="assets/img/works/flyer-bakery-large.jpg" target="_blank" rel="noopener">
+        <img src="assets/img/works/flyer-bakery.jpg" alt="パン屋の開店を知らせるA4チラシ（自主制作サンプル）" width="760" height="1075" loading="lazy">
+          <div class="work-body">
+          <p class="work-tag">自主制作サンプル／架空の店舗</p>
+          <h3>パン屋の開店チラシ</h3>
+          <p>新しくオープンするパン屋を想定した、A4のチラシです。店名・住所・電話番号はすべて架空で、写真はイメージです。</p>
+        <span class="work-go">大きい画像で見る →</span></div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- SECTION 07 進め方 -->
+<section class="sec sec-tint" id="flow">
+  <div class="wrap">
+    <p class="sec-label"><span>07</span> FLOW</p>
+    <h2>進め方</h2>
+    <p class="lead">契約ありきではありません。相談だけで終わってもかまいません。</p>
+    <ol class="flow reveal">
+      <li><span class="mono">01</span><h3>無料相談</h3><p>1回45分。オンライン全国対応可。気になっていることを、そのままお話しください。</p></li>
+      <li><span class="mono">02</span><h3>現状を整理・診断</h3><p>診断結果と、「30日のやることリスト」をPDFでお渡しします。</p></li>
+      <li><span class="mono">03</span><h3>必要な支援だけ選ぶ</h3><p>自分でやる部分と、任せる部分を決めます。無理にすすめることはありません。</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- SECTION 08 よくある質問 -->
+<section class="sec" id="faq">
+  <div class="wrap faq-grid">
+    <div class="faq-head">
+      <p class="sec-label"><span>08</span> FAQ</p>
+      <h2>よくある質問</h2>
+      <div class="mid-cta">
+        <p>ほかに気になることがあれば、無料相談でそのままお聞きください。</p>
+        <a class="btn js-form" href="#contact">無料相談を申し込む</a>
+      </div>
+    </div>
+    <div class="faq">
+      <details><summary>無料相談は本当に無料ですか？相談だけでも大丈夫ですか？</summary><p>はい、無料です。ご契約をいただくまで、何度でも無料でご相談いただけます。契約を前提とした相談ではありませんので、相談だけでも大丈夫です。</p></details>
+      <details><summary>オンラインでも、対面でも相談できますか？</summary><p>オンラインで対応しています。対面は、石川・金沢を中心に、元オーナーとしてご相談に乗ります。場所は、日程調整の際にご希望をうかがったうえで、ご相談して決めます。</p></details>
+      <details><summary>月額プランに、最低契約期間や違約金はありますか？解約できますか？</summary><p>最低契約期間も違約金もありません。月単位の契約で、前月末までにご連絡いただければ解約できます。</p></details>
+      <details><summary>単品サービスは、途中でやめられますか？返金はできますか？</summary><p>やめることはできますが、制作の途中でやめた場合も、料金の返金はできません。内容に迷うときは、お申込みの前に、無料相談でご相談ください。</p></details>
+      <details><summary>月額サービスではどこまでやってもらえますか？</summary><p>相談プランは相談とアドバイスが中心で、実際の作業は店主ご自身で行います。投稿代行プランはInstagram投稿4本、まるごと代行プランはInstagram投稿8本・ストーリーズ、Googleマップ・LINEの更新（合計5件）、月次レポートまでを担当します。詳しくは<a href="#plans">月額プラン</a>をご覧ください。</p></details>
+      <details><summary>広告運用は含まれますか？</summary><p>広告費は含まれません。広告運用の代行は、現在のメニューには入っていません。ご希望がある場合は、無料相談でお聞かせください。</p></details>
+      <details><summary>税務・社会保険などもお願いできますか？</summary><p>給与計算、税務手続き、社会保険の手続きは含まれません。</p></details>
+      <details><summary>成果を保証してもらえますか？</summary><p>いたしません。売上・Googleマップの順位・フォロワー数などの数値成果は、お約束できないためです。できること・できないことは、正直にお伝えします。</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 09 無料相談申込み -->
+<section class="sec contact" id="contact">
+  <div class="wrap narrow center">
+    <p class="sec-label"><span>09</span> FREE CONSULTATION</p>
+    <h2>まずは、今やることを<br>一緒に整理しませんか？</h2>
+    <ul class="contact-points">
+      <li>45分の無料相談</li>
+      <li>オンライン全国対応可</li>
+      <li>診断結果と「30日のやることリスト」をお渡し</li>
+    </ul>
+    <a class="btn btn-lg js-form" href="#contact">無料相談を申し込む</a>
+    <p id="form-note" class="form-note" hidden><span class="todo">【GoogleフォームURLを村田さんが記入】</span><br><small>js/config.js の FORM_URL に入力すると、このボタンが申込みフォームにつながります。</small></p>
+    <div id="form-embed" class="form-embed" hidden></div>
+    <p class="note"><span class="nb">お急ぎの方・フォームが使いにくい方は、</span><span class="nb">メール <a href="mailto:yokogumi.info@gmail.com">yokogumi.info@gmail.com</a> へどうぞ。</span></p>
   </div>
 </section>
 
 </main>
 
-<footer class="ft">
-  <div class="wrap ft__in">
-    <img src="assets/img/logo-vertical.png" width="200" height="180" loading="lazy" alt="ヨコグミ YOKOGUMI STARTUP SUPPORT">
-    <div class="ft__t">
-      <p class="label">ヨコグミ｜元弁当屋の、リアル開業相談。</p>
-      <p>村田一訓 ／ 金沢市<br><span class="num">yokogumi.info@gmail.com</span></p>
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div class="foot-brandbox">
+      <img class="foot-symbol" src="assets/img/symbol.png" alt="" width="146" height="176" loading="lazy">
+      <div>
+        <img class="foot-word" src="assets/img/wordmark.png" alt="ヨコグミ" width="403" height="112" loading="lazy">
+        <p class="foot-lab">店舗集客・業務サポート</p>
+        <p class="foot-small">石川県・金沢／オンライン全国対応可</p>
+      </div>
+    </div>
+    <div class="foot-side">
+      <p class="foot-mail"><a href="mailto:yokogumi.info@gmail.com">yokogumi.info@gmail.com</a></p>
+      <ul class="foot-links">
+        <li><a href="privacy.html">プライバシーポリシー</a></li>
+      </ul>
     </div>
   </div>
+  <p class="copy">© ヨコグミ</p>
 </footer>
 
-<script src="assets/js/main.js"></script>
+<div class="cta-bar"><a class="btn js-form" href="#contact">無料相談を申し込む</a></div>
+
+<script src="js/main.js" defer></script>
 </body>
 </html>
