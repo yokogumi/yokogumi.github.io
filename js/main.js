@@ -208,18 +208,19 @@
   var monthRow = $('#sim-month-row'), monthEl = $('#sim-month');
   if (items.length && list && total) {
     var calc = function () {
-      var min = 0, max = 0, html = '', on = items.filter(function (i) { return i.checked; });
+      var min = 0, max = 0, open = false, html = '', on = items.filter(function (i) { return i.checked; });
       var plan = simPlans.filter(function (r) { return r.checked; })[0];
       if (plan) html += '<li><span>' + plan.dataset.label + '（月額）</span><span>' + yen(parseInt(plan.dataset.month, 10)) + ' / 月</span></li>';
       on.forEach(function (i) {
         if (i.dataset.quote) { html += '<li><span>' + i.dataset.label + '</span><span>要見積もり</span></li>'; return; }
         var a = parseInt(i.dataset.min, 10), b = parseInt(i.dataset.max || i.dataset.min, 10);
         min += a; max += b;
-        html += '<li><span>' + i.dataset.label + '</span><span>' + (a === b ? yen(a) : yen(a) + '〜' + yen(b)) + '</span></li>';
+        var isOpen = !!i.dataset.open; if (isOpen) open = true;
+        html += '<li><span>' + i.dataset.label + '</span><span>' + (isOpen ? yen(a) + '〜' : (a === b ? yen(a) : yen(a) + '〜' + yen(b))) + '</span></li>';
       });
       list.innerHTML = html || '<li class="empty">項目を選ぶと、ここに表示されます。</li>';
       var q = on.some(function (i) { return i.dataset.quote; }), priced = on.some(function (i) { return !i.dataset.quote; });
-      total.textContent = !on.length ? '0円' : (priced ? (min === max ? yen(min) : yen(min) + '〜' + yen(max)) + (q ? '＋要見積もり' : '') : '要見積もり');
+      total.textContent = !on.length ? '0円' : (priced ? (open ? yen(min) + '〜' : (min === max ? yen(min) : yen(min) + '〜' + yen(max))) + (q ? '＋要見積もり' : '') : '要見積もり');
       if (monthRow) { monthRow.hidden = !plan; if (plan) monthEl.textContent = '月 ' + yen(parseInt(plan.dataset.month, 10)); }
       if (bundle) {
         var ids = ['hp', 'gbp', 'ig'];
