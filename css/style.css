@@ -1160,3 +1160,6 @@ input[type=radio]:checked::after{transform:scale(1)}
   .hero .scope li a{white-space:nowrap}
   .hero-lead{font-size:1.02rem;line-height:1.8;color:#4a4036}
 }
+
+/* v3 ドラフト: 進め方が4ステップになったため（PC幅） */
+@media (min-width:761px){.flow{grid-template-columns:repeat(4,1fr);gap:28px}}
