@@ -1149,3 +1149,14 @@ input[type=radio]:checked::after{transform:scale(1)}
 
 /* v3 ドラフト: 言葉の途中で折り返さない */
 .nw{white-space:nowrap}
+
+/* v3 ドラフト: スマホ幅の調整（ロゴを小さく／タグを1行に／実績の文を大きく） */
+@media (max-width:760px){
+  .brand-symbol{height:38px}
+  .brand-word{height:17px}
+  .brand-text small{font-size:.66rem}
+  .hero .scope{flex-wrap:wrap;gap:5px;overflow:visible;margin-right:0;padding-right:0}
+  .hero .scope li{flex:1 1 auto;padding:4px 6px;font-size:.7rem;text-align:center}
+  .hero .scope li a{white-space:nowrap}
+  .hero-lead{font-size:1.02rem;line-height:1.8;color:#4a4036}
+}
