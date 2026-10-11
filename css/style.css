@@ -1171,3 +1171,12 @@ input[type=radio]:checked::after{transform:scale(1)}
   .hero .scope li:nth-child(n+4){grid-column:span 3}
   .hero-lead .hero-em{font-size:.9em}
 }
+
+/* v3: Instagramへの誘導（アイコンのみ） */
+.ig-btn{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1.5px solid var(--green);color:var(--green);transition:background .2s,color .2s,border-color .2s}
+.ig-btn:hover,.ig-btn:focus-visible{background:linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);border-color:transparent;color:#fff}
+.ig-head{order:3;margin-left:12px}
+.ig-cta{margin:22px 0 0}
+.ig-big{width:56px;height:56px;border-color:#fff;color:#fff}
+@media (min-width:761px){#nav{margin-left:auto}}
+@media (max-width:760px){.ig-head{order:0;margin-left:auto;margin-right:6px}}
