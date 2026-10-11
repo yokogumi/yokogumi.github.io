@@ -1163,3 +1163,11 @@ input[type=radio]:checked::after{transform:scale(1)}
 
 /* v3 ドラフト: 進め方が4ステップになったため（PC幅） */
 @media (min-width:761px){.flow{grid-template-columns:repeat(4,1fr);gap:28px}}
+
+/* v3: スマホ幅でタグを3列＋2列の等幅にし、強調行を折り返さない */
+@media (max-width:760px){
+  .hero .scope{display:grid;grid-template-columns:repeat(6,1fr);gap:5px}
+  .hero .scope li{flex:none;grid-column:span 2;padding:4px 2px}
+  .hero .scope li:nth-child(n+4){grid-column:span 3}
+  .hero-lead .hero-em{font-size:.9em}
+}
