@@ -101,7 +101,7 @@
     if (el) el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: block || 'start' });
   };
   if (pains.length) {
-    var MAP = { 'sim-ai': 'p8', 'plan-2': 'p1', 'sim-tool': 'p2', 'sim-hp': 'p3', 'sim-biz': 'p4', 'sim-line': 'p5' };
+    var MAP = { 'sim-ai': 'p8', 'sim-reel': 'p9', 'plan-2': 'p1', 'sim-tool': 'p2', 'sim-hp': 'p3', 'sim-biz': 'p4', 'sim-line': 'p5' };
     var sumEl = $('#pick-summary'), clr = $('#pick-clear'), priceBtn = $('.js-pick-price');
     var refresh = function () {
       var on = pains.filter(function (p) { return p.checked; });
@@ -141,6 +141,7 @@
       if (v.p4) $('#sim-biz').checked = true;
       if (v.p5) $('#sim-line').checked = true;
       if (v.p8) $('#sim-ai').checked = true;
+      if (v.p9) $('#sim-reel').checked = true;
       if (v.p2) $('#sim-tool').checked = true;
       if (window.simSetPlan) window.simSetPlan(plan);
       var first = $('#sim input'); if (first) first.dispatchEvent(new Event('change', { bubbles: true }));
