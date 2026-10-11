@@ -367,7 +367,7 @@ html{scroll-behavior:auto}
 .scope{display:flex;flex-wrap:nowrap;gap:8px;list-style:none;padding:0;margin:0 0 18px}
 .scope li{flex:none;white-space:nowrap;display:inline-block;border:1px solid var(--green);border-radius:4px;color:var(--green);font-weight:700;font-size:.8rem;line-height:1.4;padding:4px 12px;background:transparent}
 @media (max-width:760px){.scope{gap:6px;overflow-x:auto;margin-right:-20px;padding-right:20px;scrollbar-width:none;-webkit-overflow-scrolling:touch}.scope::-webkit-scrollbar{display:none}.scope li{font-size:.75rem;padding:3px 10px}}
-@media (min-width:761px){.hero .scope{width:calc(var(--h1,5.2rem)*6.93);max-width:100%}.hero .scope li{flex:1 1 auto;text-align:center}}
+@media (min-width:761px){.hero .scope{display:grid;grid-template-columns:repeat(5,1fr);width:calc(var(--h1,5.2rem)*6.93);max-width:100%}.hero .scope li{text-align:center;padding-left:8px;padding-right:8px}}
 
 .ways{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:0 0 56px}
 .way{display:flex;flex-direction:column;background:var(--paper);border-top:3px solid var(--ink);padding:22px 22px 20px;text-decoration:none;color:var(--ink);transition:transform .2s,box-shadow .2s}
@@ -1130,7 +1130,7 @@ input[type=radio]:checked::after{transform:scale(1)}
 @media (min-width:761px){.hero h1{font-size:clamp(2.5rem,6.2vw,4.6rem)}}
 
 /* v3 ドラフト: 強調の1行を折り返さず1行に収める（PC幅） */
-@media (min-width:761px){.hero-lead .hero-em{white-space:nowrap;font-size:1.12em}}
+@media (min-width:761px){.hero-lead .hero-em{white-space:nowrap;font-size:1.04em}}
 .hero-lead .hero-em .em-sm{font-size:.8em;font-weight:700}
 
 /* v3 ドラフト: 大見出しとタグの間に隙間をあける */
