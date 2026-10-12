@@ -8,7 +8,7 @@ window.SITE_CONFIG = {
   // フォームをページ内に埋め込む場合のみ記入（Googleフォーム →「送信」→「<>埋め込む」の src の URL）。空なら埋め込まずリンクのみ。
   FORM_EMBED_URL: "",
   // GA4の測定ID（例：G-XXXXXXXXXX）
-  GA4_ID: "【GA4測定IDを村田さんが記入】",
+  GA4_ID: "G-GRR6W87QMH",
   // 実行プランの現在の残り枠（社数を数字で。例："2"）。空欄なら残り枠は表示しません。
   SLOTS_LEFT: ""
 };

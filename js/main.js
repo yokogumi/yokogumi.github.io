@@ -38,6 +38,12 @@
       ? C.FORM_URL + '?usp=pp_url&' + C.FORM_ENTRY_SERVICE + '=' + encodeURIComponent(names.join('、'))
       : C.FORM_URL;
   }, true);
+  /* 計測：申込みボタンが押されたことをGA4に送る */
+  document.addEventListener('click', function (e) {
+    if (window.gtag && e.target.closest && e.target.closest('.js-form')) {
+      window.gtag('event', 'consult_click');
+    }
+  });
   var note = $('#form-note');
   if (note && !formReady) { note.hidden = false; }
   var embed = $('#form-embed');
