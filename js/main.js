@@ -31,8 +31,10 @@
     var names = $$('.pickrow input:checked').map(function (i) { return i.dataset.name; });
     if (!names.length) names = $$('#sim-list li:not(.empty) span:first-child').map(function (s) { return s.textContent.replace('（月額）', '').trim(); });
     if (!names.length) {
-      var card = a.closest('.pcard'), h = card && card.querySelector('h3');
-      if (h) names = [h.textContent.trim()];
+      var card = a.closest('[data-service], .pcard'), h = card && card.querySelector('h3');
+      if (a.dataset.service) names = [a.dataset.service];
+      else if (card && card.dataset.service) names = [card.dataset.service];
+      else if (h) names = [h.textContent.trim()];
     }
     a.href = names.length
       ? C.FORM_URL + '?usp=pp_url&' + C.FORM_ENTRY_SERVICE + '=' + encodeURIComponent(names.join('、'))
