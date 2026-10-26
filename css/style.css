@@ -1510,7 +1510,7 @@ input[type=radio]:checked::after{transform:scale(1)}
 /* v4 経歴の帯：ラベルを左に置いて高さを抑える */
 @media (min-width:761px){
   .band-proof .hero-formula{display:grid;grid-template-columns:auto 1fr;column-gap:26px;align-items:center;max-width:960px;margin-inline:auto;text-align:center}
-  .band-proof .proof-label{grid-row:1 / span 2;margin:0;padding:6px 18px 6px 0;border-right:3px solid var(--green);text-align:right;font-size:1.15rem;line-height:1.35;letter-spacing:.06em;color:var(--green);transform:rotate(-4deg);transform-origin:right center}
+  .band-proof .proof-label{grid-row:1 / span 2;margin:0;padding:6px 18px 6px 0;border-right:3px solid var(--green);text-align:right;font-size:1.15rem;line-height:1.35;letter-spacing:.06em;color:var(--green);transform:rotate(-4deg);transform-origin:left center}
   .band-proof .proof-label span{display:block}
   .band-proof .fm-row{grid-column:2}
   .band-proof .fm-result{grid-column:2;justify-self:center}
@@ -2150,7 +2150,10 @@ input[type=radio]:checked::after{transform:scale(1)}
 .pc-list li.off{color:#7d7264}
 .px .pc-list li.off{color:#7d7264}
 /* その他メニューの税別表記 */
-.pl-tax{margin:10px 0 0;font-size:.82rem;color:var(--sub)}
+.pl-tax{margin:10px 0 0;font-size:.74rem;color:var(--sub);text-align:right}
+.pl-more{border-bottom:0}
+.pl-intro{margin:0 0 0 16px;font-size:.85rem;font-weight:400;line-height:1.7;color:var(--sub)}
+@media (max-width:760px){.pl-intro{display:block;margin:6px 0 0}}
 /* 強みの帯：スマホで数字が途中で折れないように */
 .fm-item em{white-space:nowrap}
 @media (max-width:760px){
@@ -2212,7 +2215,7 @@ input[type=radio]:checked::after{transform:scale(1)}
 /* v4 スマホ：代表の写真を、本文と同じ幅（全幅）に */
 @media (max-width:760px){
   .about-top .portrait{max-width:none;width:100%}
-  .about-top .portrait img{aspect-ratio:4/3;object-position:50% 25%}
+  .about-top .portrait img{aspect-ratio:1/1;object-position:50% 30%}
 }
 /* v4 FAQ：スマホでも、意味のまとまり（.nb）で折り返す */
 @media (max-width:760px){.faq summary{line-height:1.7}}
@@ -2257,4 +2260,39 @@ input[type=radio]:checked::after{transform:scale(1)}
   #nav a:not(.btn){padding:14px 0;border-bottom:1px solid var(--line);font-size:1rem}
   #nav a:not(.btn):last-of-type{border-bottom:0}
   #nav .btn{margin-top:14px;padding:14px;text-align:center}
+}
+
+/* v5 制作実績：何を手がけたか（ホームページ／チラシ）が一目で伝わる見せ方 */
+.work-kind{margin:0 0 6px;font-weight:900;font-size:.82rem;letter-spacing:.06em;color:var(--green)}
+@media (max-width:760px){
+  .works{gap:34px}
+  .work{border:0;background:none;overflow:visible;border-radius:0}
+  .work-link{background:none}
+  /* ホームページ：ブラウザの枠に入れて、画面全体を見せる */
+  .work:not(.work-flyer) .work-link{position:relative;border:1px solid rgba(42,33,24,.18);border-radius:8px;overflow:visible;background:var(--paper);box-shadow:0 8px 22px rgba(42,33,24,.12)}
+  .work:not(.work-flyer) .work-link{padding-top:18px}
+  .work:not(.work-flyer) img{aspect-ratio:16/10;height:auto;object-position:center}
+  /* チラシ：切り取らず、用紙のまま全体を見せる */
+  .work-flyer .work-link{background:#efe6d6;border-radius:8px;padding:22px 0 0;overflow:visible}
+  .work-flyer img{width:68%;height:auto;aspect-ratio:760/1075;margin:0 auto;object-fit:contain;box-shadow:0 10px 26px rgba(42,33,24,.25)}
+  .work-flyer .work-body{background:#efe6d6;padding-top:18px}
+  .work:not(.work-flyer) .work-body{padding:14px 16px 18px}
+}
+
+/* v5 スマホ：代表写真の圧迫感を減らす（全体が入る比率で、幅を小さく） */
+@media (max-width:760px){
+  .about-top .portrait{width:64%;max-width:none;margin:0 auto 16px}
+  .about-top .portrait img{aspect-ratio:4/5;object-position:50% 50%}
+  .about-top .portrait-cap{text-align:center}
+}
+
+/* v5 制作実績（スマホ）：画像の左上に種類のバッジ（WEB／PRINT） */
+.work-badge{display:none}
+@media (max-width:760px){
+  .work-link{position:relative}
+  .work-badge{position:absolute;z-index:2;top:-11px;left:-6px;display:inline-flex;align-items:baseline;gap:7px;padding:4px 10px;background:var(--green);color:#fff;border-radius:3px;font:900 .8rem/1.3 var(--sans,inherit);letter-spacing:.06em;transform:rotate(-5deg);transform-origin:left center;box-shadow:0 6px 14px rgba(0,0,0,.35)}
+  .work-badge small{font:900 .64rem var(--sans,inherit);letter-spacing:.1em;padding:1px 7px;background:#fff;color:var(--green);border-radius:2px}
+  .work-flyer .work-link{padding-top:30px}
+  .work-flyer .work-badge{top:-11px;left:-6px}
+  .work .work-body .work-kind{display:none}
 }
