@@ -2296,3 +2296,129 @@ input[type=radio]:checked::after{transform:scale(1)}
   .work-flyer .work-badge{top:-11px;left:-6px}
   .work .work-body .work-kind{display:none}
 }
+
+/* 2026-11-04 ヒーロー宛名（見出し上） */
+.hero-area{margin:0 0 10px;font-size:.95rem;font-weight:900;letter-spacing:.14em;color:var(--green);line-height:1.6}
+/* 2026-11-04 新見出し: 両端揃えを解除し、左揃えに */
+.h1-main,.h1-end{width:auto;text-align:left;text-align-last:left}
+@media (max-width:760px){.hero h1{font-size:clamp(1.5rem,7vw,2.2rem)}}
+/* 2026-11-04 ヒーロー見出し再デザイン（大小の強弱＋マーカー） */
+.hero-area{display:inline-block;align-self:flex-start;margin:0 0 14px;padding:5px 14px 5px 12px;font-size:.9rem;letter-spacing:.1em;color:#fff;background:var(--green);border-radius:3px}
+.hero h1{gap:.14em;line-height:1.1}
+.hero h1 .h1-top{font-size:.62em;letter-spacing:.08em;color:var(--ink)}
+.hero h1 .h1-main{font-size:1.32em;line-height:1.05;letter-spacing:.01em;padding:0 .08em;background:linear-gradient(transparent 66%,rgba(232,116,42,.3) 66%)}
+.hero h1 .h1-end{font-size:.8em;letter-spacing:.04em}
+.hero h1 .h1-end .h1-brand{color:var(--green);font-weight:900}
+@media (min-width:761px){.hero h1{font-size:clamp(2.6rem,5.2vw,4.6rem)}}
+@media (max-width:760px){.hero h1{font-size:clamp(1.9rem,10vw,2.6rem)}}
+/* 2026-11-04 第3行を「おまかせください！」に。長くなった分、一回り小さく */
+.hero h1 .h1-end{font-size:.66em;letter-spacing:.02em}
+@media (max-width:760px){.hero h1{font-size:clamp(1.5rem,8.4vw,2.3rem)}}
+/* 2026-11-04 04 WHY 見出し上の導入文 */
+.why-lead{margin:0 0 14px;font-size:1rem;font-weight:700;line-height:1.9;color:var(--green)}
+.why-lead .nb{display:block}
+/* 2026-11-04 ヒーローのサブ：写真に重なっても読めるよう生成りの下地を敷く */
+.hero-say{display:inline-block;padding:10px 18px 10px 16px;background:rgba(250,243,232,.9);border-radius:0 6px 6px 0;box-shadow:0 2px 10px rgba(60,40,20,.08)}
+/* 2026-11-04 サブの下地：箱をやめ、左から右へ溶ける生成りのぼかしに */
+.hero-say{background:linear-gradient(90deg,rgba(250,243,232,.96) 0,rgba(250,243,232,.9) 72%,rgba(250,243,232,0) 100%);border-radius:0;box-shadow:none;padding:8px 40px 8px 16px}
+/* 2026-11-04 04 導入文：見出しの下・カードの前に移動し、結びを強調 */
+.why-lead{margin:22px 0 26px;padding:2px 0 2px 16px;border-left:4px solid var(--green);font-size:1rem;font-weight:700;line-height:1.9;color:var(--ink)}
+.why-lead .why-key{margin-top:4px;font-size:1.3em;font-weight:900;line-height:1.5;color:var(--green)}
+/* 2026-11-04 ヒーローのサブ再設計：2段（前置き→本題）。箱・縦線をやめ、本題を太く、“ちゃんと”だけ緑に */
+.hero-say{display:block;border-left:0;padding:0;margin:0 0 26px;background:none;box-shadow:none;border-radius:0}
+.hero-say .say-main{display:block;font-size:1em;line-height:1.5}
+.hero-say .say-main .nb{display:block}
+.hero-say .say-main .nb:first-child{font-size:.82em;font-weight:700;letter-spacing:.06em;color:#5a4a3a;margin-bottom:3px}
+.hero-say .say-key{font-size:1.2em;font-weight:900;letter-spacing:.03em;color:var(--ink)}
+.hero-say .say-key em{font-style:normal;color:var(--green);background:linear-gradient(transparent 70%,rgba(15,110,94,.16) 70%)}
+/* 2026-11-04 ヒーローのサブ簡素化：同じ大きさ・同じ色・装飾なし */
+.hero-say .say-main .nb:first-child{font-size:1em;font-weight:900;letter-spacing:.03em;color:var(--ink);margin-bottom:0}
+.hero-say .say-key{font-size:1em;letter-spacing:.03em}
+.hero-say .say-key em{color:inherit;background:none}
+/* 2026-11-04 ヒーローのサブ整形：2行の幅を揃えて一つの塊にし、上に短い緑の罫で見出しと区切る */
+.hero-say{margin:0 0 28px}
+.hero-say .say-main{display:block;width:fit-content;padding-top:14px;position:relative;font-size:1.05em;line-height:1.7;letter-spacing:.06em}
+.hero-say .say-main::before{content:"";position:absolute;left:0;top:0;width:44px;height:3px;border-radius:2px;background:var(--green)}
+.hero-say .say-main .nb{text-align:justify;text-align-last:justify}
+.hero-say .say-main .nb:first-child,.hero-say .say-key{font-size:1em;letter-spacing:.06em}
+/* 2026-11-04 PC：サブを見出しの幅いっぱいの1行にして右の空きをなくす（スマホは2行のまま） */
+@media (min-width:761px){
+  .hero-copy{display:grid;justify-content:start;justify-items:start}
+  .hero-say{width:0;min-width:100%}
+  .hero-say .say-main{width:100%;font-size:1em;letter-spacing:.02em}
+  .hero-say .say-main .nb{display:inline;text-align:left;text-align-last:auto}
+  .hero-say .say-main{text-align:justify;text-align-last:justify;white-space:nowrap}
+}
+@media (min-width:761px){.hero-say .say-main{font-size:.86em}}
+/* 2026-11-04 04 導入文：左に悩み・右に答えの2カラムのパネルにして、右の空きをなくす */
+.why-lead{display:grid;grid-template-columns:1fr 1.15fr;align-items:center;gap:0 36px;margin:22px 0 26px;padding:22px 32px;border:1px solid #cfdcd2;border-left:4px solid var(--green);border-radius:10px;background:#fff;position:relative}
+.why-lead::after{content:"→";position:absolute;left:calc(46.5% - 4px);top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;font-weight:900;line-height:34px;text-align:center}
+.why-lead .nb{grid-column:1;font-size:.98rem;font-weight:700;line-height:1.9;color:var(--ink)}
+.why-lead .why-key{grid-column:2;grid-row:1 / span 2;margin:0;padding-left:20px;font-size:1.45rem;font-weight:900;line-height:1.6;color:var(--green);text-wrap:balance}
+@media (max-width:760px){
+  .why-lead{grid-template-columns:1fr;padding:16px 18px}
+  .why-lead::after{display:none}
+  .why-lead .why-key{grid-column:1;grid-row:auto;padding:10px 0 0;margin-top:8px;border-top:1px dashed #cfdcd2;font-size:1.15rem}
+}
+/* 2026-11-04 04 導入文：箱をやめ、背景に直置き。左右を細い縦線で区切るだけにする */
+.why-lead{background:none;border:0;border-radius:0;padding:6px 0;margin:26px 0 34px;grid-template-columns:auto 1fr;gap:0 40px}
+.why-lead::after{display:none}
+.why-lead .nb{color:#5a4a3a}
+.why-lead .why-key{padding-left:40px;border-left:2px solid var(--green);font-size:1.6rem}
+@media (max-width:760px){
+  .why-lead{grid-template-columns:1fr;padding:0}
+  .why-lead .why-key{padding:10px 0 0;border-left:0;border-top:2px solid var(--green);font-size:1.2rem}
+}
+.why-lead .nb.why-key{color:var(--green)}
+/* 2026-11-04 04 締めの1行：カードの下に結論として。既存の締め文より一段上の扱い */
+.wh-conclude{margin:26px 0 8px;font-size:1.15rem;font-weight:900;line-height:1.6;color:var(--green)}
+/* 2026-11-04 ヒーローのサブ（主張）→強みの帯（根拠）をつなぐ：帯の上辺に下向きの切り欠きを付ける */
+.band-proof{position:relative}
+/* 2026-11-04 PC：サブの大きさは据え置き。濃い色と生成りの縁取りで読みやすく */
+@media (min-width:761px){.hero-say .say-main{color:var(--ink);text-shadow:0 0 5px #faf3e8,0 0 5px #faf3e8,0 0 10px #faf3e8}}
+/* 2026-11-04 04 ノウハウ文：カードの下に地の文として。箱なし */
+.wh-story{margin:28px 0 0;max-width:40em}
+.wh-story p{margin:0 0 14px;font-size:1rem;line-height:1.95;color:var(--ink)}
+.wh-story b{font-weight:900;color:var(--green)}
+/* 2026-11-04 04 ノウハウ文：左に問いかけ（大きく）、右にノウハウ3点（番号つき）の2カラム。箱なし */
+.wh-story{display:grid;grid-template-columns:1.05fr 1fr;gap:0 56px;align-items:start;margin:34px 0 0;max-width:none}
+.wh-story p{margin:0}
+.ws-lead{font-size:.9rem;font-weight:700;color:#6a5a48;margin-bottom:8px!important}
+.ws-q{font-size:1.5rem;font-weight:900;line-height:1.6;color:var(--ink);margin-bottom:14px!important}
+.ws-q em{font-style:normal;color:var(--green)}
+.ws-body{font-size:.98rem;line-height:1.9;color:var(--ink)}
+.ws-solve{padding-left:40px;border-left:2px solid var(--green)}
+.ws-h{font-size:1.1rem;font-weight:900;color:var(--green);margin-bottom:12px!important}
+.ws-list{list-style:none;margin:0 0 14px;padding:0}
+.ws-list li{display:flex;align-items:baseline;gap:14px;padding:9px 0;border-bottom:1px solid #d9cfbf;font-size:1.15rem;font-weight:900;color:var(--ink)}
+.ws-list li:first-child{border-top:1px solid #d9cfbf}
+.ws-list li span{font-family:var(--mono,monospace);font-size:.8rem;font-weight:700;color:var(--green)}
+.ws-note{font-size:.92rem;line-height:1.85;color:#5a4a3a}
+@media (max-width:760px){
+  .wh-story{grid-template-columns:1fr;gap:26px}
+  .ws-solve{padding:22px 0 0;border-left:0;border-top:2px solid var(--green)}
+  .ws-q{font-size:1.25rem}
+}
+/* 詳細度を上げて文字サイズ・色を効かせる */
+.wh-story .ws-lead{font-size:.9rem;font-weight:700;line-height:1.7;color:#6a5a48}
+.wh-story .ws-q{font-size:1.55rem;font-weight:900;line-height:1.6;color:var(--ink)}
+.wh-story .ws-body{font-size:.98rem;line-height:1.9}
+.wh-story .ws-h{font-size:1.1rem;font-weight:900;line-height:1.6;color:var(--green)}
+.wh-story .ws-note{font-size:.92rem;line-height:1.85;color:#5a4a3a}
+@media (max-width:760px){.wh-story .ws-q{font-size:1.25rem}}
+/* 2026-11-04 04 締め2文を同じ扱いで縦に並べる */
+.wh-conclude{margin:30px 0 0;line-height:1.7}
+.wh-conclude2{margin-top:6px;margin-bottom:12px}
+.ws-list li small{font-size:.8em;font-weight:700;color:#6a5a48;margin-left:.2em}
+/* 2026-11-04 強みの帯 → セクション04へのリンク */
+.band-proof .proof-more{display:block;width:fit-content;margin:8px auto 0;font-size:.82rem;font-weight:700;color:var(--green);letter-spacing:.04em;border-bottom:1px solid var(--green);padding-bottom:1px;text-decoration:none}
+.band-proof .proof-more:hover{opacity:.7}
+@media (min-width:761px){.band-proof .proof-more{grid-column:2;justify-self:center}}
+/* 2026-11-04 #why へのリンク着地：ヘッダーに見出しラベルが隠れないよう余白を確保 */
+.sec#why{scroll-margin-top:0}
+@media (max-width:760px){.sec#why{scroll-margin-top:0}}
+/* 2026-11-04 強みのラベルをリンク化：下に「詳しく見る ↓」の誘導を付ける */
+a.proof-label-link{text-decoration:none;cursor:pointer;display:block}
+.band-proof .proof-label-link .pl-cue{display:block;margin-top:6px;font-size:.62em;font-weight:700;letter-spacing:.06em;line-height:1.4;border-bottom:1px solid currentColor;width:fit-content;margin-left:auto}
+.band-proof .proof-label-link:hover{opacity:.75}
+@media (max-width:760px){.band-proof .proof-label-link .pl-cue{display:inline-block;margin:0 0 0 .8em;border-bottom:0;text-decoration:underline}}
