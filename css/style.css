@@ -2415,10 +2415,15 @@ input[type=radio]:checked::after{transform:scale(1)}
 .band-proof .proof-more:hover{opacity:.7}
 @media (min-width:761px){.band-proof .proof-more{grid-column:2;justify-self:center}}
 /* 2026-11-04 #why へのリンク着地：ヘッダーに見出しラベルが隠れないよう余白を確保 */
-.sec#why{scroll-margin-top:0}
-@media (max-width:760px){.sec#why{scroll-margin-top:0}}
+.sec#why{scroll-margin-top:-15px}
+@media (max-width:760px){.sec#why{scroll-margin-top:-39px}}
 /* 2026-11-04 強みのラベルをリンク化：下に「詳しく見る ↓」の誘導を付ける */
 a.proof-label-link{text-decoration:none;cursor:pointer;display:block}
 .band-proof .proof-label-link .pl-cue{display:block;margin-top:6px;font-size:.62em;font-weight:700;letter-spacing:.06em;line-height:1.4;border-bottom:1px solid currentColor;width:fit-content;margin-left:auto}
 .band-proof .proof-label-link:hover{opacity:.75}
 @media (max-width:760px){.band-proof .proof-label-link .pl-cue{display:inline-block;margin:0 0 0 .8em;border-bottom:0;text-decoration:underline}}
+/* 2026-11-04 04 カード見出し：「フォロワー4,000人のインスタ運用」が1行に収まるよう3枚とも少し小さく */
+.wh-tag{font-size:1.08rem;letter-spacing:0;white-space:nowrap}
+/* 2026-11-04 料金セクション（#plans-top）の下余白を詰めて、04 WHY との間を狭くする */
+#plans-top{padding-bottom:24px}
+@media (max-width:760px){#plans-top{padding-bottom:16px}}
