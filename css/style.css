@@ -2429,3 +2429,13 @@ a.proof-label-link{text-decoration:none;cursor:pointer;display:block}
 @media (max-width:760px){#plans-top{padding-bottom:16px}}
 /* 2026-11-04 04 タイトル：幅が狭いPC・タブレットでも1行ずつ収まるよう、画面幅に応じて縮める（広い画面は48pxのまま） */
 @media (min-width:761px){.why-h{font-size:min(3rem,3.9vw)}.why-h .ln{white-space:nowrap}}
+/* 2026-11-04 04 タイトルのキーワードを緑で強調 */
+.why-h em{font-style:normal;color:var(--green)}
+/* 2026-11-04 04 タイトル：根拠の2行を一回り小さく、結論の3行目を大きく。結論の「魅力」にだけマーカー */
+.why-h .ln:nth-child(-n+2){font-size:.8em;font-weight:900;margin-bottom:.12em}
+.why-h .ln:nth-child(3){margin-top:.18em;font-size:1.04em}
+.why-h .ln:nth-child(3) em{background:linear-gradient(transparent 62%,rgba(15,111,98,.2) 62%);padding:0 .06em}
+/* 2026-11-04 04 タイトル：根拠と結論の間に短い緑の罫を入れ、「だから、」を緑にして結論への切り替えを見せる */
+.why-h .ln-end{position:relative;margin-top:.5em;padding-top:.45em}
+.why-h .ln-end::before{content:"";position:absolute;left:0;top:0;width:56px;height:4px;border-radius:2px;background:var(--green)}
+.why-h .dakara{font-weight:900;color:var(--green)}
