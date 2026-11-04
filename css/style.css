@@ -2427,3 +2427,5 @@ a.proof-label-link{text-decoration:none;cursor:pointer;display:block}
 /* 2026-11-04 料金セクション（#plans-top）の下余白を詰めて、04 WHY との間を狭くする */
 #plans-top{padding-bottom:24px}
 @media (max-width:760px){#plans-top{padding-bottom:16px}}
+/* 2026-11-04 04 タイトル：幅が狭いPC・タブレットでも1行ずつ収まるよう、画面幅に応じて縮める（広い画面は48pxのまま） */
+@media (min-width:761px){.why-h{font-size:min(3rem,3.9vw)}.why-h .ln{white-space:nowrap}}
