@@ -2439,3 +2439,299 @@ a.proof-label-link{text-decoration:none;cursor:pointer;display:block}
 .why-h .ln-end{position:relative;margin-top:.5em;padding-top:.45em}
 .why-h .ln-end::before{content:"";position:absolute;left:0;top:0;width:56px;height:4px;border-radius:2px;background:var(--green)}
 .why-h .dakara{font-weight:900;color:var(--green)}
+/* 2026-11-06 ヒーローのサブを箇条書き2点に */
+.say-points{list-style:none;margin:0 0 28px;padding:14px 0 0;position:relative;display:grid;gap:6px;font-weight:900;font-size:.95rem;line-height:1.6;color:var(--ink)}
+.say-points::before{content:"";position:absolute;left:0;top:0;width:44px;height:3px;border-radius:2px;background:var(--green)}
+.say-points li{position:relative;padding-left:1.3em}
+.say-points li::before{content:"";position:absolute;left:.1em;top:.62em;width:.5em;height:.5em;border-radius:50%;background:var(--green)}
+@media (min-width:761px){.say-points{font-size:1.02rem}}
+/* 2026-11-06 04 右カラム：コツ3点の下に、肌感を大事にする1文 */
+.wh-story .ws-note.ws-feel{margin-top:14px;font-size:1rem;font-weight:900;line-height:1.7;color:var(--green)}
+/* 2026-11-06 04 「空気感を一番大切にしている」ブロック：大きく目立たせる */
+.why-feel{margin:44px 0 10px;padding:4px 0 4px 24px;border-left:5px solid var(--green)}
+.why-feel p{margin:0}
+.why-feel .wf-lead{font-size:.98rem;font-weight:700;line-height:1.7;color:#6a5a48;margin-bottom:8px}
+.why-feel .wf-main{font-size:1.75rem;font-weight:900;line-height:1.55;color:var(--ink)}
+.why-feel .wf-main em{font-style:normal;color:var(--green);background:linear-gradient(transparent 64%,rgba(15,111,98,.18) 64%);padding:0 .06em}
+.why-feel .wf-end{margin-top:12px;font-size:1.05rem;font-weight:900;line-height:1.7;color:var(--green)}
+@media (max-width:760px){.why-feel{margin:30px 0 6px;padding-left:16px}.why-feel .wf-main{font-size:1.3rem}.why-feel .wf-end{font-size:.98rem}}
+/* 空気感ブロック：手段の1文（中くらいの大きさ） */
+.why-feel .wf-how{margin-top:10px;font-size:1.15rem;font-weight:700;line-height:1.7;color:var(--ink)}
+@media (max-width:760px){.why-feel .wf-how{font-size:1rem}}
+/* 2026-11-06 04 再設計：答え（大・小の2段）＋締め1行 */
+.why-feel{margin:40px 0 28px}
+.why-feel .wf-main{font-size:2rem;line-height:1.5}
+.why-feel .wf-how{margin-top:12px}
+.wh-conclude2{margin-top:0}
+@media (max-width:760px){.why-feel{margin:28px 0 20px}.why-feel .wf-main{font-size:1.4rem}}
+/* 2026-11-06 04 コンパクト版：上段=問い|答えの2列、下段=根底を横いっぱいの2列。縦を短く・右の空きをなくす */
+.wh-story.why-compact{display:block;margin:30px 0 0}
+.why-compact .wc-top{display:grid;grid-template-columns:1.2fr 1fr;gap:0 48px;align-items:start}
+.why-compact .ws-lead{margin:0 0 6px;font-size:.88rem;font-weight:700;color:#6a5a48}
+.why-compact .ws-q{margin:0 0 8px;font-size:1.28rem;white-space:nowrap;font-weight:900;line-height:1.55;color:var(--ink)}
+.why-compact .ws-q em{font-style:normal;color:var(--green)}
+.why-compact .ws-body{margin:0;font-size:.95rem;line-height:1.7;color:var(--ink)}
+.why-compact .wc-a{padding-left:40px;border-left:2px solid var(--green)}
+.why-compact .ws-h{margin:0 0 6px;font-size:1.05rem;font-weight:900;color:var(--green)}
+.why-compact .ws-list{margin:0}
+.why-compact .ws-list li{padding:7px 0;font-size:1.05rem}
+.why-compact .wc-root{display:grid;grid-template-columns:1.2fr 1fr;gap:0 48px;align-items:center;margin-top:26px;padding-top:22px;border-top:1px solid #d9cfbf}
+.why-compact .wf-lead2{margin:0 0 4px;font-size:.9rem;font-weight:700;color:#6a5a48}
+.why-compact .wf-main{margin:0;font-size:1.75rem;font-weight:900;line-height:1.5;color:var(--ink)}
+.why-compact .wf-main em{font-style:normal;color:var(--green);background:linear-gradient(transparent 64%,rgba(15,111,98,.18) 64%);padding:0 .06em}
+.why-compact .wf-how{margin:0;padding-left:40px;font-size:1.05rem;font-weight:700;line-height:1.8;color:var(--ink)}
+.wh-conclude2{margin-top:24px}
+@media (max-width:760px){
+  .why-compact .wc-top,.why-compact .wc-root{grid-template-columns:1fr;gap:18px 0}
+  .why-compact .wc-a{padding:16px 0 0;border-left:0;border-top:2px solid var(--green)}
+  .why-compact .ws-q{font-size:1.1rem;white-space:normal}
+  .why-compact .wf-main{font-size:1.35rem}
+  .why-compact .wf-how{padding-left:0;font-size:.98rem}
+}
+
+/* 2026-11-06 04 見せ方A案：上段の高さをそろえて問い→答えの矢印／下段は1列で大文の直下に補足 */
+.why-compact .wc-top{align-items:stretch}
+.why-compact .wc-q{align-self:center}
+.why-compact .wc-a{position:relative;align-self:stretch}
+.why-compact .wc-a::before{content:"→";position:absolute;left:-14px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;font-size:.95rem;font-weight:900;line-height:26px;text-align:center}
+.why-compact .wc-root{display:block}
+.why-compact .wf-main{margin:0 0 8px;white-space:nowrap}
+.why-compact .wf-how{padding-left:0}
+@media (max-width:760px){
+  .why-compact .wc-a::before{content:"↓";left:50%;top:-14px;transform:translateX(-50%)}
+  .why-compact .wf-main{white-space:normal}
+}
+
+/* 2026-11-06 04 大文が長くなったため、狭めのPC幅で1行に収める */
+@media (min-width:761px){.why-compact .wf-main{font-size:min(1.75rem,2.45vw)}}
+
+/* 2026-11-06 04 下段を「大文(左)｜見るもの3つ(右)｜締め」に分けて、長文の連なりをなくす */
+.why-compact .wc-root{display:grid;grid-template-columns:1.2fr 1fr;gap:0 48px;align-items:center}
+.why-compact .wf-main{margin:0;white-space:normal;line-height:1.55}
+@media (min-width:761px){.why-compact .wf-main{font-size:min(1.75rem,2.6vw)}}
+.why-compact .wf-see{padding-left:40px}
+.why-compact .wf-items{list-style:none;margin:0;padding:0}
+.why-compact .wf-items li{padding:7px 0;font-size:1.05rem;font-weight:900;color:var(--ink);border-bottom:1px solid #d9cfbf}
+.why-compact .wf-items li:first-child{border-top:1px solid #d9cfbf}
+.why-compact .wf-items small{margin-left:.7em;font-size:.8rem;font-weight:700;color:#6a5a48}
+.why-compact .wf-verbs{margin:10px 0 0;font-size:1.05rem;font-weight:900;color:var(--green)}
+.why-compact .wf-verbs::before{content:"↓ "}
+.wh-conclude2{margin-top:14px;font-size:1.5rem;line-height:1.5}
+@media (max-width:760px){
+  .why-compact .wc-root{grid-template-columns:1fr;gap:16px 0}
+  .why-compact .wf-see{padding-left:0}
+  .wh-conclude2{font-size:1.2rem}
+}
+
+/* 2026-11-06 04 ゼロベース再設計：飛ばされる投稿→見てもらえる投稿の対比／コツ1行／軸／約束 */
+.why-vs{margin:34px 0 0;text-align:center}
+.why-vs .vs-row{display:grid;grid-template-columns:1fr auto 1fr;gap:0 36px;align-items:center}
+.why-vs .vs-cap{margin:0 0 10px;font-size:.88rem;font-weight:700;letter-spacing:.08em}
+.why-vs .vs-no .vs-cap{color:#9a8d7c}
+.why-vs .vs-yes .vs-cap{color:var(--green)}
+.why-vs .vs-txt{margin:0;font-weight:900;line-height:1.6}
+.why-vs .vs-no .vs-txt{font-size:1.15rem;color:#a89c8b}
+.why-vs .vs-yes .vs-txt{font-size:1.7rem;color:var(--green)}
+.why-vs .vs-arrow{width:40px;height:40px;border-radius:50%;background:var(--green);color:#fff;font-size:1.2rem;font-weight:900;line-height:40px;text-align:center}
+.why-vs .vs-tips{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px 28px;margin:34px 0 0;padding:16px 0;border-top:1px solid #d9cfbf;border-bottom:1px solid #d9cfbf}
+.why-vs .vs-tips-lead{margin:0;font-size:1rem;font-weight:900;color:var(--green)}
+.why-vs .vs-tips-list{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 30px;margin:0;padding:0;list-style:none}
+.why-vs .vs-tips-list li{font-size:1.1rem;font-weight:900;color:var(--ink)}
+.why-vs .vs-tips-list li span{margin-right:.5em;font-family:ui-monospace,Menlo,monospace;font-size:.95rem;color:var(--green)}
+.why-vs .vs-tips-list small{margin-left:.6em;font-size:.8rem;font-weight:700;color:#6a5a48}
+.why-vs .vs-core{margin:34px 0 0;font-size:1.85rem;font-weight:900;line-height:1.55;color:var(--ink)}
+.why-vs .vs-core em{font-style:normal;color:var(--green);background:linear-gradient(transparent 64%,rgba(15,111,98,.18) 64%);padding:0 .06em}
+.why-vs .vs-sub{margin:16px 0 0;font-size:.95rem;font-weight:700;line-height:1.7;color:#6a5a48}
+.why-vs .vs-end{margin:6px 0 0;font-size:1.5rem;font-weight:900;line-height:1.5;color:var(--green)}
+@media (max-width:760px){
+  .why-vs .vs-row{grid-template-columns:1fr;gap:14px 0}
+  .why-vs .vs-arrow{margin:0 auto;transform:rotate(90deg)}
+  .why-vs .vs-yes .vs-txt{font-size:1.35rem}
+  .why-vs .vs-no .vs-txt{font-size:1.05rem}
+  .why-vs .vs-tips{flex-direction:column}
+  .why-vs .vs-core{font-size:1.35rem}
+  .why-vs .vs-end{font-size:1.2rem}
+}
+
+/* 2026-11-06 04 対比の左右を矢印に寄せて中央にまとめ、空白をなくす */
+@media (min-width:761px){
+  .why-vs .vs-row{grid-template-columns:auto auto auto;justify-content:center;gap:0 52px}
+  .why-vs .vs-yes .vs-txt{font-size:1.95rem}
+  .why-vs .vs-no .vs-txt{font-size:1.2rem}
+}
+
+/* 2026-11-06 04 上段：左=対比／右=コツ の2カラム */
+.why-vs .vs-top{display:grid;grid-template-columns:1.15fr 1fr;gap:0 44px;align-items:stretch;text-align:left}
+.why-vs .vs-top .vs-row{align-self:center;grid-template-columns:auto auto auto;justify-content:center;gap:0 22px;text-align:center}
+.why-vs .vs-top .vs-yes .vs-txt{font-size:1.5rem}
+.why-vs .vs-top .vs-no .vs-txt{font-size:1.02rem}
+.why-vs .vs-top .vs-arrow{width:34px;height:34px;font-size:1rem;line-height:34px}
+.why-vs .vs-top .vs-tips{display:block;margin:0;padding:0 0 0 40px;border:0;border-left:2px solid var(--green)}
+.why-vs .vs-top .vs-tips-lead{margin:0 0 6px;font-size:1.05rem}
+.why-vs .vs-top .vs-tips-list{display:block}
+.why-vs .vs-top .vs-tips-list li{padding:8px 0;font-size:1.1rem;border-bottom:1px solid #d9cfbf}
+.why-vs .vs-top .vs-tips-list li:first-child{border-top:1px solid #d9cfbf}
+.why-vs .vs-core{margin-top:30px;padding-top:28px;border-top:1px solid #d9cfbf}
+@media (max-width:760px){
+  .why-vs .vs-top{grid-template-columns:1fr;gap:22px 0}
+  .why-vs .vs-top .vs-row{grid-template-columns:1fr;gap:12px 0}
+  .why-vs .vs-top .vs-yes .vs-txt{font-size:1.35rem}
+  .why-vs .vs-top .vs-tips{padding:16px 0 0;border-left:0;border-top:2px solid var(--green)}
+}
+
+/* 2026-11-06 04 対比の装飾：左=取り消し線で「飛ばされる」／右=✓付き・マーカーで強調 */
+.why-vs .vs-top .vs-cap{display:inline-flex;align-items:center;gap:.5em;margin:0 0 14px;font-size:.95rem;letter-spacing:.06em}
+.why-vs .vs-top .vs-cap::before{display:inline-block;width:1.45em;height:1.45em;border-radius:50%;font-size:.9em;font-weight:900;line-height:1.45em;text-align:center}
+.why-vs .vs-top .vs-no .vs-cap::before{content:"✕";background:#cfc4b3;color:#fff}
+.why-vs .vs-top .vs-yes .vs-cap::before{content:"✓";background:var(--green);color:#fff}
+.why-vs .vs-top .vs-no .vs-txt{line-height:1.75;text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:rgba(154,141,124,.7)}
+.why-vs .vs-top .vs-yes .vs-txt{font-size:1.65rem;line-height:1.6}
+.why-vs .vs-top .vs-yes .vs-txt em{font-style:normal;background:linear-gradient(transparent 62%,rgba(15,111,98,.2) 62%);padding:0 .06em}
+.why-vs .vs-top .vs-arrow{width:42px;height:42px;font-size:1.2rem;line-height:42px;box-shadow:0 0 0 6px rgba(15,111,98,.12)}
+.why-vs .vs-top .vs-row{gap:0 26px}
+@media (max-width:760px){
+  .why-vs .vs-top .vs-yes .vs-txt{font-size:1.35rem}
+  .why-vs .vs-top .vs-arrow{width:36px;height:36px;line-height:36px}
+}
+@media (min-width:761px){
+  .why-vs .vs-top .vs-yes .vs-txt{font-size:min(1.65rem,2.2vw)}
+  .why-vs .vs-top .vs-row{gap:0 min(26px,1.8vw)}
+  .why-vs .vs-top .vs-no .vs-txt{text-decoration-thickness:1.5px}
+}
+
+/* 2026-11-06 04 対比 仕上げ：左は少し傾けて「弾かれた」感／右は一回り大きく */
+@media (min-width:761px){
+  .why-vs .vs-top .vs-no{transform:rotate(-3deg);transform-origin:center}
+  .why-vs .vs-top .vs-yes .vs-txt{font-size:min(1.9rem,2.45vw)}
+}
+
+/* 2026-11-06 04 対比の矢印：丸をやめて、緑の矢印だけにする */
+.why-vs .vs-top .vs-arrow{width:auto;height:auto;background:none;box-shadow:none;border-radius:0;color:var(--green);font-size:2.4rem;font-weight:400;line-height:1}
+@media (max-width:760px){.why-vs .vs-top .vs-arrow{font-size:1.8rem}}
+
+/* 2026-11-06 04 上段の比率：対比を広く・コツを狭く（右側の空きを減らす） */
+@media (min-width:761px){
+  .why-vs .vs-top{grid-template-columns:1.55fr .8fr}
+  .why-vs .vs-top .vs-yes .vs-txt{font-size:min(2.1rem,2.7vw)}
+  .why-vs .vs-top .vs-no .vs-txt{font-size:min(1.12rem,1.5vw)}
+  .why-vs .vs-top .vs-row{gap:0 min(30px,2.2vw)}
+}
+
+/* 2026-11-06 04 対比：矢印をやめ、✕/✓・色・大きさの差だけで見せる */
+@media (min-width:761px){
+  .why-vs .vs-top .vs-arrow{display:none}
+  .why-vs .vs-top .vs-row{grid-template-columns:auto auto;gap:0 min(64px,5vw)}
+}
+
+/* 2026-11-06 04 対比：左は「スワイプで左へ飛ばされていく」動き（ずれ＋だんだん薄く）／右は大きく */
+@media (min-width:761px){
+  .why-vs .vs-top .vs-no{transform:none;padding-left:40px}
+  .why-vs .vs-top .vs-no .vs-cap{display:inline-flex}
+  .why-vs .vs-top .vs-no .vs-txt{text-align:left;text-decoration:none;line-height:1.7;color:#8f8372}
+  .why-vs .vs-top .vs-no .vs-txt span{display:block;white-space:nowrap}
+  .why-vs .vs-top .vs-no .vs-txt span:nth-child(1){transform:translateX(0);opacity:.95}
+  .why-vs .vs-top .vs-no .vs-txt span:nth-child(2){transform:translateX(-18px);opacity:.6}
+  .why-vs .vs-top .vs-no .vs-txt span:nth-child(3){transform:translateX(-36px);opacity:.3}
+  .why-vs .vs-top .vs-yes .vs-txt{font-size:min(2.25rem,2.9vw);line-height:1.5}
+  .why-vs .vs-top .vs-row{gap:0 min(56px,4vw)}
+}
+@media (min-width:761px){.why-vs .vs-top .vs-no{text-align:left}}
+
+/* 2026-11-06 04 対比：矢印を復活。左の「薄れ」→右の「濃い緑」へ色が変わる山形3つ */
+.why-vs .vs-top .vs-arrow{display:block;width:auto;height:auto;background:none;box-shadow:none;line-height:0}
+.why-vs .vs-top .vs-arrow svg{display:block}
+@media (min-width:761px){
+  .why-vs .vs-top .vs-row{grid-template-columns:auto auto auto;gap:0 min(36px,2.6vw)}
+}
+@media (max-width:760px){.why-vs .vs-top .vs-arrow svg{transform:rotate(90deg);margin:0 auto}}
+
+/* 2026-11-06 04 左（飛ばされる投稿）を1つ前の見せ方へ戻す：少し傾け＋取り消し線、ずれ・薄れはなし */
+@media (min-width:761px){
+  .why-vs .vs-top .vs-no{transform:rotate(-3deg);padding-left:0;text-align:center}
+  .why-vs .vs-top .vs-no .vs-txt{text-align:center;color:#a89c8b;line-height:1.75;text-decoration:line-through;text-decoration-thickness:1.5px;text-decoration-color:rgba(154,141,124,.7)}
+  .why-vs .vs-top .vs-no .vs-txt span:nth-child(n){transform:none;opacity:1}
+}
+
+/* 2026-11-06 04 左（飛ばされる投稿）：だんだん薄くなる版に戻し、ラベルと3行の左端をそろえる */
+@media (min-width:761px){
+  .why-vs .vs-top .vs-no{transform:none;padding-left:0;text-align:left}
+  .why-vs .vs-top .vs-no .vs-txt{text-align:left;text-decoration:none;color:#8f8372;line-height:1.7}
+  .why-vs .vs-top .vs-no .vs-txt span:nth-child(1){transform:none;opacity:.95}
+  .why-vs .vs-top .vs-no .vs-txt span:nth-child(2){transform:none;opacity:.6}
+  .why-vs .vs-top .vs-no .vs-txt span:nth-child(3){transform:none;opacity:.3}
+}
+
+/* 2026-11-06 04 左（飛ばされる投稿）：センター揃え（右の見てもらえる投稿とそろえる） */
+@media (min-width:761px){
+  .why-vs .vs-top .vs-no,.why-vs .vs-top .vs-no .vs-txt{text-align:center}
+}
+
+/* 2026-11-06 04 右（見てもらえる投稿）を、左と対になる具体的な3行に */
+.why-vs .vs-top .vs-yes .vs-txt span{display:block;white-space:nowrap}
+@media (min-width:761px){
+  .why-vs .vs-top .vs-yes .vs-txt{font-size:min(1.7rem,2.2vw);line-height:1.6}
+}
+@media (max-width:760px){
+  .why-vs .vs-top .vs-yes .vs-txt{font-size:1.2rem}
+}
+
+/* 2026-11-06 04 右の2行目が長くなったため、狭めのPC幅で文字を少し小さくし、左ラベルの折り返しを防ぐ */
+@media (min-width:761px){
+  .why-vs .vs-top .vs-cap{white-space:nowrap}
+  .why-vs .vs-top .vs-yes .vs-txt{font-size:min(1.7rem,1.95vw)}
+}
+@media (min-width:761px){.why-vs .vs-top{grid-template-columns:minmax(0,1.55fr) minmax(0,.8fr)}}
+
+/* 2026-11-06 04 上段：コツの列を中身の幅まで狭め（右側の空きを減らし）、左の対比をゆったり */
+@media (min-width:761px){
+  .why-vs .vs-top{grid-template-columns:minmax(0,1fr) max-content;gap:0 min(56px,4vw)}
+  .why-vs .vs-top .vs-row{gap:0 min(48px,3.4vw)}
+  .why-vs .vs-top .vs-yes .vs-txt{font-size:min(1.9rem,2.2vw)}
+  .why-vs .vs-top .vs-tips{padding-right:0}
+}
+
+/* 2026-11-06 04 コツの列：狭めすぎたので中間の幅に戻す */
+@media (min-width:761px){
+  .why-vs .vs-top{grid-template-columns:minmax(0,1fr) minmax(0,.5fr)}
+}
+
+/* 2026-11-06 04 右（見てもらえる投稿）：ラベルと3行を左揃えに */
+@media (min-width:761px){
+  .why-vs .vs-top .vs-yes,.why-vs .vs-top .vs-yes .vs-txt{text-align:left}
+}
+
+/* 2026-11-06 04 右の3行：1〜2行目=見えるもの／↓／3行目=結果（少し大きく） */
+.why-vs .vs-top .vs-yes .vs-txt .vs-then{line-height:1;margin:2px 0 4px;font-size:.9em;font-weight:900;color:#7fb0a5}
+.why-vs .vs-top .vs-yes .vs-txt .vs-result{font-size:1.1em}
+@media (min-width:761px){
+  .why-vs .vs-top .vs-yes .vs-txt .vs-then{padding-left:.4em}
+}
+
+/* 2026-11-06 04 右の3行：「↓」をやめ、短い緑の線で結果行と区切る */
+.why-vs .vs-top .vs-yes .vs-txt .vs-then{display:block;width:44px;height:3px;margin:12px 0 12px;padding:0;border-radius:2px;background:var(--green);font-size:0;line-height:0}
+
+/* 2026-11-06 04 結果行のデザイン：線・矢印をやめ、余白で区切る。マーカーは文字の下側に重ねる下線式（位置ずれ防止） */
+.why-vs .vs-top .vs-yes .vs-txt .vs-then{width:0;height:0;margin:14px 0 0;background:none;border-radius:0}
+.why-vs .vs-top .vs-yes .vs-txt .vs-result{font-size:1.12em;line-height:1.5}
+.why-vs .vs-top .vs-yes .vs-txt .vs-result em{font-style:normal;background:none;padding:0;text-decoration:underline;text-decoration-thickness:.32em;text-decoration-color:rgba(15,111,98,.2);text-underline-offset:-.12em;text-decoration-skip-ink:none}
+
+/* 2026-11-06 04 右の3行：1〜2行目=「材料」（小さめ・淡い緑・左に細い縦線でひとまとめ）／3行目=「結果」（大きく・濃い緑） */
+@media (min-width:761px){
+  .why-vs .vs-top .vs-yes .vs-txt{font-size:min(1.9rem,2.2vw)}
+}
+.why-vs .vs-top .vs-yes .vs-txt .vs-causes{display:block;padding-left:16px;border-left:3px solid rgba(15,111,98,.3)}
+.why-vs .vs-top .vs-yes .vs-txt .vs-causes span{display:block;font-size:.76em;font-weight:700;line-height:1.7;color:#3d8c7e}
+.why-vs .vs-top .vs-yes .vs-txt .vs-then{margin:16px 0 0}
+.why-vs .vs-top .vs-yes .vs-txt .vs-result{font-size:1.22em;font-weight:900;line-height:1.45;color:var(--green)}
+
+/* 2026-11-06 04 コツの列：もう少し狭め、左の対比に余裕を持たせる */
+@media (min-width:761px){
+  .why-vs .vs-top{grid-template-columns:minmax(0,1fr) minmax(250px,.42fr)}
+  .why-vs .vs-top .vs-tips-list li{white-space:nowrap}
+}
+
+/* 2026-11-06 04 対比：左右のラベルを上でそろえる（矢印はラベルの下、本文の高さ付近） */
+@media (min-width:761px){
+  .why-vs .vs-top .vs-row{align-self:start;align-items:start}
+  .why-vs .vs-top .vs-arrow{margin-top:56px}
+}
