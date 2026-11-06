@@ -2735,3 +2735,159 @@ a.proof-label-link{text-decoration:none;cursor:pointer;display:block}
   .why-vs .vs-top .vs-row{align-self:start;align-items:start}
   .why-vs .vs-top .vs-arrow{margin-top:56px}
 }
+
+/* 2026-11-07 04 左を「問いかけ」に戻す：普段インスタを見るとき、テンプレ動画や広告感の強い投稿は、スワイプして飛ばしていませんか？ */
+.why-vs .vs-top .vs-ask{text-align:left}
+.why-vs .vs-top .vs-lead{margin:0 0 12px;font-size:.9rem;font-weight:700;letter-spacing:.04em;color:#6a5a48}
+.why-vs .vs-top .vs-q{margin:0;font-size:1.15rem;font-weight:900;line-height:1.65;color:var(--ink)}
+.why-vs .vs-top .vs-q em{font-style:normal;color:var(--green)}
+@media (min-width:761px){
+  .why-vs .vs-top .vs-row{align-items:start}
+  .why-vs .vs-top .vs-arrow{margin-top:60px}
+  .why-vs .vs-top .vs-q{font-size:min(1.15rem,1.55vw)}
+}
+@media (min-width:761px){
+  .why-vs .vs-top .vs-ask{white-space:nowrap}
+  .why-vs .vs-top .vs-yes .vs-txt{font-size:min(1.55rem,1.9vw)}
+  .why-vs .vs-top .vs-row{gap:0 min(36px,2.6vw)}
+}
+
+/* 2026-11-07 04 全文版：上=問いかけ（中央・全幅）／↓／下=見てもらえる投稿｜コツ */
+.why-vs .vs-head{text-align:center}
+.why-vs .vs-head-lead{margin:0 0 12px;font-size:.98rem;font-weight:700;letter-spacing:.04em;color:#6a5a48}
+.why-vs .vs-head-q{margin:0;font-size:1.65rem;font-weight:900;line-height:1.55;color:var(--ink)}
+.why-vs .vs-head-q em{font-style:normal;color:var(--green)}
+.why-vs .vs-head-sub{margin:14px 0 0;font-size:1rem;font-weight:700;line-height:1.7;color:#6a5a48}
+.why-vs .vs-down{display:block;width:28px;height:64px;margin:16px auto 20px;line-height:0}
+.why-vs .vs-down svg{display:block}
+@media (min-width:761px){
+  .why-vs .vs-head-q{font-size:min(1.65rem,2.6vw);white-space:nowrap}
+  .why-vs .vs-top .vs-yes .vs-txt{font-size:min(1.9rem,2.3vw)}
+  .why-vs .vs-top{align-items:start}
+}
+@media (max-width:760px){
+  .why-vs .vs-head-q{font-size:1.2rem}
+  .why-vs .vs-head-q br{display:none}
+  .why-vs .vs-top .vs-yes .vs-txt{font-size:1.25rem}
+  .why-vs .vs-down{margin:10px auto 14px}
+}
+@media (min-width:761px){
+  .why-vs .vs-top .vs-yes{justify-self:center}
+}
+
+/* 2026-11-07 04 2列案：左=問いかけ全文／→／右=見てもらえる投稿＋コツ(横並び) */
+.why-vs .vs-two{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1.05fr);gap:0 36px;align-items:start}
+.why-vs .vs-two .vs-head{text-align:left}
+.why-vs .vs-two .vs-head-lead{margin:0 0 12px;font-size:.92rem}
+.why-vs .vs-two .vs-head-q{font-size:1.3rem;line-height:1.7;white-space:normal}
+.why-vs .vs-two .vs-head-q br{display:none}
+.why-vs .vs-two .vs-head-sub{margin:14px 0 0;font-size:.95rem}
+.why-vs .vs-two .vs-arrow2{display:block;margin-top:78px;line-height:0}
+.why-vs .vs-two .vs-top{display:block}
+.why-vs .vs-two .vs-top .vs-yes{justify-self:auto}
+.why-vs .vs-two .vs-top .vs-txt{font-size:min(1.55rem,1.9vw)}
+.why-vs .vs-two .vs-tips{display:block;margin:22px 0 0;padding:14px 0 0;border:0;border-top:1px solid #d9cfbf}
+.why-vs .vs-two .vs-tips-lead{margin:0 0 6px;font-size:.98rem}
+.why-vs .vs-two .vs-tips-list{display:flex;flex-wrap:wrap;gap:4px 24px}
+.why-vs .vs-two .vs-tips-list li,.why-vs .vs-two .vs-tips-list li:first-child{padding:2px 0;border:0;font-size:1.05rem;white-space:nowrap}
+@media (max-width:760px){
+  .why-vs .vs-two{grid-template-columns:1fr;gap:14px 0}
+  .why-vs .vs-two .vs-arrow2{margin:0 auto}
+  .why-vs .vs-two .vs-arrow2 svg{transform:rotate(90deg)}
+  .why-vs .vs-two .vs-head-q{font-size:1.15rem}
+}
+.why-vs .vs-two .vs-head-q br{display:inline}
+@media (min-width:761px){
+  .why-vs .vs-two .vs-head-q{font-size:min(1.3rem,1.95vw)}
+  .why-vs .vs-two .vs-head-sub{font-size:min(.95rem,1.45vw)}
+}
+.why-vs .vs-two .vs-tips-list{justify-content:flex-start}
+@media (max-width:760px){.why-vs .vs-two .vs-head-q br{display:none}}
+
+/* 2026-11-07 04 B案：左右(問い｜答え)の高さをそろえ、コツは下に全幅で1行 */
+.why-vs .vs-two{align-items:stretch}
+.why-vs .vs-two .vs-arrow2{align-self:center;margin-top:0}
+.why-vs .vs-strip{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px 34px;margin:30px 0 0;padding:16px 0;border-top:1px solid #d9cfbf;border-bottom:1px solid #d9cfbf}
+.why-vs .vs-strip .vs-tips-lead{margin:0;font-size:1rem;font-weight:900;color:var(--green)}
+.why-vs .vs-strip .vs-tips-list{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 34px;margin:0;padding:0;list-style:none}
+.why-vs .vs-strip .vs-tips-list li{padding:0;border:0;font-size:1.1rem;white-space:nowrap}
+@media (max-width:760px){
+  .why-vs .vs-strip{flex-direction:column;margin-top:22px}
+  .why-vs .vs-strip .vs-tips-list{justify-content:flex-start}
+}
+.why-vs .vs-core{margin-top:34px;padding-top:0;border-top:0}
+
+/* 2026-11-07 04 右（答え）を大きく・補足つきに：幅を広げ、各行の下に小さな補足 */
+@media (min-width:761px){
+  .why-vs .vs-two{grid-template-columns:minmax(0,.85fr) auto minmax(0,1.25fr);gap:0 min(36px,2.6vw)}
+  .why-vs .vs-two .vs-head-q{font-size:min(1.3rem,1.8vw)}
+  .why-vs .vs-two .vs-top .vs-txt{font-size:min(2rem,2.4vw)}
+}
+.why-vs .vs-two .vs-top .vs-txt b{display:block;font-weight:inherit}
+.why-vs .vs-two .vs-top .vs-txt small{display:block;margin-top:3px;font-size:.95rem;font-weight:500;line-height:1.6;color:#6a5a48}
+.why-vs .vs-two .vs-top .vs-causes > span{margin:0 0 6px}
+.why-vs .vs-two .vs-top .vs-causes > span:last-child{margin-bottom:0}
+.why-vs .vs-two .vs-top .vs-causes{padding-left:18px}
+.why-vs .vs-two .vs-top .vs-then{margin:20px 0 0}
+.why-vs .vs-two .vs-top .vs-result small{margin-top:6px}
+@media (max-width:760px){
+  .why-vs .vs-two .vs-top .vs-txt small{font-size:.88rem}
+}
+@media (min-width:761px){.why-vs .vs-two .vs-head-lead{font-size:min(.92rem,1.3vw);white-space:nowrap}}
+
+/* 2026-11-07 04 縦を短く：「見える」2つを横に並べ、補足は小さく、間隔を詰める */
+@media (min-width:761px){
+  .why-vs .vs-two .vs-top .vs-txt{font-size:min(1.9rem,2.2vw)}
+  .why-vs .vs-two .vs-top .vs-causes{display:grid;grid-template-columns:1fr 1fr;gap:0 22px;padding-left:16px}
+  .why-vs .vs-two .vs-top .vs-causes > span{margin:0}
+  .why-vs .vs-two .vs-top .vs-txt small{font-size:.84rem;line-height:1.55;margin-top:2px}
+  .why-vs .vs-two .vs-top .vs-then{margin:12px 0 0}
+  .why-vs .vs-two .vs-top .vs-result small{margin-top:3px}
+  .why-vs .vs-two .vs-top .vs-cap{margin-bottom:10px}
+}
+@media (min-width:761px){
+  .why-vs .vs-two .vs-top .vs-yes .vs-txt .vs-causes{display:grid;grid-template-columns:1fr 1fr;gap:0 22px;padding-left:16px}
+  .why-vs .vs-two .vs-top .vs-yes .vs-txt .vs-causes > span{margin:0}
+}
+@media (min-width:761px){
+  .why-vs .vs-two .vs-top .vs-yes .vs-txt .vs-causes{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .why-vs .vs-two .vs-top .vs-yes .vs-txt .vs-causes > span{white-space:normal}
+  .why-vs .vs-two .vs-top .vs-yes .vs-txt .vs-causes b{white-space:nowrap}
+  .why-vs .vs-two .vs-top .vs-yes .vs-txt small{white-space:normal}
+}
+@media (min-width:761px){.why-vs .vs-two .vs-top .vs-txt small{font-size:min(.84rem,1.25vw)}}
+
+/* 2026-11-07 04 補足説明をなくし、「見える」2つを縦に戻す */
+@media (min-width:761px){
+  .why-vs .vs-two .vs-top .vs-yes .vs-txt .vs-causes{display:block;padding-left:18px}
+  .why-vs .vs-two .vs-top .vs-yes .vs-txt .vs-causes > span{margin:0 0 4px}
+  .why-vs .vs-two .vs-top .vs-yes .vs-txt .vs-causes > span:last-child{margin-bottom:0}
+  .why-vs .vs-two .vs-top .vs-yes .vs-txt{font-size:min(2rem,2.4vw)}
+  .why-vs .vs-two .vs-top .vs-yes .vs-txt .vs-then{margin:16px 0 0}
+}
+
+/* 2026-11-07 04 空きのバランス：問い・矢印・答えを中身の幅で中央にまとめ、間隔を左右同じにする */
+@media (min-width:761px){
+  .why-vs .vs-two{grid-template-columns:auto auto auto;justify-content:center;gap:0 min(72px,5vw)}
+  .why-vs .vs-two .vs-head-lead{white-space:nowrap}
+}
+
+/* 2026-11-07 04 中央（矢印の前後）を詰め、左右の端に少し余白をつくる */
+@media (min-width:761px){
+  .why-vs .vs-two{gap:0 min(38px,2.8vw)}
+}
+
+/* 2026-11-07 04 矢印の前後を等間隔に：左文末の句点の余白ぶん（約14px）を左ブロックの右端から差し引く */
+@media (min-width:761px){
+  .why-vs .vs-two .vs-head{margin-right:-14px}
+}
+@media (min-width:761px){.why-vs .vs-two .vs-head{margin-right:-1vw}}
+
+/* 2026-11-07 04 矢印の前後の空きを広げる（左右等間隔のまま） */
+@media (min-width:761px){
+  .why-vs .vs-two{gap:0 min(58px,4.2vw)}
+}
+
+/* 2026-11-07 04 左の導入文：右の「✓ 見てもらえる投稿」と対になる「？」の丸アイコンを付ける */
+.why-vs .vs-two .vs-head-lead{display:flex;align-items:center;gap:.55em}
+.why-vs .vs-two .vs-head-lead::before{content:"?";flex:none;width:1.6em;height:1.6em;border-radius:50%;background:#8f8372;color:#fff;font-size:.95em;font-weight:900;line-height:1.6em;text-align:center}
