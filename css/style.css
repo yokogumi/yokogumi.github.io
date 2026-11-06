@@ -2978,3 +2978,32 @@ a.proof-label-link{text-decoration:none;cursor:pointer;display:block}
 .why-vs .vs-plusrow .vs-plus{font-size:0;line-height:0}
 .why-vs .vs-plusrow .vs-plus svg{display:block}
 @media (max-width:760px){.why-vs .vs-plusrow .vs-plus svg{width:38px;height:38px}}
+
+/* 2026-11-07 04 スマホ幅の調整：導入文の改行／問いの3行／結果行の文字サイズ／約束の行の折り返し */
+.why-vs .vs-head-lead .lead-t{display:block}
+.why-vs .mbr{display:none}
+@media (max-width:760px){
+  .why-vs .vs-head .vs-head-lead{flex-direction:column;gap:8px;font-size:.92rem;text-align:center}
+  .why-vs .vs-head .vs-head-lead .lead-t{text-align:center;line-height:1.7}
+  .why-vs .vs-head .vs-head-q{font-size:1.2rem;line-height:1.65}
+  .why-vs .vs-head .vs-head-q br,.why-vs .vs-head .vs-head-q .mbr{display:inline}
+  .why-vs .vs-head .vs-head-q .nb{white-space:nowrap}
+  .why-vs .vs-head .vs-head-sub{font-size:.92rem}
+  .why-vs .vs-plusrow .vs-top .vs-yes .vs-txt{font-size:1.35rem}
+  .why-vs .vs-plusrow .vs-top .vs-yes .vs-txt .vs-causes b{font-size:.9em}
+  .why-vs .vs-plusrow .vs-top .vs-yes .vs-txt .vs-result{font-size:1.12em}
+  .why-vs .vs-plusrow .vs-top .vs-yes .vs-txt .vs-causes{padding-left:0;border:0}
+  .why-vs .vs-core{font-size:1.2rem;line-height:1.7}
+  .why-vs .vs-sub{font-size:.9rem}
+  .why-vs .vs-end{font-size:1.25rem}
+}
+@media (max-width:760px){
+  .why-vs .vs-plusrow .vs-top .vs-yes .vs-txt{font-size:1.18rem}
+  .why-vs .vs-plusrow .vs-top .vs-yes .vs-txt span{white-space:normal}
+  .why-vs .vs-plusrow > *{min-width:0}
+  .why-vs .vs-allbox{width:100%}
+}
+@media (max-width:760px){
+  .why-vs .vs-plusrow .vs-top .vs-yes .vs-txt .vs-causes > span{font-size:1em}
+  .why-vs .vs-plusrow .vs-top .vs-yes .vs-txt .vs-causes b{font-size:.92em}
+}
