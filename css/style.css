@@ -2891,3 +2891,90 @@ a.proof-label-link{text-decoration:none;cursor:pointer;display:block}
 /* 2026-11-07 04 左の導入文：右の「✓ 見てもらえる投稿」と対になる「？」の丸アイコンを付ける */
 .why-vs .vs-two .vs-head-lead{display:flex;align-items:center;gap:.55em}
 .why-vs .vs-two .vs-head-lead::before{content:"?";flex:none;width:1.6em;height:1.6em;border-radius:50%;background:#8f8372;color:#fff;font-size:.95em;font-weight:900;line-height:1.6em;text-align:center}
+
+/* 2026-11-07 04 軸の文：2行目が長くなったため、狭めのPC幅で文字を少し小さくして1行に収める */
+@media (min-width:761px){
+  .why-vs .vs-core{font-size:min(1.85rem,2.8vw)}
+}
+
+/* 2026-11-07 04 結果行：先頭に太めの緑のチェックマーク（右の✓ラベルと呼応）／「チェック」にマーカー */
+@media (min-width:761px){
+  .why-vs .vs-two .vs-top .vs-yes .vs-txt .vs-result{font-size:1.08em}
+}
+.why-vs .vs-two .vs-top .vs-result b{display:flex;align-items:center;gap:.28em}
+.why-vs .vs-two .vs-top .vs-result b::before{content:"";flex:none;width:1.05em;height:1.05em;background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230f6f62' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.5 12.8l5.6 5.6L20.5 6.2'/%3E%3C/svg%3E")}
+.why-vs .vs-two .vs-top .vs-result b{display:block}
+.why-vs .vs-two .vs-top .vs-result b::before{display:inline-block;margin-right:.26em;vertical-align:-.12em}
+
+/* 2026-11-07 04 「セオリーも大事 ＋ 見てもらえる投稿」構成：上=問い（中央）／中=セオリー＋答え／下=軸・約束 */
+.why-vs .vs-head{margin-bottom:30px}
+.why-vs .vs-head .vs-head-lead{display:flex;justify-content:center;align-items:center;gap:.55em}
+.why-vs .vs-head .vs-head-lead::before{content:"?";flex:none;width:1.6em;height:1.6em;border-radius:50%;background:#8f8372;color:#fff;font-size:.95em;font-weight:900;line-height:1.6em;text-align:center}
+.why-vs .vs-plusrow{align-items:start;justify-content:center}
+.why-vs .vs-theory{text-align:left}
+.why-vs .vs-theory-lead{margin:0 0 10px;font-size:1.05rem;font-weight:900;color:var(--green)}
+.why-vs .vs-theory-list{margin:0;padding:0;list-style:none}
+.why-vs .vs-theory-list li{padding:9px 0;font-size:1.3rem;font-weight:900;line-height:1.4;color:var(--ink);border-bottom:1px solid #d9cfbf;white-space:nowrap}
+.why-vs .vs-theory-list li:first-child{border-top:1px solid #d9cfbf}
+.why-vs .vs-theory-list li span{margin-right:.6em;font-family:ui-monospace,Menlo,monospace;font-size:.9rem;color:var(--green)}
+.why-vs .vs-theory-list small{margin-left:.6em;font-size:.8rem;font-weight:700;color:#6a5a48}
+.why-vs .vs-plus{align-self:center;font-size:2.6rem;font-weight:300;line-height:1;color:var(--green)}
+.why-vs .vs-core{margin-top:30px;padding-top:26px;border-top:1px solid #d9cfbf}
+@media (min-width:761px){
+  .why-vs .vs-plusrow{grid-template-columns:auto auto auto;gap:0 min(44px,3.2vw)}
+}
+@media (max-width:760px){
+  .why-vs .vs-plusrow{grid-template-columns:1fr;gap:14px 0}
+  .why-vs .vs-plus{margin:0 auto}
+  .why-vs .vs-theory-list li{font-size:1.1rem}
+}
+
+/* 2026-11-07 04 ゼロベースのデザイン：左=前提(控えめ)／＋／右=ヨコグミの強み(濃く・大きく)。縦線・区切り線の混在をやめ、強弱だけで見せる */
+@media (min-width:761px){
+  .why-vs .vs-plusrow{align-items:center;gap:0 min(56px,4vw)}
+  /* 左：セオリー（前提）＝淡く・小さめ・点線 */
+  .why-vs .vs-plusrow .vs-theory-list li{padding:11px 0;font-size:min(1.2rem,1.85vw);font-weight:700;color:#7b6c58;border:0;border-bottom:1px dotted #cfc4b3}
+  .why-vs .vs-plusrow .vs-theory-list li:first-child{border-top:0}
+  .why-vs .vs-plusrow .vs-theory-list li:last-child{border-bottom:0}
+  .why-vs .vs-plusrow .vs-theory-list li span{color:#a89c8b}
+  /* ＋ */
+  .why-vs .vs-plusrow .vs-plus{font-size:min(3rem,4vw);font-weight:300;color:var(--green)}
+  /* 右：強み＝濃く・大きく */
+  .why-vs .vs-plusrow .vs-top .vs-yes .vs-txt{font-size:min(2.1rem,2.7vw)}
+  .why-vs .vs-plusrow .vs-top .vs-yes .vs-txt .vs-causes{display:block;padding:0;border:0}
+  .why-vs .vs-plusrow .vs-top .vs-yes .vs-txt .vs-causes > span{margin:0 0 2px}
+  .why-vs .vs-plusrow .vs-top .vs-yes .vs-txt .vs-causes b{font-size:.86em;font-weight:900;color:var(--green);line-height:1.55}
+  .why-vs .vs-plusrow .vs-top .vs-yes .vs-txt .vs-then{margin:14px 0 0}
+  .why-vs .vs-plusrow .vs-top .vs-yes .vs-txt .vs-result{font-size:1.1em}
+  .why-vs .vs-plusrow .vs-top .vs-yes .vs-cap{margin-bottom:8px}
+}
+
+/* 2026-11-07 04 「✓ 見てもらえる投稿」を、セオリー＋強み＋結果の全体の見出しにする（中央） */
+.why-vs .vs-cap-all{display:flex;justify-content:center;align-items:center;gap:.55em;margin:0 0 22px;font-size:1.08rem;font-weight:900;letter-spacing:.08em;color:var(--green)}
+.why-vs .vs-cap-all::before{content:"✓";flex:none;width:1.45em;height:1.45em;border-radius:50%;background:var(--green);color:#fff;font-size:.9em;font-weight:900;line-height:1.45em;text-align:center}
+
+/* 2026-11-07 04 見出し「✓ 見てもらえる投稿」が、下の行（セオリー＋強み＋結果）の全幅にかかるよう、両側に線を伸ばし、端を下に折る（かっこ型） */
+.why-vs .vs-allbox{width:fit-content;max-width:100%;margin:0 auto}
+.why-vs .vs-allbox .vs-cap-all{gap:.9em;margin:0 0 22px;display:flex;align-items:center}
+.why-vs .vs-allbox .vs-cap-all::before{content:none}
+.why-vs .vs-allbox .cap-text{display:inline-flex;align-items:center;gap:.55em;flex:none}
+.why-vs .vs-allbox .cap-text::before{content:"✓";flex:none;width:1.45em;height:1.45em;border-radius:50%;background:var(--green);color:#fff;font-size:.9em;font-weight:900;line-height:1.45em;text-align:center}
+.why-vs .vs-allbox .cap-line{flex:1 1 auto;height:12px;border-top:2px solid rgba(15,111,98,.35)}
+.why-vs .vs-allbox .cap-l{border-left:2px solid rgba(15,111,98,.35);border-top-left-radius:6px;margin-top:10px}
+.why-vs .vs-allbox .cap-r{border-right:2px solid rgba(15,111,98,.35);border-top-right-radius:6px;margin-top:10px}
+
+/* 2026-11-07 04 問いの文字を一回り大きくし、下の行（見てもらえる投稿）の幅に近づける */
+@media (min-width:761px){
+  .why-vs .vs-head .vs-head-q{font-size:min(2.1rem,3vw);line-height:1.6}
+  .why-vs .vs-head .vs-head-lead{font-size:min(1rem,1.5vw)}
+  .why-vs .vs-head .vs-head-sub{font-size:min(1.05rem,1.6vw)}
+}
+
+/* 2026-11-07 02 CHECK と 03 PRICING の間：03 の上余白を詰める（約96px→約68px） */
+#plans-top{padding-top:40px}
+@media (max-width:760px){#plans-top{padding-top:36px}}
+
+/* 2026-11-07 04 「＋」：丸い先端の太めの十字。横線は左(前提=淡い)から右(強み=濃い緑)へ色が変わる */
+.why-vs .vs-plusrow .vs-plus{font-size:0;line-height:0}
+.why-vs .vs-plusrow .vs-plus svg{display:block}
+@media (max-width:760px){.why-vs .vs-plusrow .vs-plus svg{width:38px;height:38px}}
