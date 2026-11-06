@@ -3007,3 +3007,17 @@ a.proof-label-link{text-decoration:none;cursor:pointer;display:block}
   .why-vs .vs-plusrow .vs-top .vs-yes .vs-txt .vs-causes > span{font-size:1em}
   .why-vs .vs-plusrow .vs-top .vs-yes .vs-txt .vs-causes b{font-size:.92em}
 }
+
+/* 2026-11-07 04 スマホ幅：「？」の丸を、導入文の1行目の先頭（文の左）に置く */
+@media (max-width:760px){
+  .why-vs .vs-head .vs-head-lead{display:block;text-align:center;line-height:1.8}
+  .why-vs .vs-head .vs-head-lead::before{display:inline-block;vertical-align:-.28em;margin-right:.5em}
+  .why-vs .vs-head .vs-head-lead .lead-t{display:inline}
+}
+
+/* 2026-11-07 04 スマホ幅：セオリー3項目の区切り線をなくす */
+@media (max-width:760px){
+  .why-vs .vs-plusrow .vs-theory-list li,
+  .why-vs .vs-plusrow .vs-theory-list li:first-child,
+  .why-vs .vs-plusrow .vs-theory-list li:last-child{border:0;padding:6px 0}
+}
