@@ -3021,3 +3021,11 @@ a.proof-label-link{text-decoration:none;cursor:pointer;display:block}
   .why-vs .vs-plusrow .vs-theory-list li:first-child,
   .why-vs .vs-plusrow .vs-theory-list li:last-child{border:0;padding:6px 0}
 }
+
+/* 制作実績：縦型動画カード */
+.work-video video{display:block;width:100%;height:auto;max-height:440px;aspect-ratio:9/16;object-fit:contain;background:#14110d}
+@media (max-width:760px){
+  .work-video .work-link{background:var(--paper);border:1px solid rgba(42,33,24,.18);border-radius:8px;position:relative;padding-top:18px;box-shadow:0 8px 22px rgba(42,33,24,.12)}
+  .work-video .work-body{padding:14px 16px 18px}
+  .work-video video{max-height:none;max-width:320px;margin:0 auto}
+}
