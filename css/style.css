@@ -3032,12 +3032,16 @@ a.proof-label-link{text-decoration:none;cursor:pointer;display:block}
 
 /* 04 スマホ：タイトルを大きく目立たせる */
 @media (max-width:760px){
-  #why h2.why-h{font-size:1.75rem;line-height:1.5}
+  #why h2.why-h{font-size:min(1.75rem,calc((100vw - 40px) / 12.6));line-height:1.5}
   #why .why-h .ln:nth-child(-n+2){font-size:.85em}
-  #why .why-h .ln-end::before{width:72px;height:5px}
+  #why .why-h .ln-end::before{width:72px;height:3px}
 }
 
 /* トップ スマホ：メインタイトルを画面幅いっぱいまで大きく */
 @media (max-width:760px){
   .hero h1{font-size:min(calc((100vw - 40px) / 8.6), 2.9rem)}
 }
+
+/* 04 スマホ：タイトルの改行位置 */
+.sp-br{display:none}
+@media (max-width:760px){.sp-br{display:inline}}
