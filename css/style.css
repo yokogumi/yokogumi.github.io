@@ -3029,3 +3029,15 @@ a.proof-label-link{text-decoration:none;cursor:pointer;display:block}
   .work-video .work-body{padding:14px 16px 18px}
   .work-video video{max-height:none;max-width:320px;margin:0 auto}
 }
+
+/* 04 スマホ：タイトルを大きく目立たせる */
+@media (max-width:760px){
+  #why h2.why-h{font-size:1.75rem;line-height:1.5}
+  #why .why-h .ln:nth-child(-n+2){font-size:.85em}
+  #why .why-h .ln-end::before{width:72px;height:5px}
+}
+
+/* トップ スマホ：メインタイトルを画面幅いっぱいまで大きく */
+@media (max-width:760px){
+  .hero h1{font-size:min(calc((100vw - 40px) / 8.6), 2.9rem)}
+}
