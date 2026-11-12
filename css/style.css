@@ -3045,3 +3045,305 @@ a.proof-label-link{text-decoration:none;cursor:pointer;display:block}
 /* 04 スマホ：タイトルの改行位置 */
 .sp-br{display:none}
 @media (max-width:760px){.sp-br{display:inline}}
+
+/* 04 比較表 (2026-11-12) */
+.cmp{margin:26px 0 0;border-top:2px solid var(--ink)}
+.cmp-head{display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,1.25fr);gap:0 22px;padding:10px 0;font:700 .85rem var(--sans);letter-spacing:.08em}
+.cmp-h-other{color:#8a7d6b}
+.cmp-h-me{color:var(--green)}
+.cmp-row{display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,1.25fr);gap:0 22px;align-items:stretch;padding:0;border-top:1px solid var(--line);margin:0}
+.cmp-row p{margin:0}
+.cmp-key{padding:20px 0;font-weight:900;font-size:1.05rem;color:var(--ink)}
+.cmp-key .mono{display:block;font-size:.8rem;color:var(--green);margin-bottom:2px}
+.cmp-other{padding:20px 4px;font-size:.93rem;line-height:1.8;color:#8a7d6b}
+.cmp-me{padding:20px 22px;font-size:.98rem;line-height:1.8;color:var(--ink);background:#fff;border-left:4px solid var(--green);box-shadow:0 0 0 1px rgba(42,33,24,.08)}
+.cmp-me b{display:block;font-size:1.08rem;font-weight:900;color:var(--green);margin-bottom:2px}
+.cmp-lbl{display:none}
+@media (max-width:760px){
+  .cmp-head{display:none}
+  .cmp-row{grid-template-columns:1fr;gap:0;padding:16px 0}
+  .cmp-key{padding:0 0 8px;display:flex;gap:10px;align-items:baseline}
+  .cmp-key .mono{display:inline;margin:0}
+  .cmp-other{padding:10px 12px;background:rgba(42,33,24,.04);border-radius:8px 8px 0 0}
+  .cmp-me{padding:14px 14px;border-radius:0 0 8px 8px}
+  .cmp-lbl{display:block;font:700 .72rem var(--sans);letter-spacing:.08em;margin-bottom:2px}
+  .cmp-me .cmp-lbl{color:var(--green)}
+}
+
+/* 04 比較表 見出し・文節改行・つなぎ (2026-11-12 v2) */
+.cmp-title{margin:34px 0 0;font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:900;color:var(--ink);line-height:1.4}
+.cmp-title-en{display:block;font-size:.72rem;letter-spacing:.16em;color:var(--green);font-weight:500;margin-bottom:4px}
+.cmp{margin-top:14px}
+.cmp .cl{display:block}
+.cmp-me b .cl{display:block}
+.cmp-row{grid-template-columns:130px minmax(0,1fr) minmax(0,1.3fr)}
+.cmp-head{grid-template-columns:130px minmax(0,1fr) minmax(0,1.3fr)}
+.cmp-bridge{margin:40px 0 0;text-align:center;font-weight:900;font-size:clamp(1.1rem,2vw,1.4rem);color:var(--green)}
+.cmp-bridge::after{content:"";display:block;width:2px;height:28px;background:var(--green);margin:14px auto 0;opacity:.5}
+.vs-lab{margin:0 0 8px;font:700 .8rem var(--sans);letter-spacing:.06em;color:var(--green)}
+.vs-lab small{font-weight:500;color:#8a7d6b;margin-left:.3em}
+@media (max-width:760px){.cmp-row{grid-template-columns:1fr}.cmp-me .cl,.cmp-other .cl{display:block}}
+
+/* 04 比較表 カテゴリ列なし (2026-11-12 v3) */
+.cmp-row,.cmp-head{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr)}
+.cmp-other{padding-left:8px}
+.cmp-h-other{padding-left:8px}
+
+/* 04 比較表 デザイン刷新 (2026-11-12 v4) */
+.cmp .cmp-head{display:none}
+.cmp{border-top:0;margin-top:18px}
+.cmp .cmp-row{display:grid;grid-template-columns:minmax(0,1fr) 64px minmax(0,1.4fr);gap:0;align-items:stretch;border-top:0;margin:0 0 18px;padding:0}
+.cmp .cmp-other{padding:24px 28px;background:rgba(42,33,24,.05);border:1px dashed #cdbfa8;border-radius:16px;color:#7a6e5e;font-size:1.02rem;line-height:1.9}
+.cmp .cmp-me{padding:24px 30px;background:#fff;border:2px solid var(--green);border-left:2px solid var(--green);border-radius:16px;box-shadow:0 8px 22px rgba(15,111,98,.14);font-size:1.05rem;line-height:1.9;color:var(--ink)}
+.cmp .cmp-me b{font-size:clamp(1.2rem,2vw,1.5rem);line-height:1.5;margin-bottom:8px}
+.cmp .cmp-lbl{display:inline-block;margin:0 0 10px;padding:2px 12px;border-radius:999px;font:700 .78rem var(--sans);letter-spacing:.06em}
+.cmp .cmp-other .cmp-lbl{background:#e2d7c4;color:#6b5f4f}
+.cmp .cmp-other .cmp-lbl::before{content:"✕ "}
+.cmp .cmp-me .cmp-lbl{background:var(--green);color:#fff}
+.cmp .cmp-me .cmp-lbl::before{content:"✓ "}
+.cmp .cmp-arrow{align-self:center;justify-self:center;width:40px;height:40px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-size:1.2rem;font-weight:900;line-height:1}
+@media (max-width:760px){
+  .cmp .cmp-row{grid-template-columns:1fr;margin-bottom:26px}
+  .cmp .cmp-other{padding:16px 18px;font-size:.98rem}
+  .cmp .cmp-me{padding:18px 18px;border:2px solid var(--green);border-radius:16px}
+  .cmp .cmp-arrow{width:34px;height:34px;margin:8px 0;transform:rotate(90deg)}
+}
+
+/* 04 比較表 余白・アイコン調整 (2026-11-12 v5) */
+.cmp .cmp-row{grid-template-columns:minmax(0,1fr) 56px minmax(0,1.15fr);min-height:150px}
+.cmp .cmp-other,.cmp .cmp-me{position:relative;display:flex;flex-direction:column;justify-content:center}
+.cmp .cmp-other{padding:26px 84px 26px 30px;font-size:1.08rem}
+.cmp .cmp-me{padding:26px 96px 26px 34px;font-size:1.12rem}
+.cmp .cmp-me b{font-size:clamp(1.35rem,2.3vw,1.75rem)}
+.cmp .cmp-lbl{align-self:flex-start}
+.cmp .cmp-other::after,.cmp .cmp-me::after{position:absolute;right:28px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-weight:900;line-height:1}
+.cmp .cmp-other::after{content:"✕";background:#e2d7c4;color:#8a7d6b;font-size:1.2rem}
+.cmp .cmp-me::after{content:"✓";background:#e3f0ec;color:var(--green);font-size:1.6rem}
+@media (max-width:760px){
+  .cmp .cmp-row{grid-template-columns:1fr;min-height:0}
+  .cmp .cmp-other{padding:18px 18px;font-size:.95rem}
+  .cmp .cmp-me{padding:20px 18px;font-size:1rem}
+  .cmp .cmp-me b{font-size:1.2rem}
+  .cmp .cmp-other::after,.cmp .cmp-me::after{display:none}
+}
+
+/* 04 比較表 v6: 緑の一枚パネル構成（アイコン・矢印なし） (2026-11-12) */
+.cmp{margin-top:22px}
+.cmp .cmp-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:0;align-items:end;margin:0;padding:0}
+.cmp .cmp-head span{display:block}
+.cmp .cmp-h-other{padding:0 32px 14px;font:700 1rem var(--sans);letter-spacing:.1em;color:#8a7d6b;border-bottom:2px solid #cdbfa8}
+.cmp .cmp-h-me{padding:16px 38px;font:900 1.2rem var(--sans);letter-spacing:.12em;color:#fff;background:var(--green-d);border-radius:18px 18px 0 0}
+.cmp .cmp-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:0;margin:0;min-height:0;padding:0;border:0;align-items:stretch}
+.cmp .cmp-arrow,.cmp .cmp-lbl{display:none}
+.cmp .cmp-other::after,.cmp .cmp-me::after{display:none}
+.cmp .cmp-lbl::before{content:none!important}
+.cmp .cmp-other{display:flex;flex-direction:column;justify-content:center;padding:30px 32px;background:none;border:0;border-bottom:1px dashed #cdbfa8;border-radius:0;box-shadow:none;color:#7a6e5e;font-size:1.08rem;line-height:1.9}
+.cmp .cmp-me{display:flex;flex-direction:column;justify-content:center;padding:30px 38px;background:var(--green);border:0;border-bottom:1px solid rgba(255,255,255,.25);border-radius:0;box-shadow:none;color:rgba(255,255,255,.92);font-size:1.1rem;line-height:1.9}
+.cmp .cmp-me b{color:#fff;font-size:clamp(1.4rem,2.4vw,1.8rem);line-height:1.5;margin-bottom:8px}
+.cmp .cmp-row:last-child .cmp-other{border-bottom:0}
+.cmp .cmp-row:last-child .cmp-me{border-bottom:0;border-radius:0 0 18px 18px;box-shadow:0 14px 26px -14px rgba(15,111,98,.55)}
+@media (max-width:760px){
+  .cmp .cmp-head{display:none}
+  .cmp .cmp-row{grid-template-columns:1fr;margin-bottom:24px}
+  .cmp .cmp-lbl{display:inline-block;align-self:flex-start;margin:0 0 8px;padding:2px 12px;border-radius:999px;font:700 .75rem var(--sans);letter-spacing:.08em}
+  .cmp .cmp-other{padding:16px 18px;border:0;border-left:4px solid #cdbfa8;background:rgba(42,33,24,.04);border-radius:0 12px 12px 0;font-size:.95rem}
+  .cmp .cmp-other .cmp-lbl{background:#e2d7c4;color:#6b5f4f}
+  .cmp .cmp-me{padding:20px 18px;margin-top:8px;border:0;border-radius:14px;font-size:1rem;box-shadow:0 10px 22px -12px rgba(15,111,98,.6)}
+  .cmp .cmp-me .cmp-lbl{background:rgba(255,255,255,.22);color:#fff}
+  .cmp .cmp-me b{font-size:1.2rem}
+  .cmp .cmp-row:last-child .cmp-other{border-bottom:0}
+  .cmp .cmp-row:last-child .cmp-me{border-radius:14px}
+}
+
+/* 04 比較表 v7: 罫線のみのシンプル構成 (2026-11-12) */
+.cmp{margin-top:22px;border-top:2px solid var(--ink)}
+.cmp .cmp-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);align-items:center;padding:0}
+.cmp .cmp-h-other,.cmp .cmp-h-me{padding:14px 0;background:none;border:0;border-radius:0;font:500 .8rem var(--mono);letter-spacing:.18em;text-transform:uppercase}
+.cmp .cmp-h-other{padding-left:8px;color:#8a7d6b}
+.cmp .cmp-h-me{padding-left:38px;color:var(--green);border-left:3px solid var(--green)}
+.cmp .cmp-row{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);border-top:1px solid var(--line)}
+.cmp .cmp-row:last-child{border-bottom:1px solid var(--line)}
+.cmp .cmp-other{padding:30px 32px 30px 8px;border:0;background:none;color:#8a7d6b;font-size:1.05rem;line-height:1.9}
+.cmp .cmp-me{padding:30px 32px 30px 38px;background:none;border:0;border-left:3px solid var(--green);border-radius:0;box-shadow:none;color:var(--ink);font-size:1.08rem;line-height:1.9}
+.cmp .cmp-me b{color:var(--green);font-size:clamp(1.35rem,2.2vw,1.7rem);margin-bottom:8px}
+.cmp .cmp-row:last-child .cmp-other,.cmp .cmp-row:last-child .cmp-me{border-bottom:0;border-radius:0;box-shadow:none}
+@media (max-width:760px){
+  .cmp .cmp-head{display:none}
+  .cmp .cmp-row{grid-template-columns:1fr;margin:0;padding:22px 0}
+  .cmp .cmp-lbl{display:block;align-self:flex-start;margin:0 0 4px;padding:0;background:none;border-radius:0;font:500 .72rem var(--mono);letter-spacing:.16em}
+  .cmp .cmp-other .cmp-lbl{background:none;color:#8a7d6b}
+  .cmp .cmp-me .cmp-lbl{background:none;color:var(--green)}
+  .cmp .cmp-other{padding:0 0 18px;border:0;background:none;border-radius:0;font-size:.97rem}
+  .cmp .cmp-me{padding:0 0 0 16px;margin:0;border:0;border-left:3px solid var(--green);border-radius:0;box-shadow:none;font-size:1rem}
+  .cmp .cmp-me b{font-size:1.2rem}
+}
+
+/* 04 比較表 v8: 白パネル＋マーカー＋vs (2026-11-12) */
+.cmp .mk{background:linear-gradient(transparent 60%,rgba(15,111,98,.22) 60%);padding:0 .1em}
+@media (min-width:761px){
+  .cmp{position:relative;margin-top:26px;border-top:0}
+  .cmp::before{content:"vs";position:absolute;z-index:2;top:12px;left:calc((100% - 36px)/2.25 + 18px);transform:translateX(-50%);width:38px;height:38px;border-radius:50%;background:var(--bg);border:1px solid #cdbfa8;display:grid;place-items:center;font:500 .74rem var(--mono);letter-spacing:.04em;color:#8a7d6b}
+  .cmp .cmp-head,.cmp .cmp-row{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);column-gap:36px}
+  .cmp .cmp-row{border-top:0}
+  .cmp .cmp-row:last-child{border-bottom:0}
+  .cmp .cmp-h-other{padding:20px 0 14px 4px;border-bottom:1px solid var(--ink)}
+  .cmp .cmp-h-me{padding:18px 34px 16px;background:#fff;border:1px solid var(--line);border-top:3px solid var(--green);border-bottom:0;border-radius:14px 14px 0 0;color:var(--green)}
+  .cmp .cmp-other{padding:30px 4px;border-bottom:1px dashed #d3c5ad;color:#857867}
+  .cmp .cmp-row:last-child .cmp-other{border-bottom:0}
+  .cmp .cmp-me{padding:30px 34px;background:#fff;border:0;border-left:1px solid var(--line);border-right:1px solid var(--line);border-top:1px solid var(--line);border-radius:0;box-shadow:none;color:var(--ink)}
+  .cmp .cmp-me b{color:var(--ink)}
+  .cmp .cmp-row:last-child .cmp-me{border-bottom:1px solid var(--line);border-radius:0 0 14px 14px;box-shadow:0 18px 30px -22px rgba(42,33,24,.35)}
+}
+
+/* 04 比較表 v9: コンパクトな1行構成 (2026-11-12) */
+@media (min-width:761px){
+  .cmp{max-width:980px;margin-top:22px;border-top:2px solid var(--ink)}
+  .cmp::before{display:none}
+  .cmp .cmp-head,.cmp .cmp-row{grid-template-columns:minmax(0,1fr) 44px minmax(0,1.35fr);column-gap:0}
+  .cmp .cmp-h-other{grid-column:1;padding:12px 0;border:0}
+  .cmp .cmp-h-me{grid-column:3;padding:12px 0 12px 20px;background:none;border:0;border-left:3px solid var(--green);border-radius:0}
+  .cmp .cmp-row{border-top:1px solid var(--line);align-items:stretch}
+  .cmp .cmp-row:last-child{border-bottom:1px solid var(--line)}
+  .cmp .cmp-arrow{display:flex;align-items:center;justify-content:center;width:auto;height:auto;border-radius:0;background:none;font-size:0;color:transparent;transform:none}
+  .cmp .cmp-arrow::before{content:"";display:block;width:24px;height:1px;background:#b9ab94}
+  .cmp .cmp-other{padding:18px 0;border:0;font-size:.98rem;line-height:1.7;color:#857867}
+  .cmp .cmp-me,.cmp .cmp-row:last-child .cmp-me{padding:18px 0 18px 20px;background:none;border:0;border-left:3px solid var(--green);border-radius:0;box-shadow:none;font-size:1rem;line-height:1.7;color:var(--ink)}
+  .cmp .cmp-me b{display:block;font-size:clamp(1.15rem,1.9vw,1.4rem);line-height:1.5;margin-bottom:2px}
+  .cmp .cmp-me .cl,.cmp .cmp-me b .cl{display:inline-block}
+}
+@media (min-width:761px){
+  .cmp{max-width:none}
+  .cmp .cmp-head,.cmp .cmp-row{grid-template-columns:minmax(0,1fr) 56px minmax(0,1.5fr)}
+  .cmp .cmp-arrow::before{width:32px}
+  .cmp .cmp-other{font-size:1.02rem}
+  .cmp .cmp-me,.cmp .cmp-row:last-child .cmp-me{font-size:1.05rem;padding-left:26px}
+  .cmp .cmp-h-me{padding-left:26px}
+  .cmp .cmp-me b{font-size:clamp(1.25rem,2.1vw,1.6rem)}
+}
+
+/* 04 比較表 v10: コンパクト＋薄いグラデ帯・ピル見出し (2026-11-12) */
+.cmp .mk{background:linear-gradient(transparent 55%,rgba(15,111,98,.26) 55%)}
+@media (min-width:761px){
+  .cmp{border-top:0;margin-top:26px}
+  .cmp .cmp-head{padding:0;margin:0}
+  .cmp .cmp-h-other,.cmp .cmp-h-me{justify-self:start;margin:0 0 12px;padding:5px 18px;border:0;border-radius:999px;font:700 .8rem var(--sans);letter-spacing:.12em;text-transform:none}
+  .cmp .cmp-h-other{border:1px solid #cdbfa8;color:#857867;background:none}
+  .cmp .cmp-h-me{background:var(--green);color:#fff}
+  .cmp .cmp-row{border-top:0;margin:0 0 10px}
+  .cmp .cmp-row:last-child{border-bottom:0;margin-bottom:0}
+  .cmp .cmp-other{padding:16px 0 16px 6px;font-size:1.02rem;color:#857867}
+  .cmp .cmp-arrow::before{content:"→";width:34px;height:34px;border-radius:50%;background:rgba(15,111,98,.13);color:var(--green);display:grid;place-items:center;font:900 1rem var(--sans)}
+  .cmp .cmp-me,.cmp .cmp-row:last-child .cmp-me{padding:18px 28px;border:0;border-left:4px solid var(--green);border-radius:0 14px 14px 0;background:linear-gradient(90deg,rgba(15,111,98,.12),rgba(15,111,98,.02));font-size:1.05rem}
+  .cmp .cmp-me b{font-size:clamp(1.35rem,2.4vw,1.85rem);line-height:1.45;margin-bottom:4px}
+}
+@media (max-width:760px){
+  .cmp .cmp-me{padding:14px 16px;background:linear-gradient(90deg,rgba(15,111,98,.12),rgba(15,111,98,.02));border-radius:0 12px 12px 0}
+}
+
+/* 04 比較表 v11: 白カード＋細線のみ・色面なし (2026-11-12) */
+.cmp .mk{background:linear-gradient(transparent 64%,rgba(15,111,98,.15) 64%)}
+@media (min-width:761px){
+  .cmp .cmp-h-other{color:#7d705f}
+  .cmp .cmp-h-me{background:none;border:1px solid var(--green);color:var(--green)}
+  .cmp .cmp-row{margin:0 0 12px}
+  .cmp .cmp-row:last-child{margin-bottom:0}
+  .cmp .cmp-other{color:#7d705f}
+  .cmp .cmp-arrow::before{background:none;border:1px solid #bfb19a;color:var(--green)}
+  .cmp .cmp-me,.cmp .cmp-row:last-child .cmp-me{padding:16px 26px 16px 30px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:inset 4px 0 0 var(--green),0 8px 18px -14px rgba(42,33,24,.3)}
+  .cmp .cmp-me b{font-size:clamp(1.3rem,2.1vw,1.6rem)}
+}
+@media (max-width:760px){
+  .cmp .cmp-me{padding:14px 16px 14px 20px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:inset 4px 0 0 var(--green)}
+}
+
+/* 04 比較表 v12: 左右隣接・同サイズの比較表 (2026-11-12) */
+@media (min-width:761px){
+  .cmp{margin-top:22px;max-width:none;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+  .cmp::before{display:none}
+  .cmp .cmp-arrow{display:none}
+  .cmp .cmp-head,.cmp .cmp-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:0}
+  .cmp .cmp-h-other,.cmp .cmp-h-me{grid-column:auto;justify-self:stretch;margin:0;padding:12px 24px;border:0;border-radius:0;font:700 .9rem var(--sans);letter-spacing:.1em}
+  .cmp .cmp-h-other{background:#efe6d6;color:var(--sub);border-right:1px solid var(--line)}
+  .cmp .cmp-h-me{background:#e3efea;color:var(--green-d)}
+  .cmp .cmp-row,.cmp .cmp-row:last-child{margin:0;border-top:1px solid var(--line);border-bottom:0}
+  .cmp .cmp-other{padding:20px 24px;border:0;border-right:1px solid var(--line);color:var(--sub);font-size:1.05rem;line-height:1.8;background:#fff}
+  .cmp .cmp-me,.cmp .cmp-row:last-child .cmp-me{padding:20px 24px;border:0;border-radius:0;box-shadow:none;background:#f7fbf9;color:var(--ink);font-size:1.05rem;line-height:1.8}
+  .cmp .cmp-me b{font-size:1.25rem;color:var(--green-d)}
+}
+@media (max-width:760px){
+  .cmp .cmp-other{color:var(--sub);font-size:1rem}
+}
+
+/* 04 比較表 v13: 3カード横並び・カード内で上下比較 (2026-11-12) */
+.cmp{display:grid;grid-template-columns:1fr;gap:16px;margin-top:22px;max-width:none;border:0;border-radius:0;overflow:visible;background:none}
+@media (min-width:901px){.cmp{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}}
+.cmp .cmp-head,.cmp .cmp-arrow{display:none}
+.cmp .cmp-row,.cmp .cmp-row:last-child{display:flex;flex-direction:column;margin:0;padding:0;min-height:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
+.cmp .cmp-lbl{display:block;align-self:flex-start;margin:0 0 6px;padding:0;background:none;border-radius:0;font:700 .72rem var(--sans);letter-spacing:.12em}
+.cmp .cmp-other .cmp-lbl{background:none;color:#8a7d6b}
+.cmp .cmp-me .cmp-lbl{background:none;color:var(--green)}
+.cmp .cmp-other{flex:0 0 auto;padding:16px 22px;background:#f1e8d8;border:0;border-radius:0;color:var(--sub);font-size:.98rem;line-height:1.75}
+.cmp .cmp-me,.cmp .cmp-row:last-child .cmp-me{flex:1;margin:0;padding:18px 22px 20px;background:#fff;border:0;border-radius:0;box-shadow:none;color:var(--ink);font-size:1rem;line-height:1.75}
+.cmp .cmp-me b{font-size:1.12rem;line-height:1.5;color:var(--green-d);margin-bottom:4px}
+.cmp .cmp-row:last-child .cmp-other{border-bottom:0}
+
+/* 04 比較表 v14: 左右とも「見出し行＋説明」の同構造・2列表 (2026-11-12) */
+.cmp .cmp-other b{display:block;font-size:1.12rem;line-height:1.5;color:#6b5f4f;margin-bottom:4px}
+@media (min-width:761px){
+  .cmp{display:block;margin-top:22px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+  .cmp .cmp-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);margin:0;padding:0}
+  .cmp .cmp-h-other,.cmp .cmp-h-me{display:block;grid-column:auto;justify-self:stretch;margin:0;padding:12px 24px;border:0;border-radius:0;font:700 .9rem var(--sans);letter-spacing:.1em}
+  .cmp .cmp-h-other{background:#efe6d6;color:var(--sub);border-right:1px solid var(--line)}
+  .cmp .cmp-h-me{background:#e3efea;color:var(--green-d)}
+  .cmp .cmp-row,.cmp .cmp-row:last-child{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border:0;border-top:1px solid var(--line);border-radius:0;overflow:visible;background:none}
+  .cmp .cmp-lbl{display:none}
+  .cmp .cmp-other{padding:18px 24px;background:#fff;border-right:1px solid var(--line);color:var(--sub);font-size:1rem;line-height:1.75}
+  .cmp .cmp-me,.cmp .cmp-row:last-child .cmp-me{padding:18px 24px;background:#f7fbf9;font-size:1rem;line-height:1.75}
+  .cmp .cmp-other b,.cmp .cmp-me b{font-size:1.2rem}
+}
+
+/* 04 比較表 v15: 行見出し＋他社/自社の3列比較表 (2026-11-12) */
+.cmp .cmp-key{margin:0;font-weight:900;color:var(--ink)}
+.cmp .cmp-h-key{display:block}
+@media (min-width:761px){
+  .cmp{display:block;margin-top:22px;border:0;border-radius:0;overflow:visible;background:none}
+  .cmp .cmp-head,.cmp .cmp-row,.cmp .cmp-row:last-child{display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,1.1fr);border:0;border-radius:0;overflow:visible;background:none}
+  .cmp .cmp-h-other,.cmp .cmp-h-me{grid-column:auto;justify-self:stretch;margin:0;padding:16px;border:0;text-align:center;letter-spacing:.06em}
+  .cmp .cmp-h-other{background:#e7e0d1;color:var(--sub);font:700 1rem var(--sans);border-radius:12px 0 0 0}
+  .cmp .cmp-h-me{background:#dcede7;color:var(--green-d);font:900 1.1rem var(--sans);border-radius:0 12px 0 0}
+  .cmp .cmp-row{border-top:1px solid #d9cbb4}
+  .cmp .cmp-key{display:flex;align-items:center;padding:18px 8px;font-size:1rem}
+  .cmp .cmp-other{padding:20px 22px;border:0;background:#fff;text-align:center;color:var(--sub)}
+  .cmp .cmp-me,.cmp .cmp-row:last-child .cmp-me{padding:20px 22px;background:#eaf4f0;text-align:center}
+  .cmp .cmp-row:last-child .cmp-other{border-radius:0 0 0 12px}
+  .cmp .cmp-row:last-child .cmp-me{border-radius:0 0 12px 0}
+  .cmp .cmp-other b,.cmp .cmp-me b{font-size:1.2rem}
+  .cmp .cmp-other .cl,.cmp .cmp-me .cl{display:inline-block}
+}
+@media (max-width:760px){
+  .cmp .cmp-key{padding:10px 22px;background:#fff;border-bottom:1px solid var(--line);font-size:.85rem;letter-spacing:.08em}
+}
+.cmp .cl2{display:inline-block}
+@media (min-width:761px){
+  .cmp .cmp-row:last-child{border-top:1px solid #d9cbb4}
+}
+
+/* 04 つなぎ: 線ではさんだ見出し＋下向き矢印 (2026-11-12) */
+.brg{margin:44px 0 0;text-align:center}
+.brg-line{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:22px;margin:0}
+.brg-line::before,.brg-line::after{content:"";height:1px;background:#cdbfa8}
+.brg-t{font-weight:900;font-size:clamp(1.05rem,2vw,1.4rem);line-height:1.5;color:var(--green)}
+.brg-ar{display:grid;place-items:center;width:34px;height:34px;margin:18px auto 0;border:1px solid #cdbfa8;border-radius:50%}
+.brg-ar::before{content:"";width:8px;height:8px;border-right:2px solid var(--green);border-bottom:2px solid var(--green);transform:translateY(-2px) rotate(45deg)}
+@media (max-width:560px){.brg-line{grid-template-columns:1fr}.brg-line::before,.brg-line::after{display:none}}
+
+/* 04 つなぎ文: 「?」アイコンを外す (2026-11-12) */
+.why-vs .vs-head .vs-head-lead::before,.why-vs .vs-two .vs-head-lead::before{content:none!important;display:none!important}
+
+/* 04 つなぎ: 吹き出し＋しっぽ (2026-11-12) */
+.brg{margin:44px 0 22px}
+.brg-line{display:inline-block;vertical-align:top;grid-template-columns:none;gap:0;padding:12px 32px;border:1px solid var(--green);border-radius:999px;background:#fff}
+.brg-line::before,.brg-line::after{display:none}
+.brg-ar{display:block;position:relative;z-index:1;width:14px;height:14px;margin:-8px auto 0;border:0;border-right:1px solid var(--green);border-bottom:1px solid var(--green);border-radius:0;background:#fff;transform:rotate(45deg)}
+.brg-ar::before{display:none}
+@media (max-width:560px){.brg-line{padding:12px 20px;border-radius:22px}}
